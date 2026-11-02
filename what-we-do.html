@@ -1,0 +1,486 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8"/>
+<meta name="viewport" content="width=device-width,initial-scale=1"/>
+<title>What We Do — 6 Core Engineering Divisions | Resoline Techbis</title>
+<meta name="description" content="Explore Resoline Techbis' six core engineering divisions: Automation, Instrumentation, Electrical and Utilities, Utility Systems, Environmental Solutions, and Engineering Consultation."/>
+<link rel="stylesheet" href="styles.css"/>
+</head>
+<body>
+
+<!-- ═══ SHARED FULLSCREEN MENU OVERLAY ═══ -->
+<div class="fs-menu" id="fsMenu">
+  <div class="fs-menu__backdrop" id="fsBackdrop"></div>
+  <div class="fs-menu__panel" id="fsPanel">
+    <div class="fs-menu__top">
+      <a href="index.html" class="fs-menu__brand" aria-label="Resoline Techbis">
+        <span class="brand-pill">
+          <img src="assets/logo-resoline.png" alt="Resoline Techbis" class="brand-logo-img"/>
+        </span>
+      </a>
+      <button class="fs-menu__close" id="fsClose" aria-label="Close Menu">
+        <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round"><line x1="18" y1="6" x2="6" y2="18"/><line x1="6" y1="6" x2="18" y2="18"/></svg>
+      </button>
+    </div>
+
+    <div class="fs-menu__split">
+      <nav class="fs-menu__nav">
+        <a href="index.html" class="fs-menu__link"><span>Home</span><span class="menu-arrow">→</span></a>
+        <a href="what-we-do.html" class="fs-menu__link"><span>What We Do</span><span class="menu-arrow">→</span></a>
+        <a href="products.html" class="fs-menu__link"><span>Products &amp; Hardware</span><span class="menu-arrow">→</span></a>
+        <a href="about.html" class="fs-menu__link"><span>About Us</span><span class="menu-arrow">→</span></a>
+        <a href="contact.html" class="fs-menu__link"><span>Contact Desk</span><span class="menu-arrow">→</span></a>
+      </nav>
+
+      <div class="fs-menu__context">
+        <div class="menu-feat">
+          <div class="menu-feat-badge">ENGINEERING HEADQUARTERS</div>
+          <div class="menu-feat-title">Resoline Techbis Private Limited</div>
+          <div class="menu-feat-desc">Full-lifecycle turnkey industrial automation, process instrumentation, electrical systems, and industrial environmental engineering based in Bhubaneswar, Odisha.</div>
+        </div>
+
+        <div class="menu-contact-info">
+          <div><strong>Engineering Desk:</strong> Plot No 122/A, Rasulgarh Industrial Estate, Bhubaneswar, Odisha</div>
+          <div><strong>Direct Hotline:</strong> <a href="tel:+91637053100">+91 637053100</a></div>
+          <div><strong>Support Desk:</strong> <a href="mailto:info@resoline.in">info@resoline.in</a></div>
+          <div><strong>Turnaround:</strong> 24/7 Field Support &amp; Turnkey AMC</div>
+        </div>
+
+        <a href="contact.html" class="fs-menu__cta-quote">Request Engineering Quote →</a>
+      </div>
+    </div>
+
+    <div class="fs-menu__bottom">
+      <div style="font-size:0.75rem;color:rgba(255,255,255,0.6)">© 2026 Resoline Techbis. Bhubaneswar, Odisha. Managing Director: Subhashree Sahoo.</div>
+      <div class="fs-menu__socials">
+        <a href="https://linkedin.com" target="_blank" rel="noopener">LinkedIn</a>
+        <a href="https://wa.me/91637053100" target="_blank" rel="noopener">WhatsApp</a>
+        <a href="mailto:info@resoline.in">Email Desk</a>
+      </div>
+    </div>
+  </div>
+</div>
+
+<!-- ═══ FLOATING HEADER ═══ -->
+<header class="header">
+  <a href="index.html" class="header__brand" aria-label="Resoline Techbis Home">
+    <span class="brand-pill">
+      <img src="assets/logo-resoline.png" alt="Resoline Techbis — Precision In Every Solution" class="brand-logo-img"/>
+    </span>
+  </a>
+
+  <div class="header__center">
+    <div class="nav-mega-group" id="navMegaGroup">
+      <a href="index.html" class="nav-link">Home</a>
+
+      <!-- Direct Automation Dropdown -->
+      <div class="nav-dropdown-item">
+        <button class="nav-mega-btn" id="navAutoDropdownBtn" type="button" aria-haspopup="true">
+          <span>Automation</span> <span class="nav-caret">▾</span>
+        </button>
+        <div class="nav-sub-dropdown" id="navAutoDropdown">
+          <button type="button" class="auto-drop-item" data-open-auto="plc">
+            <span class="auto-drop-icon">⚡</span>
+            <div class="auto-drop-text">
+              <strong>PLC</strong>
+              <span>Programmable Logic Controllers &amp; Panels</span>
+            </div>
+          </button>
+          <button type="button" class="auto-drop-item" data-open-auto="hmi">
+            <span class="auto-drop-icon">🖥️</span>
+            <div class="auto-drop-text">
+              <strong>HMI</strong>
+              <span>Touchscreen Operator Interfaces</span>
+            </div>
+          </button>
+          <button type="button" class="auto-drop-item" data-open-auto="vfd">
+            <span class="auto-drop-icon">⚙️</span>
+            <div class="auto-drop-text">
+              <strong>VFD</strong>
+              <span>Variable Frequency Drives &amp; Panels</span>
+            </div>
+          </button>
+          <button type="button" class="auto-drop-item" data-open-auto="scada">
+            <span class="auto-drop-icon">📊</span>
+            <div class="auto-drop-text">
+              <strong>SCADA</strong>
+              <span>Supervisory Telemetry &amp; Central Control</span>
+            </div>
+          </button>
+          <button type="button" class="auto-drop-item" data-open-auto="servo">
+            <span class="auto-drop-icon">🎯</span>
+            <div class="auto-drop-text">
+              <strong>SERVO METER</strong>
+              <span>High-Precision Servo Drives &amp; Motion</span>
+            </div>
+          </button>
+        </div>
+      </div>
+
+      <a href="what-we-do.html" class="nav-link active">What We Do <span class="nav-caret">▾</span></a>
+      <a href="products.html" class="nav-link">Products</a>
+      <a href="about.html" class="nav-link">About Us</a>
+      <a href="contact.html" class="nav-link">Contact</a>
+
+      <!-- 4-Column Mega Dropdown -->
+      <div class="mega-dropdown" id="megaDropdown">
+        <div class="mega-grid">
+          <div class="mega-col">
+            <div class="mega-col__title">What We Do</div>
+            <div class="mega-col__list">
+              <a href="automation.html" class="mega-col__link" data-open-auto="plc">1. Automation (PLC, HMI, VFD, SCADA, Servo)</a>
+              <a href="instrumentation.html" class="mega-col__link">2. Instrumentation</a>
+              <a href="electrical-utilities.html" class="mega-col__link">3. Electrical and Utilities</a>
+              <a href="utility-systems.html" class="mega-col__link">4. Utility System</a>
+              <a href="environmental-solutions.html" class="mega-col__link">5. Environmental Solution</a>
+              <a href="consultation.html" class="mega-col__link">6. Consultation</a>
+            </div>
+          </div>
+
+          <div class="mega-col">
+            <div class="mega-col__title">Products</div>
+            <div class="mega-col__list">
+              <a href="products.html" class="mega-col__link">Variable Frequency Drives (VFD)</a>
+              <a href="products.html" class="mega-col__link">PLC &amp; SCADA Panels</a>
+              <a href="products.html" class="mega-col__link">Coriolis &amp; Mag Flow Meters</a>
+              <a href="products.html" class="mega-col__link">Ultrasonic Level Transmitters</a>
+              <a href="products.html" class="mega-col__link">Smart Pressure Sensors</a>
+            </div>
+          </div>
+
+          <div class="mega-col">
+            <div class="mega-col__title">Industries</div>
+            <div class="mega-col__list">
+              <a href="about.html#industries" class="mega-col__link">Water &amp; Wastewater</a>
+              <a href="about.html#industries" class="mega-col__link">Power &amp; Utilities</a>
+              <a href="about.html#industries" class="mega-col__link">Manufacturing &amp; Process</a>
+              <a href="about.html#industries" class="mega-col__link">Mining &amp; Metals</a>
+              <a href="about.html#industries" class="mega-col__link">HVAC &amp; Infrastructure</a>
+            </div>
+          </div>
+
+          <div class="mega-col">
+            <div class="mega-col__title">Consultation</div>
+            <div class="mega-col__list">
+              <a href="consultation.html" class="mega-col__link">Plant Energy Audits</a>
+              <a href="consultation.html" class="mega-col__link">Testing &amp; Commissioning</a>
+              <a href="consultation.html" class="mega-col__link">Annual Maintenance (AMC)</a>
+              <a href="consultation.html" class="mega-col__link">VFD Retrofitting</a>
+              <a href="contact.html" class="mega-col__link">24/7 Technical Desk</a>
+            </div>
+          </div>
+        </div>
+
+        <div class="mega-bottom">
+          <div><span style="color:var(--brand-green);margin-right:0.4rem">●</span> Dedicated Engineering &amp; Commissioning Partner — Bhubaneswar, Odisha</div>
+          <a href="contact.html">Consult an Application Engineer →</a>
+        </div>
+      </div>
+    </div>
+  </div>
+
+  <div class="header__right">
+    <a href="RESOLINE CATALOGUE.pdf" download class="header__cat-btn" title="Download Product Catalogue">
+      <span>↓ Catalogue</span>
+    </a>
+    <a href="contact.html" class="header__quote-btn">CONTACT US</a>
+    <button class="burger" id="burgerBtn" aria-label="Toggle Menu" title="Toggle Navigation Menu">
+      <div class="burger__inner">
+        <span class="burger__bar"></span>
+        <span class="burger__bar"></span>
+      </div>
+    </button>
+  </div>
+</header>
+
+<main>
+  <!-- ═══ PAGE HERO ═══ -->
+  <section class="page-hero">
+    <div class="page-hero__badge">Comprehensive Engineering Capabilities</div>
+    <h1 class="page-hero__title">What We Do</h1>
+    <p class="page-hero__desc">
+      Resoline Techbis delivers end-to-end industrial engineering structured across six dedicated operational disciplines. From precision hardware and custom control panels to complete plant commissioning, we build high-reliability systems for heavy industry.
+    </p>
+  </section>
+
+  <!-- ═══ 5 CORE DIVISIONS OVERVIEW (PART 01) ═══ -->
+  <section class="content-section">
+    <div class="section-header">
+      <div class="section-eyebrow">What We Do • Part 01</div>
+      <h2 class="section-title">5 Core Engineering Divisions</h2>
+      <p class="section-desc">
+        Click any core division below to explore in-depth technical specifications, hardware capabilities, and industry use-cases.
+      </p>
+    </div>
+
+    <div class="home-segregation__grid">
+      <!-- 01: Automation -->
+      <div class="seg-card">
+        <div>
+          <div class="seg-card__top">
+            <span class="seg-card__num">#01</span>
+            <div class="seg-card__icon">
+              <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><rect x="4" y="4" width="16" height="16" rx="2"/><rect x="9" y="9" width="6" height="6"/><line x1="9" y1="1" x2="9" y2="4"/><line x1="15" y1="1" x2="15" y2="4"/></svg>
+            </div>
+          </div>
+          <span class="seg-card__tag">Turnkey Logic &amp; SCADA</span>
+          <h3 class="seg-card__heading">1. Automation</h3>
+          <p class="seg-card__body">
+            High-speed deterministic PLCs, graphical touchscreen HMIs, centralized supervisory SCADA architectures, and custom-wired industrial control panels.
+          </p>
+          <div class="auto-chips-row">
+            <button type="button" class="auto-chip-btn" data-open-auto="plc"><span>⚡ PLC</span></button>
+            <button type="button" class="auto-chip-btn" data-open-auto="hmi"><span>🖥️ HMI</span></button>
+            <button type="button" class="auto-chip-btn" data-open-auto="vfd"><span>⚙️ VFD</span></button>
+            <button type="button" class="auto-chip-btn" data-open-auto="scada"><span>📊 SCADA</span></button>
+            <button type="button" class="auto-chip-btn" data-open-auto="servo"><span>🎯 SERVO METER</span></button>
+          </div>
+        </div>
+        <div style="display:flex;gap:1rem;flex-wrap:wrap;align-items:center">
+          <a href="automation.html" class="seg-card__link">View Full Division →</a>
+          <button type="button" class="seg-card__link" data-open-auto="plc" style="background:none;border:none;cursor:pointer;padding:0">Showcase Pop-up ⚡</button>
+        </div>
+      </div>
+
+      <!-- 02: Instrumentation -->
+      <div class="seg-card">
+        <div>
+          <div class="seg-card__top">
+            <span class="seg-card__num">#02</span>
+            <div class="seg-card__icon">
+              <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><circle cx="12" cy="12" r="9"/><line x1="12" y1="3" x2="12" y2="7"/><line x1="12" y1="17" x2="12" y2="21"/></svg>
+            </div>
+          </div>
+          <span class="seg-card__tag">Precision Measurement</span>
+          <h3 class="seg-card__heading">2. Instrumentation</h3>
+          <p class="seg-card__body">
+            Coriolis mass flow meters, electromagnetic flow meters, non-contact ultrasonic level transmitters, and smart differential pressure sensors.
+          </p>
+        </div>
+        <a href="instrumentation.html" class="seg-card__link">View Instrumentation Division →</a>
+      </div>
+
+      <!-- 03: Electrical and Utilities -->
+      <div class="seg-card">
+        <div>
+          <div class="seg-card__top">
+            <span class="seg-card__num">#03</span>
+            <div class="seg-card__icon">
+              <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><polygon points="13 2 3 14 12 14 11 22 21 10 12 10 13 2"/></svg>
+            </div>
+          </div>
+          <span class="seg-card__tag">Power &amp; Drives</span>
+          <h3 class="seg-card__heading">3. Electrical and Utilities</h3>
+          <p class="seg-card__body">
+            Variable Frequency Drives (VFDs), motor softstarters, multi-tier Motor Control Centers (MCC), power distribution switchgear, and energy monitoring.
+          </p>
+        </div>
+        <a href="electrical-utilities.html" class="seg-card__link">View Electrical Division →</a>
+      </div>
+
+      <!-- 04: Utility System -->
+      <div class="seg-card">
+        <div>
+          <div class="seg-card__top">
+            <span class="seg-card__num">#04</span>
+            <div class="seg-card__icon">
+              <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><circle cx="12" cy="12" r="3"/><path d="M19.4 15a1.65 1.65 0 0 0 .33 1.82l.06.06a2 2 0 0 1 0 2.83 2 2 0 0 1-2.83 0l-.06-.06a1.65 1.65 0 0 0-1.82-.33 1.65 1.65 0 0 0-1 1.51V21a2 2 0 0 1-2 2 2 2 0 0 1-2-2v-.09A1.65 1.65 0 0 0 9 19.4a1.65 1.65 0 0 0-1.82.33l-.06.06a2 2 0 0 1-2.83 0 2 2 0 0 1 0-2.83l.06-.06a1.65 1.65 0 0 0 .33-1.82 1.65 1.65 0 0 0-1.51-1H3a2 2 0 0 1-2-2 2 2 0 0 1 2-2h.09A1.65 1.65 0 0 0 4.6 9a1.65 1.65 0 0 0-.33-1.82l-.06-.06a2 2 0 0 1 0-2.83 2 2 0 0 1 2.83 0l.06.06a1.65 1.65 0 0 0 1.82.33H9a1.65 1.65 0 0 0 1-1.51V3a2 2 0 0 1 2-2 2 2 0 0 1 2 2v.09a1.65 1.65 0 0 0 1 1.51 1.65 1.65 0 0 0 1.82-.33l.06-.06a2 2 0 0 1 2.83 0 2 2 0 0 1 0 2.83l-.06.06a1.65 1.65 0 0 0-.33 1.82V9a1.65 1.65 0 0 0 1.51 1H21a2 2 0 0 1 2 2 2 2 0 0 1-2 2h-.09a1.65 1.65 0 0 0-1.51 1z"/></svg>
+            </div>
+          </div>
+          <span class="seg-card__tag">Mechanical Utilities</span>
+          <h3 class="seg-card__heading">4. Utility System</h3>
+          <p class="seg-card__body">
+            Industrial pumping assemblies, heavy centrifugal and positive displacement skids, compressor control systems, and cooling fluid loops.
+          </p>
+        </div>
+        <a href="utility-systems.html" class="seg-card__link">View Utility Systems →</a>
+      </div>
+
+      <!-- 05: Environmental Solution -->
+      <div class="seg-card">
+        <div>
+          <div class="seg-card__top">
+            <span class="seg-card__num">#05</span>
+            <div class="seg-card__icon">
+              <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M12 2.69l5.66 5.66a8 8 0 1 1-11.31 0z"/></svg>
+            </div>
+          </div>
+          <span class="seg-card__tag">Water &amp; Ecological</span>
+          <h3 class="seg-card__heading">5. Environmental Solution</h3>
+          <p class="seg-card__body">
+            Turnkey Industrial RO, DM, Softener Plants, Effluent Treatment Plants (ETP), Sewage Treatment Plants (STP), and Zero Liquid Discharge (ZLD).
+          </p>
+        </div>
+        <a href="environmental-solutions.html" class="seg-card__link">View Environmental Tech →</a>
+      </div>
+    </div>
+
+    <!-- ═══ WHAT WE DO • PART 02: CONSULTATION, AUDITS & AMC ═══ -->
+    <div class="consultation-part" id="consultation-part" style="margin-top:3rem;padding-top:2.5rem;border-top:1px solid var(--hairline)">
+      <div class="section-header" style="margin-bottom:2rem">
+        <div class="section-eyebrow">What We Do • Part 02</div>
+        <h2 class="section-title">Engineering Consultation, Audits &amp; AMC</h2>
+        <p class="section-desc">
+          Direct technical partnership, on-site diagnostics, plant efficiency audits, and round-the-clock maintenance agreements managed by senior industrial engineers.
+        </p>
+      </div>
+
+      <div class="consultation-grid" style="display:grid;grid-template-columns:repeat(auto-fit,minmax(min(100%,15rem),1fr));gap:1.25rem;margin-bottom:2rem">
+        <!-- Consult Card 1 -->
+        <div class="consult-card" style="background:var(--surface);border:1px solid var(--hairline);border-radius:var(--radius-card);padding:1.8rem 1.5rem;display:flex;flex-direction:column;justify-content:space-between">
+          <div>
+            <div style="font-size:1.6rem;margin-bottom:.9rem;width:3rem;height:3rem;border-radius:12px;background:rgba(118,184,42,0.14);border:1px solid rgba(118,184,42,0.28);display:flex;align-items:center;justify-content:center">⚡</div>
+            <h4 style="font-size:1.1rem;font-weight:600;color:var(--ink);margin-bottom:.5rem">Plant Energy Audits</h4>
+            <p style="font-size:.82rem;color:var(--ink-soft);line-height:1.55;margin-bottom:1.2rem">Comprehensive power factor analysis, harmonic distortion evaluations, and VFD energy conservation ROI studies for industrial pumps and fans.</p>
+          </div>
+          <span style="align-self:flex-start;font-size:.65rem;font-weight:700;text-transform:uppercase;letter-spacing:.08em;background:rgba(37,99,201,0.1);color:var(--brand);padding:.25rem .65rem;border-radius:var(--radius-pill)">Efficiency Optimization</span>
+        </div>
+
+        <!-- Consult Card 2 -->
+        <div class="consult-card" style="background:var(--surface);border:1px solid var(--hairline);border-radius:var(--radius-card);padding:1.8rem 1.5rem;display:flex;flex-direction:column;justify-content:space-between">
+          <div>
+            <div style="font-size:1.6rem;margin-bottom:.9rem;width:3rem;height:3rem;border-radius:12px;background:rgba(118,184,42,0.14);border:1px solid rgba(118,184,42,0.28);display:flex;align-items:center;justify-content:center">🎯</div>
+            <h4 style="font-size:1.1rem;font-weight:600;color:var(--ink);margin-bottom:.5rem">NABL Traceable Calibration</h4>
+            <p style="font-size:.82rem;color:var(--ink-soft);line-height:1.55;margin-bottom:1.2rem">On-site flow rig verification, electromagnetic meter profiling, precision pressure transmitter calibration, and RTD temperature loop validation.</p>
+          </div>
+          <span style="align-self:flex-start;font-size:.65rem;font-weight:700;text-transform:uppercase;letter-spacing:.08em;background:rgba(37,99,201,0.1);color:var(--brand);padding:.25rem .65rem;border-radius:var(--radius-pill)">Compliance &amp; QA</span>
+        </div>
+
+        <!-- Consult Card 3 -->
+        <div class="consult-card" style="background:var(--surface);border:1px solid var(--hairline);border-radius:var(--radius-card);padding:1.8rem 1.5rem;display:flex;flex-direction:column;justify-content:space-between">
+          <div>
+            <div style="font-size:1.6rem;margin-bottom:.9rem;width:3rem;height:3rem;border-radius:12px;background:rgba(118,184,42,0.14);border:1px solid rgba(118,184,42,0.28);display:flex;align-items:center;justify-content:center">🔄</div>
+            <h4 style="font-size:1.1rem;font-weight:600;color:var(--ink);margin-bottom:.5rem">VFD &amp; Panel Retrofitting</h4>
+            <p style="font-size:.82rem;color:var(--ink-soft);line-height:1.55;margin-bottom:1.2rem">Modernization of obsolete MCC lineups, DOL to VFD drive conversions, PLC ladder logic migration, and busbar capacity expansions.</p>
+          </div>
+          <span style="align-self:flex-start;font-size:.65rem;font-weight:700;text-transform:uppercase;letter-spacing:.08em;background:rgba(37,99,201,0.1);color:var(--brand);padding:.25rem .65rem;border-radius:var(--radius-pill)">System Modernization</span>
+        </div>
+
+        <!-- Consult Card 4 -->
+        <div class="consult-card" style="background:var(--surface);border:1px solid var(--hairline);border-radius:var(--radius-card);padding:1.8rem 1.5rem;display:flex;flex-direction:column;justify-content:space-between">
+          <div>
+            <div style="font-size:1.6rem;margin-bottom:.9rem;width:3rem;height:3rem;border-radius:12px;background:rgba(118,184,42,0.14);border:1px solid rgba(118,184,42,0.28);display:flex;align-items:center;justify-content:center">🛠️</div>
+            <h4 style="font-size:1.1rem;font-weight:600;color:var(--ink);margin-bottom:.5rem">24/7 AMC &amp; Field Support</h4>
+            <p style="font-size:.82rem;color:var(--ink-soft);line-height:1.55;margin-bottom:1.2rem">Annual Maintenance Contracts (AMC) with guaranteed emergency dispatch, routine preventive inspections, and remote SCADA telemetry assistance.</p>
+          </div>
+          <span style="align-self:flex-start;font-size:.65rem;font-weight:700;text-transform:uppercase;letter-spacing:.08em;background:rgba(37,99,201,0.1);color:var(--brand);padding:.25rem .65rem;border-radius:var(--radius-pill)">24/7 Operations</span>
+        </div>
+      </div>
+
+      <!-- Direct Action Consultation Banner -->
+      <div style="background:linear-gradient(135deg,#092048 0%,#0f3675 100%);border-radius:var(--radius-card);padding:1.8rem 2.2rem;display:flex;align-items:center;justify-content:space-between;flex-wrap:wrap;gap:1.5rem">
+        <div>
+          <h4 style="font-size:1.15rem;font-weight:700;color:#ffffff;margin-bottom:.3rem">Need Plant Consultation or an Energy Audit?</h4>
+          <p style="font-size:.82rem;color:rgba(255,255,255,.8);max-width:32rem">Speak directly with senior application engineers in Bhubaneswar. We evaluate on-site requirements across Odisha and Eastern India.</p>
+        </div>
+        <div style="display:flex;gap:.75rem;flex-wrap:wrap">
+          <a href="tel:+91637053100" class="btn-primary" style="padding:.65rem 1.4rem;font-size:.8rem;background:var(--brand-green);border-color:var(--brand-green)">Call +91 637053100</a>
+          <a href="contact.html" class="btn-outline" style="padding:.65rem 1.4rem;font-size:.8rem;border-color:rgba(255,255,255,.3);color:#fff">Request Engineering Consultation →</a>
+        </div>
+      </div>
+    </div>
+  </section>
+</main>
+
+<!-- ═══ SHARED FOOTER ═══ -->
+<footer class="footer">
+  <div class="footer__cta">
+    <div class="footer__cta-eye">Partnering For Success</div>
+    <div class="footer__cta-title">Ready to Engineer Your Plant Operations?</div>
+    <a href="contact.html" class="btn-primary" style="padding:.9rem 2.4rem;font-size:.9rem">Consult an Application Engineer →</a>
+  </div>
+
+  <div class="footer__cols">
+    <div>
+      <div class="footer__col-title">Resoline Techbis</div>
+      <p style="font-size:.82rem;opacity:.75;line-height:1.6;margin-bottom:1rem">
+        Engineering future-ready industrial automation panels, process instrumentation, and turnkey water systems for mission-critical reliability.
+      </p>
+      <p style="font-size:.8rem;color:var(--brand-light);font-weight:600">Managing Director: Subhashree Sahoo</p>
+    </div>
+
+    <div>
+      <div class="footer__col-title">What We Do</div>
+      <ul class="footer__links">
+        <li><a href="automation.html">1. Automation</a></li>
+        <li><a href="instrumentation.html">2. Instrumentation</a></li>
+        <li><a href="electrical-utilities.html">3. Electrical &amp; Utilities</a></li>
+        <li><a href="utility-systems.html">4. Utility System</a></li>
+        <li><a href="environmental-solutions.html">5. Environmental Solution</a></li>
+        <li><a href="consultation.html">6. Consultation</a></li>
+      </ul>
+    </div>
+
+    <div>
+      <div class="footer__col-title">Navigation</div>
+      <ul class="footer__links">
+        <li><a href="index.html">Home</a></li>
+        <li><a href="what-we-do.html">What We Do Hub</a></li>
+        <li><a href="products.html">Hardware Catalog (22 Products)</a></li>
+        <li><a href="about.html">About Resoline Techbis</a></li>
+        <li><a href="contact.html">Engineering Desk &amp; Inquiry</a></li>
+        <li><a href="RESOLINE CATALOGUE.pdf" download>Download PDF Catalogue</a></li>
+      </ul>
+    </div>
+
+    <div>
+      <div class="footer__col-title">Contact &amp; Location</div>
+      <div class="footer__contact">
+        <p><strong>HQ:</strong> Plot No 122/A, Rasulgarh Industrial Estate, Bhubaneswar, Odisha - 751010</p>
+        <p><strong>Hotline:</strong> <a href="tel:+91637053100" style="color:var(--brand-light)">+91 637053100</a></p>
+        <p><strong>Email:</strong> <a href="mailto:info@resoline.in" style="color:var(--brand-light)">info@resoline.in</a></p>
+        <p><strong>Field Support:</strong> 24/7 Breakdown &amp; AMC</p>
+      </div>
+    </div>
+  </div>
+
+  <div class="footer__bottom">
+    <div class="footer__copy">© 2026 Resoline Techbis Private Limited. All rights reserved. Bhubaneswar, Odisha.</div>
+    <div style="font-size:.74rem;opacity:.6">ISO 9001:2015 Compliant Engineering Standards</div>
+  </div>
+</footer>
+
+<a href="https://wa.me/91637053100" class="whatsapp-float" target="_blank" rel="noopener" aria-label="WhatsApp Engineering Support">
+  <svg viewBox="0 0 24 24"><path d="M12.04 2c-5.46 0-9.91 4.45-9.91 9.91 0 1.75.46 3.45 1.32 4.95L2.05 22l5.25-1.38c1.45.79 3.08 1.21 4.74 1.21 5.46 0 9.91-4.45 9.91-9.91 0-2.65-1.03-5.14-2.9-7.01A9.82 9.82 0 0 0 12.04 2z"/></svg>
+  <span>Quick Support</span>
+</a>
+
+<script>
+// Burger menu toggle
+const burger = document.getElementById('burgerBtn');
+const fsMenu = document.getElementById('fsMenu');
+const fsClose = document.getElementById('fsClose');
+const fsBackdrop = document.getElementById('fsBackdrop');
+
+function openMenu() {
+  fsMenu.classList.add('open');
+  document.body.style.overflow = 'hidden';
+  const panel = fsMenu.querySelector('.fs-menu__panel');
+  const backdrop = fsMenu.querySelector('.fs-menu__backdrop');
+  if(backdrop) backdrop.style.opacity = '1';
+  if(panel) {
+    panel.style.opacity = '1';
+    panel.style.transform = 'translateY(0)';
+  }
+  document.querySelectorAll('.fs-menu__link').forEach((l, i) => {
+    setTimeout(() => {
+      l.style.opacity = '1';
+      l.style.transform = 'translateY(0)';
+    }, 100 + i * 60);
+  });
+}
+
+function closeMenu() {
+  fsMenu.classList.remove('open');
+  document.body.style.overflow = '';
+}
+
+if(burger) burger.addEventListener('click', openMenu);
+if(fsClose) fsClose.addEventListener('click', closeMenu);
+if(fsBackdrop) fsBackdrop.addEventListener('click', closeMenu);
+document.addEventListener('keydown', e => { if(e.key === 'Escape') closeMenu(); });
+</script>
+<script src="automation-modal.js"></script>
+</body>
+</html>

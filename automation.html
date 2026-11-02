@@ -1,0 +1,422 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8"/>
+<meta name="viewport" content="width=device-width,initial-scale=1"/>
+<title>Automation — PLC, SCADA &amp; Panels | Resoline Techbis</title>
+<meta name="description" content="Turnkey industrial automation engineering: modular PLCs, custom control panels, touchscreen HMIs, and plant-wide SCADA telemetry suites by Resoline Techbis in Bhubaneswar, Odisha."/>
+<link rel="stylesheet" href="styles.css"/>
+</head>
+<body>
+
+<!-- ═══ FULLSCREEN MENU OVERLAY ═══ -->
+<div class="fs-menu" id="fsMenu">
+  <div class="fs-menu__backdrop" id="fsBackdrop"></div>
+  <div class="fs-menu__panel" id="fsPanel">
+    <div class="fs-menu__top">
+      <a href="index.html" class="fs-menu__brand" aria-label="Resoline Techbis">
+        <span class="brand-pill"><img src="assets/logo-resoline.png" alt="Resoline Techbis" class="brand-logo-img"/></span>
+      </a>
+      <button class="fs-menu__close" id="fsClose" aria-label="Close Menu">
+        <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><line x1="18" y1="6" x2="6" y2="18"/><line x1="6" y1="6" x2="18" y2="18"/></svg>
+      </button>
+    </div>
+
+    <div class="fs-menu__split">
+      <nav class="fs-menu__nav">
+        <a href="index.html" class="fs-menu__link"><span>Home</span><span class="menu-arrow">→</span></a>
+        <a href="what-we-do.html" class="fs-menu__link"><span>What We Do</span><span class="menu-arrow">→</span></a>
+        <a href="products.html" class="fs-menu__link"><span>Products &amp; Hardware</span><span class="menu-arrow">→</span></a>
+        <a href="about.html" class="fs-menu__link"><span>About Us</span><span class="menu-arrow">→</span></a>
+        <a href="contact.html" class="fs-menu__link"><span>Contact Desk</span><span class="menu-arrow">→</span></a>
+      </nav>
+
+      <div class="fs-menu__context">
+        <div class="menu-feat">
+          <div class="menu-feat-badge">DIVISION #01</div>
+          <div class="menu-feat-title">Industrial Automation &amp; SCADA</div>
+          <div class="menu-feat-desc">Custom-engineered PLC control panels, high-contrast touchscreen HMIs, and centralized supervisory SCADA architectures for continuous process plants.</div>
+        </div>
+        <div class="menu-contact-info">
+          <div><strong>Engineering Desk:</strong> Plot No 122/A, Rasulgarh Industrial Estate, Bhubaneswar, Odisha</div>
+          <div><strong>Direct Hotline:</strong> <a href="tel:+91637053100">+91 637053100</a></div>
+        </div>
+        <a href="contact.html" class="fs-menu__cta-quote">Request Automation Quote →</a>
+      </div>
+    </div>
+
+    <div class="fs-menu__bottom">
+      <div style="font-size:0.75rem;color:rgba(255,255,255,0.6)">© 2026 Resoline Techbis. Managing Director: Subhashree Sahoo.</div>
+      <div class="fs-menu__socials">
+        <a href="https://linkedin.com" target="_blank" rel="noopener">LinkedIn</a>
+        <a href="https://wa.me/91637053100" target="_blank" rel="noopener">WhatsApp</a>
+        <a href="mailto:info@resoline.in">Email Desk</a>
+      </div>
+    </div>
+  </div>
+</div>
+
+<!-- ═══ HEADER ═══ -->
+<header class="header">
+  <a href="index.html" class="header__brand" aria-label="Resoline Techbis Home">
+    <span class="brand-pill"><img src="assets/logo-resoline.png" alt="Resoline Techbis" class="brand-logo-img"/></span>
+  </a>
+
+  <div class="header__center">
+    <div class="nav-mega-group" id="navMegaGroup">
+      <a href="index.html" class="nav-link">Home</a>
+
+      <!-- Direct Automation Dropdown -->
+      <div class="nav-dropdown-item">
+        <button class="nav-mega-btn" id="navAutoDropdownBtn" type="button" aria-haspopup="true">
+          <span>Automation</span> <span class="nav-caret">▾</span>
+        </button>
+        <div class="nav-sub-dropdown" id="navAutoDropdown">
+          <button type="button" class="auto-drop-item" data-open-auto="plc">
+            <span class="auto-drop-icon">⚡</span>
+            <div class="auto-drop-text">
+              <strong>PLC</strong>
+              <span>Programmable Logic Controllers &amp; Panels</span>
+            </div>
+          </button>
+          <button type="button" class="auto-drop-item" data-open-auto="hmi">
+            <span class="auto-drop-icon">🖥️</span>
+            <div class="auto-drop-text">
+              <strong>HMI</strong>
+              <span>Touchscreen Operator Interfaces</span>
+            </div>
+          </button>
+          <button type="button" class="auto-drop-item" data-open-auto="vfd">
+            <span class="auto-drop-icon">⚙️</span>
+            <div class="auto-drop-text">
+              <strong>VFD</strong>
+              <span>Variable Frequency Drives &amp; Panels</span>
+            </div>
+          </button>
+          <button type="button" class="auto-drop-item" data-open-auto="scada">
+            <span class="auto-drop-icon">📊</span>
+            <div class="auto-drop-text">
+              <strong>SCADA</strong>
+              <span>Supervisory Telemetry &amp; Central Control</span>
+            </div>
+          </button>
+          <button type="button" class="auto-drop-item" data-open-auto="servo">
+            <span class="auto-drop-icon">🎯</span>
+            <div class="auto-drop-text">
+              <strong>SERVO METER</strong>
+              <span>High-Precision Servo Drives &amp; Motion</span>
+            </div>
+          </button>
+        </div>
+      </div>
+
+      <a href="what-we-do.html" class="nav-link active">What We Do <span class="nav-caret">▾</span></a>
+      <a href="products.html" class="nav-link">Products</a>
+      <a href="about.html" class="nav-link">About Us</a>
+      <a href="contact.html" class="nav-link">Contact</a>
+
+      <!-- Mega Dropdown -->
+      <div class="mega-dropdown" id="megaDropdown">
+        <div class="mega-grid">
+          <div class="mega-col">
+            <div class="mega-col__title">What We Do</div>
+            <div class="mega-col__list">
+              <a href="automation.html" class="mega-col__link" data-open-auto="plc" style="color:var(--brand-green);font-weight:600">1. Automation (PLC, HMI, VFD, SCADA, Servo)</a>
+              <a href="instrumentation.html" class="mega-col__link">2. Instrumentation</a>
+              <a href="electrical-utilities.html" class="mega-col__link">3. Electrical and Utilities</a>
+              <a href="utility-systems.html" class="mega-col__link">4. Utility System</a>
+              <a href="environmental-solutions.html" class="mega-col__link">5. Environmental Solution</a>
+              <a href="consultation.html" class="mega-col__link">6. Consultation</a>
+            </div>
+          </div>
+          <div class="mega-col">
+            <div class="mega-col__title">Products</div>
+            <div class="mega-col__list">
+              <a href="products.html" class="mega-col__link">PLC &amp; SCADA Panels</a>
+              <a href="products.html" class="mega-col__link">Variable Frequency Drives</a>
+              <a href="products.html" class="mega-col__link">Flow &amp; Level Instruments</a>
+              <a href="products.html" class="mega-col__link">Pressure &amp; Temp Gauges</a>
+            </div>
+          </div>
+          <div class="mega-col">
+            <div class="mega-col__title">Industries</div>
+            <div class="mega-col__list">
+              <a href="about.html#industries" class="mega-col__link">Water &amp; Wastewater</a>
+              <a href="about.html#industries" class="mega-col__link">Power &amp; Utilities</a>
+              <a href="about.html#industries" class="mega-col__link">Manufacturing &amp; Process</a>
+            </div>
+          </div>
+          <div class="mega-col">
+            <div class="mega-col__title">Consultation</div>
+            <div class="mega-col__list">
+              <a href="consultation.html" class="mega-col__link">Energy &amp; Automation Audits</a>
+              <a href="consultation.html" class="mega-col__link">Field Calibration &amp; Testing</a>
+              <a href="contact.html" class="mega-col__link">24/7 Technical Desk</a>
+            </div>
+          </div>
+        </div>
+        <div class="mega-bottom">
+          <div><span style="color:var(--brand-green);margin-right:0.4rem">●</span> Dedicated Engineering &amp; Commissioning Partner — Bhubaneswar, Odisha</div>
+          <a href="contact.html">Consult an Application Engineer →</a>
+        </div>
+      </div>
+    </div>
+  </div>
+
+  <div class="header__right">
+    <a href="RESOLINE CATALOGUE.pdf" download class="header__cat-btn" title="Download Catalogue"><span>↓ Catalogue</span></a>
+    <a href="contact.html" class="header__quote-btn">CONTACT US</a>
+    <button class="burger" id="burgerBtn" aria-label="Toggle Menu">
+      <div class="burger__inner"><span class="burger__bar"></span><span class="burger__bar"></span></div>
+    </button>
+  </div>
+</header>
+
+<main>
+  <!-- ═══ PAGE HERO ═══ -->
+  <section class="page-hero">
+    <div class="page-hero__badge">Operational Division #01</div>
+    <h1 class="page-hero__title">Automation</h1>
+    <p class="page-hero__desc">
+      Turnkey process automation, custom control panels, PLC programming, touchscreen HMIs, and plant-wide SCADA telemetry suites engineered for precision industrial control.
+    </p>
+
+    <!-- Quick Machine Pop-up Launcher Chips -->
+    <div class="auto-chips-row" style="margin-top:1.6rem">
+      <button type="button" class="btn-auto-launch" data-open-auto="plc"><span>⚡ PLC Pop-up</span></button>
+      <button type="button" class="btn-auto-launch" data-open-auto="hmi"><span>🖥️ HMI Pop-up</span></button>
+      <button type="button" class="btn-auto-launch" data-open-auto="vfd"><span>⚙️ VFD Pop-up</span></button>
+      <button type="button" class="btn-auto-launch" data-open-auto="scada"><span>📊 SCADA Pop-up</span></button>
+      <button type="button" class="btn-auto-launch" data-open-auto="servo"><span>🎯 SERVO METER Pop-up</span></button>
+    </div>
+  </section>
+
+  <!-- ═══ DIVISION CONTENT ═══ -->
+  <section class="content-section">
+    <div class="section-header">
+      <div class="section-eyebrow">Engineering Capabilities</div>
+      <h2 class="section-title">End-to-End Plant Control Architecture</h2>
+      <p class="section-desc">
+        Resoline Techbis designs, wires, tests, and commissions deterministic automation systems adhering to IP54/IP55 industrial enclosure standards.
+      </p>
+    </div>
+
+    <div class="catalog-grid" style="margin-bottom:3rem">
+      <!-- Feature 1: PLCs -->
+      <div class="prod-card">
+        <div class="prod-card__img-wrap">
+          <img src="plc.png" alt="Programmable Logic Controller (PLC)" class="prod-card__img"/>
+        </div>
+        <span class="prod-card__tag">Logic Engine</span>
+        <h3 class="prod-card__title">Modular Industrial PLCs</h3>
+        <p class="prod-card__desc">
+          High-speed deterministic logic controllers with expandable digital and analog I/O cards, RS-485 Modbus, and industrial Ethernet fieldbus connectivity.
+        </p>
+        <div class="prod-card__specs">
+          <div class="prod-spec-row"><span>Fieldbus:</span><strong>Modbus RTU / TCP / Profinet</strong></div>
+          <div class="prod-spec-row"><span>Mounting:</span><strong>Standard 35mm DIN-Rail</strong></div>
+          <div class="prod-spec-row"><span>Cycle Time:</span><strong>Sub-millisecond execution</strong></div>
+        </div>
+        <div style="display:flex;gap:.6rem;flex-wrap:wrap">
+          <button type="button" class="btn-inquire" data-open-auto="plc" style="flex:1;text-align:center">Showcase Pop-up ⚡</button>
+          <a href="contact.html" class="btn-outline" style="font-size:.78rem;padding:.5rem .9rem;color:var(--brand)">Quote →</a>
+        </div>
+      </div>
+
+      <!-- Feature 2: PLC Control Panels -->
+      <div class="prod-card">
+        <div class="prod-card__img-wrap">
+          <img src="plc pannel.png" alt="Custom PLC Automation Panel" class="prod-card__img"/>
+        </div>
+        <span class="prod-card__tag">Turnkey Assembly</span>
+        <h3 class="prod-card__title">Custom Automation Panels</h3>
+        <p class="prod-card__desc">
+          Heavy sheet steel, powder-coated control panels with neatly routed cable raceways, industrial terminal blocks, surge arrestors, and circuit protection.
+        </p>
+        <div class="prod-card__specs">
+          <div class="prod-spec-row"><span>Enclosure:</span><strong>IP54 / IP55 Powder Coated</strong></div>
+          <div class="prod-spec-row"><span>Wiring:</span><strong>Numbered Ferrule Traceability</strong></div>
+          <div class="prod-spec-row"><span>Protection:</span><strong>MCBs, Surge Protection &amp; SMPS</strong></div>
+        </div>
+        <div style="display:flex;gap:.6rem;flex-wrap:wrap">
+          <button type="button" class="btn-inquire" data-open-auto="plc" style="flex:1;text-align:center">Showcase Pop-up ⚡</button>
+          <a href="contact.html" class="btn-outline" style="font-size:.78rem;padding:.5rem .9rem;color:var(--brand)">Quote →</a>
+        </div>
+      </div>
+
+      <!-- Feature 3: Touchscreen HMIs -->
+      <div class="prod-card">
+        <div class="prod-card__img-wrap">
+          <img src="hmi.png" alt="Industrial Touchscreen HMI" class="prod-card__img"/>
+        </div>
+        <span class="prod-card__tag">Operator Interface</span>
+        <h3 class="prod-card__title">Touchscreen Graphical HMIs</h3>
+        <p class="prod-card__desc">
+          Vibrant color TFT displays with animated synoptic plant mimics, real-time recipe management, trend logging, and multi-level operator security passwords.
+        </p>
+        <div class="prod-card__specs">
+          <div class="prod-spec-row"><span>Display:</span><strong>7" to 15" TFT Touchscreen</strong></div>
+          <div class="prod-spec-row"><span>Communication:</span><strong>Dual Serial Ports + Ethernet</strong></div>
+          <div class="prod-spec-row"><span>Features:</span><strong>Alarm History &amp; Data Logging</strong></div>
+        </div>
+        <div style="display:flex;gap:.6rem;flex-wrap:wrap">
+          <button type="button" class="btn-inquire" data-open-auto="hmi" style="flex:1;text-align:center">Showcase Pop-up 🖥️</button>
+          <a href="contact.html" class="btn-outline" style="font-size:.78rem;padding:.5rem .9rem;color:var(--brand)">Quote →</a>
+        </div>
+      </div>
+
+      <!-- Feature 4: Variable Frequency Drives (VFD) -->
+      <div class="prod-card">
+        <div class="prod-card__img-wrap">
+          <img src="variable frequency drive.png" alt="Variable Frequency Drive (VFD)" class="prod-card__img"/>
+        </div>
+        <span class="prod-card__tag">Speed &amp; Torque</span>
+        <h3 class="prod-card__title">Variable Frequency Drives (VFD)</h3>
+        <p class="prod-card__desc">
+          Heavy-duty variable speed AC motor control delivering dynamic speed regulation, soft starting, and up to 40% energy conservation across pumps and blowers.
+        </p>
+        <div class="prod-card__specs">
+          <div class="prod-spec-row"><span>Power:</span><strong>0.75 kW to 630 kW+</strong></div>
+          <div class="prod-spec-row"><span>Control:</span><strong>Sensorless Vector &amp; Closed Loop</strong></div>
+          <div class="prod-spec-row"><span>Protection:</span><strong>Thermal, Ground Fault &amp; Stall</strong></div>
+        </div>
+        <div style="display:flex;gap:.6rem;flex-wrap:wrap">
+          <button type="button" class="btn-inquire" data-open-auto="vfd" style="flex:1;text-align:center">Showcase Pop-up ⚙️</button>
+          <a href="contact.html" class="btn-outline" style="font-size:.78rem;padding:.5rem .9rem;color:var(--brand)">Quote →</a>
+        </div>
+      </div>
+
+      <!-- Feature 5: SCADA Telemetry -->
+      <div class="prod-card">
+        <div class="prod-card__img-wrap">
+          <img src="sccada.png" alt="Supervisory SCADA Telemetry Suite" class="prod-card__img"/>
+        </div>
+        <span class="prod-card__tag">Plant-Wide Telemetry</span>
+        <h3 class="prod-card__title">SCADA Telemetry Suites</h3>
+        <p class="prod-card__desc">
+          Centralized supervisory workstation software supporting real-time data acquisition, SQL historical database logging, automated PDF shift reporting, and cloud telemetry.
+        </p>
+        <div class="prod-card__specs">
+          <div class="prod-spec-row"><span>Architecture:</span><strong>Client-Server Distributed</strong></div>
+          <div class="prod-spec-row"><span>Compliance:</span><strong>SPCB / CPCB Cloud Server Upload</strong></div>
+          <div class="prod-spec-row"><span>Analytics:</span><strong>Live Production &amp; OEE Trends</strong></div>
+        </div>
+        <div style="display:flex;gap:.6rem;flex-wrap:wrap">
+          <button type="button" class="btn-inquire" data-open-auto="scada" style="flex:1;text-align:center">Showcase Pop-up 📊</button>
+          <a href="contact.html" class="btn-outline" style="font-size:.78rem;padding:.5rem .9rem;color:var(--brand)">Quote →</a>
+        </div>
+      </div>
+
+      <!-- Feature 6: Servo Motors & Motion Drives -->
+      <div class="prod-card">
+        <div class="prod-card__img-wrap">
+          <img src="servo motor.png" alt="Servo Motor & Precision Drive" class="prod-card__img"/>
+        </div>
+        <span class="prod-card__tag">Precision Motion</span>
+        <h3 class="prod-card__title">High-Precision Servo Drives</h3>
+        <p class="prod-card__desc">
+          Ultra-responsive brushless AC servo motors with multi-turn absolute optical encoders, delivering micron-accurate positioning and high dynamic response.
+        </p>
+        <div class="prod-card__specs">
+          <div class="prod-spec-row"><span>Feedback:</span><strong>23-Bit Absolute Encoder</strong></div>
+          <div class="prod-spec-row"><span>Speed:</span><strong>Up to 6,000 RPM Dynamic</strong></div>
+          <div class="prod-spec-row"><span>Motion Bus:</span><strong>EtherCAT &amp; CANopen Ready</strong></div>
+        </div>
+        <div style="display:flex;gap:.6rem;flex-wrap:wrap">
+          <button type="button" class="btn-inquire" data-open-auto="servo" style="flex:1;text-align:center">Showcase Pop-up 🎯</button>
+          <a href="contact.html" class="btn-outline" style="font-size:.78rem;padding:.5rem .9rem;color:var(--brand)">Quote →</a>
+        </div>
+      </div>
+    </div>
+
+    <!-- Quick Navigation Between Divisions -->
+    <div style="background:var(--surface);padding:2rem;border-radius:var(--radius-card);display:flex;justify-content:space-between;align-items:center;flex-wrap:wrap;gap:1.5rem">
+      <div>
+        <h4 style="font-size:1.1rem;font-weight:600;margin-bottom:.3rem">Need Next Division?</h4>
+        <p style="font-size:.84rem;color:var(--ink-soft)">Explore Division #02: Process Instrumentation &amp; Flow Meters.</p>
+      </div>
+      <div style="display:flex;gap:1rem;flex-wrap:wrap">
+        <a href="what-we-do.html" class="btn-outline" style="color:var(--ink);border-color:var(--hairline)">All Divisions</a>
+        <a href="instrumentation.html" class="btn-primary">Next: Instrumentation →</a>
+      </div>
+    </div>
+  </section>
+</main>
+
+<!-- ═══ FOOTER ═══ -->
+<footer class="footer">
+  <div class="footer__cta">
+    <div class="footer__cta-eye">Partnering For Success</div>
+    <div class="footer__cta-title">Upgrade Your Plant Automation System</div>
+    <a href="contact.html" class="btn-primary" style="padding:.9rem 2.4rem;font-size:.9rem">Consult an Automation Engineer →</a>
+  </div>
+
+  <div class="footer__cols">
+    <div>
+      <div class="footer__col-title">Resoline Techbis</div>
+      <p style="font-size:.82rem;opacity:.75;line-height:1.6;margin-bottom:1rem">
+        Engineering future-ready industrial automation panels, process instrumentation, and turnkey water systems for mission-critical reliability.
+      </p>
+      <p style="font-size:.8rem;color:var(--brand-light);font-weight:600">Managing Director: Subhashree Sahoo</p>
+    </div>
+
+    <div>
+      <div class="footer__col-title">What We Do</div>
+      <ul class="footer__links">
+        <li><a href="automation.html">1. Automation</a></li>
+        <li><a href="instrumentation.html">2. Instrumentation</a></li>
+        <li><a href="electrical-utilities.html">3. Electrical &amp; Utilities</a></li>
+        <li><a href="utility-systems.html">4. Utility System</a></li>
+        <li><a href="environmental-solutions.html">5. Environmental Solution</a></li>
+        <li><a href="consultation.html">6. Consultation</a></li>
+      </ul>
+    </div>
+
+    <div>
+      <div class="footer__col-title">Navigation</div>
+      <ul class="footer__links">
+        <li><a href="index.html">Home</a></li>
+        <li><a href="what-we-do.html">What We Do Hub</a></li>
+        <li><a href="products.html">Hardware Catalog (22 Products)</a></li>
+        <li><a href="about.html">About Resoline Techbis</a></li>
+        <li><a href="contact.html">Engineering Desk &amp; Inquiry</a></li>
+      </ul>
+    </div>
+
+    <div>
+      <div class="footer__col-title">Contact &amp; Location</div>
+      <div class="footer__contact">
+        <p><strong>HQ:</strong> Plot No 122/A, Rasulgarh Industrial Estate, Bhubaneswar, Odisha - 751010</p>
+        <p><strong>Hotline:</strong> <a href="tel:+91637053100" style="color:var(--brand-light)">+91 637053100</a></p>
+        <p><strong>Email:</strong> <a href="mailto:info@resoline.in" style="color:var(--brand-light)">info@resoline.in</a></p>
+      </div>
+    </div>
+  </div>
+
+  <div class="footer__bottom">
+    <div class="footer__copy">© 2026 Resoline Techbis Private Limited. All rights reserved. Bhubaneswar, Odisha.</div>
+  </div>
+</footer>
+
+<script>
+const burger = document.getElementById('burgerBtn');
+const fsMenu = document.getElementById('fsMenu');
+const fsClose = document.getElementById('fsClose');
+const fsBackdrop = document.getElementById('fsBackdrop');
+
+function openMenu() {
+  fsMenu.classList.add('open');
+  document.body.style.overflow = 'hidden';
+}
+function closeMenu() {
+  fsMenu.classList.remove('open');
+  document.body.style.overflow = '';
+}
+if(burger) burger.addEventListener('click', openMenu);
+if(fsClose) fsClose.addEventListener('click', closeMenu);
+if(fsBackdrop) fsBackdrop.addEventListener('click', closeMenu);
+document.addEventListener('keydown', e => { if(e.key === 'Escape') closeMenu(); });
+</script>
+<script src="automation-modal.js"></script>
+</body>
+</html>

@@ -1,0 +1,3475 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8"/>
+<meta name="viewport" content="width=device-width,initial-scale=1"/>
+<title>Resoline Techbis — Precision In Every Solution | Industrial Automation, VFD Drives &amp; Water Engineering</title>
+<meta name="description" content="Resoline Techbis — Partnering for Success. High-performance industrial engineering for Variable Frequency Drives (VFD), Process Automation Panels, Flow &amp; Level Instrumentation, and Turnkey Water &amp; Wastewater Treatment in Bhubaneswar, Odisha."/>
+<link rel="preconnect" href="https://fonts.googleapis.com"/>
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin/>
+<link href="https://fonts.googleapis.com/css2?family=Caveat:wght@600;700&family=Onest:wght@400;500;600;700;800&display=swap" rel="stylesheet"/>
+<link rel="stylesheet" href="styles.css"/>
+<script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/3.12.5/gsap.min.js"></script>
+<script type="importmap">{"imports":{"lenis":"https://cdn.jsdelivr.net/npm/lenis@1.1.18/+esm"}}</script>
+<style>
+/* ── PRELOADER FULL-SCREEN OVERLAY ── */
+.preloader {
+  position: fixed;
+  inset: 0;
+  z-index: 99999;
+  background: #ffffff;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  overflow: hidden;
+  will-change: transform;
+}
+.logo-anim-wrap {
+  position: relative;
+  width: min(640px, 92vw);
+  display: flex;
+  flex-direction: column;
+  align-items: flex-start;
+  user-select: none;
+}
+.logo-grid-row {
+  display: grid;
+  grid-template-columns: repeat(8, 1fr);
+  gap: 12px;
+  width: 100%;
+}
+.top-row {
+  margin-bottom: 8px;
+}
+.square-grey {
+  aspect-ratio: 1 / 1;
+  background: #A7A9AC;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  color: #ffffff;
+  font-size: clamp(1.8rem, 4.2vw, 2.7rem);
+  font-weight: 800;
+  border-radius: 2px;
+  transform: translateY(100%);
+  opacity: 0;
+  will-change: transform, opacity;
+}
+.letter-cyan {
+  aspect-ratio: 1 / 1;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  color: #29ABE2;
+  font-size: clamp(1.8rem, 4.2vw, 2.7rem);
+  font-weight: 800;
+  opacity: 0;
+  will-change: opacity, transform;
+}
+.baseline-wrap {
+  width: 100%;
+  height: 4px;
+  position: relative;
+  margin: 2px 0 10px 0;
+}
+.baseline-line {
+  position: absolute;
+  left: 0;
+  top: 0;
+  height: 2.5px;
+  width: 100%;
+  background: #29ABE2;
+  transform: scaleX(0);
+  transform-origin: left center;
+  border-radius: 2px;
+  will-change: transform;
+}
+.bottom-row {
+  position: relative;
+}
+.cyan-square-block {
+  aspect-ratio: 1 / 1;
+  background: #29ABE2;
+  border-radius: 2px;
+  transform: scale(0);
+  opacity: 0;
+  will-change: transform, opacity;
+}
+.grey-tech-rect {
+  grid-column: 2 / 9;
+  background: #A7A9AC;
+  border-radius: 2px;
+  display: grid;
+  grid-template-columns: repeat(7, 1fr);
+  align-items: center;
+  justify-items: center;
+  color: #ffffff;
+  font-size: clamp(1.6rem, 3.8vw, 2.5rem);
+  font-weight: 800;
+  clip-path: inset(0 100% 0 0);
+  will-change: clip-path;
+}
+.tech-char {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  width: 100%;
+}
+.tagline-row {
+  margin-top: 14px;
+  padding-left: 4px;
+  width: 100%;
+  clip-path: inset(0 100% 0 0);
+  will-change: clip-path;
+}
+.tagline-text {
+  font-family: 'Caveat', cursive;
+  font-size: clamp(2rem, 5.2vw, 3.4rem);
+  font-weight: 700;
+  color: #003B5C;
+  line-height: 1;
+  letter-spacing: 0.02em;
+}
+
+/* ── MODAL STRICT OFF-SCREEN/HIDDEN SAFETY ── */
+.fs-menu, .modal, .inspect-modal, .auto-modal {
+  position: fixed !important;
+  inset: 0 !important;
+  z-index: 9999 !important;
+  display: none !important;
+  opacity: 0 !important;
+  pointer-events: none !important;
+}
+.fs-menu.open, .modal.open, .inspect-modal.open, .auto-modal.open {
+  display: flex !important;
+  opacity: 1 !important;
+  pointer-events: auto !important;
+}
+
+/* ── WHAT WE DO: PART 02 CONSULTATION & AMC ── */
+.consultation-part {
+  margin-top: 3.2rem;
+  padding-top: 2.6rem;
+  border-top: 1px solid var(--hairline);
+}
+.consultation-grid {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(min(100%, 15rem), 1fr));
+  gap: 1.25rem;
+  margin-bottom: 2rem;
+}
+.consult-card {
+  background: var(--surface);
+  border: 1px solid var(--hairline);
+  border-radius: var(--radius-card);
+  padding: 1.8rem 1.5rem;
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+  transition: all 0.35s cubic-bezier(.22,1,.36,1);
+}
+.consult-card:hover {
+  background: #ffffff;
+  border-color: var(--brand-green);
+  transform: translateY(-4px);
+  box-shadow: 0 14px 30px rgba(15, 47, 99, 0.08);
+}
+.consult-card__icon {
+  font-size: 1.6rem;
+  margin-bottom: 0.9rem;
+  width: 3rem;
+  height: 3rem;
+  border-radius: 12px;
+  background: rgba(118, 184, 42, 0.14);
+  border: 1px solid rgba(118, 184, 42, 0.28);
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+.consult-card h4 {
+  font-size: 1.1rem;
+  font-weight: 600;
+  color: var(--ink);
+  margin-bottom: 0.5rem;
+}
+.consult-card p {
+  font-size: 0.8rem;
+  color: var(--ink-soft);
+  line-height: 1.55;
+  margin-bottom: 1.2rem;
+  flex: 1;
+}
+.consult-card__chip {
+  align-self: flex-start;
+  font-size: 0.65rem;
+  font-weight: 700;
+  text-transform: uppercase;
+  letter-spacing: 0.08em;
+  background: rgba(37, 99, 201, 0.1);
+  color: var(--brand);
+  padding: 0.25rem 0.65rem;
+  border-radius: var(--radius-pill);
+}
+.consultation-cta-banner {
+  background: linear-gradient(135deg, #092048 0%, #0f3675 100%);
+  border-radius: var(--radius-card);
+  padding: 1.8rem 2.2rem;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  flex-wrap: wrap;
+  gap: 1.5rem;
+  color: #ffffff;
+  box-shadow: 0 10px 25px rgba(9, 32, 72, 0.25);
+}
+.consult-cta-left {
+  display: flex;
+  flex-direction: column;
+  gap: 0.3rem;
+}
+.consult-cta-left strong {
+  font-size: 1.15rem;
+  font-weight: 600;
+}
+.consult-cta-left span {
+  font-size: 0.84rem;
+  color: rgba(255, 255, 255, 0.8);
+}
+.consult-cta-actions {
+  display: flex;
+  align-items: center;
+  gap: 0.85rem;
+  flex-wrap: wrap;
+}
+.btn-consult-call {
+  display: inline-flex;
+  align-items: center;
+  gap: 0.45rem;
+  padding: 0.65rem 1.2rem;
+  background: rgba(255, 255, 255, 0.12);
+  border: 1px solid rgba(255, 255, 255, 0.25);
+  border-radius: var(--radius-pill);
+  color: #ffffff;
+  font-size: 0.82rem;
+  font-weight: 600;
+  transition: all 0.2s;
+  text-decoration: none;
+}
+.btn-consult-call:hover {
+  background: rgba(255, 255, 255, 0.22);
+}
+.btn-consult-quote {
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  padding: 0.75rem 1.5rem;
+  background: var(--brand-green);
+  color: #ffffff;
+  border-radius: var(--radius-pill);
+  font-size: 0.82rem;
+  font-weight: 700;
+  letter-spacing: 0.04em;
+  text-transform: uppercase;
+  border: none;
+  cursor: pointer;
+  box-shadow: 0 4px 14px rgba(118, 184, 42, 0.4);
+  transition: all 0.25s;
+}
+.btn-consult-quote:hover {
+  background: var(--brand-green-hover);
+  transform: translateY(-2px);
+  box-shadow: 0 6px 18px rgba(118, 184, 42, 0.5);
+}
+*,*::before,*::after{margin:0;padding:0;box-sizing:border-box}
+:root{
+  --background:#ffffff;
+  --foreground:#0a0a0a;
+  --brand:#2563c9;
+  --brand-deep:#0f2f63;        /* deep navy hero / stats / footer base */
+  --brand-light:#5790e6;       /* light blue accent / focus ring */
+  --accent-teal:#0b6e97;
+  --brand-green:#76b82a;       /* Emotron vibrant green CTA */
+  --brand-green-hover:#66a222;
+  --surface:#f4f4f4;           /* off-white section bg */
+  --surface-card:#ffffff;
+  --ink:#0a0a0a;               /* near-black headings */
+  --ink-soft:#717784;          /* muted body */
+  --ghost:#d7dae1;             /* oversized ghost text */
+  --hairline:#e6e8ec;          /* subtle borders */
+  --on-brand:#ffffff;
+  --radius-card:1.5rem;
+  --radius-card-lg:2rem;
+  --radius-pill:62.5rem;
+}
+html{font-size:16px}
+@media(max-width:1920px){html{font-size:0.833333vw}}
+@media(max-width:1440px){html{font-size:1.111111vw}}
+@media(max-width:1024px){html{font-size:1.5625vw}}
+@media(max-width:640px){html{font-size:4.444444vw}}
+body{font-family:'Onest',system-ui,sans-serif;font-weight:400;color:var(--foreground);background:#071124;padding:16px;min-height:100vh;overflow-x:hidden;-webkit-font-smoothing:antialiased}
+@media(max-width:640px){body{padding:10px}}
+img{display:block;max-width:100%}
+button{font:inherit;cursor:pointer;border:none;background:none;color:inherit}
+a{color:inherit;text-decoration:none}
+ul{list-style:none}
+main{padding:0;width:100%;overflow-x:clip}
+
+/* ── INTRO LOADER ── */
+.loader{position:fixed;inset:0;z-index:200;background:var(--brand-deep);display:flex;flex-direction:column;align-items:center;justify-content:center;gap:1.4rem;transition:transform 850ms cubic-bezier(.65,0,.35,1)}
+.loader.exit{transform:translateY(-105%)}
+.loader__logo-wrap{background:rgba(255,255,255,.96);padding:.7rem 1.6rem;border-radius:.8rem;box-shadow:0 10px 30px rgba(0,0,0,.3)}
+.loader__logo{height:2.4rem;width:auto}
+.loader__bar{width:11.5rem;height:2px;background:rgba(255,255,255,.2);border-radius:2px;overflow:hidden;position:relative}
+.loader__fill{position:absolute;inset:0;background:#fff;transform:scaleX(0);transform-origin:left;transition:transform 1280ms cubic-bezier(.65,0,.35,1) 120ms}
+.loader.running .loader__fill{transform:scaleX(1)}
+
+/* ── HERO SECTION (BASELINE ROUNDED CARD + SEAMLESS AESTHETIC TRANSITION) ── */
+.hero{background:#071124;color:#fff;border-radius:28px;min-height:93vh;position:relative;overflow:hidden;display:flex;flex-direction:column;justify-content:space-between;border:1px solid rgba(255,255,255,0.08);box-shadow:0 20px 60px rgba(0,0,0,0.45)}
+.hero__parallax{position:absolute;top:-10%;left:0;width:100%;height:120%;will-change:transform}
+.hero__parallax img{width:100%;height:100%;object-fit:cover;object-position:center}
+.hero__overlay{position:absolute;inset:0;background:linear-gradient(180deg,rgba(7,17,36,0.60) 0%,rgba(7,17,36,0.30) 40%,rgba(7,17,36,0.85) 80%,#071124 100%)}
+
+/* ── FLOATING HEADER ── */
+.header{position:relative;z-index:50;display:flex;align-items:center;justify-content:space-between;padding:1.4rem 1.6rem 0;flex-shrink:0}
+@media(min-width:640px){.header{padding:1.8rem 2.2rem 0}}
+
+.header__brand{display:flex;align-items:center;text-decoration:none}
+.brand-pill{display:flex;align-items:center;gap:.6rem;background:rgba(255,255,255,.96);padding:8px 16px;border-radius:14px;backdrop-filter:blur(10px);-webkit-backdrop-filter:blur(10px);box-shadow:0 4px 16px rgba(0,0,0,.15);transition:all .3s}
+.brand-pill:hover{background:#ffffff;transform:scale(1.02)}
+.brand-logo-img{height:1.85rem;width:auto;display:block;object-fit:contain}
+
+/* Center Navigation Bar & 4-Column Mega Dropdown */
+.header__center{display:none;align-items:center;position:relative}
+@media(min-width:1024px){.header__center{display:flex}}
+.nav-mega-group{display:flex;align-items:center;background:rgba(255,255,255,.08);border:1px solid rgba(255,255,255,.15);border-radius:var(--radius-pill);padding:.3rem .5rem;backdrop-filter:blur(12px);-webkit-backdrop-filter:blur(12px)}
+.nav-mega-btn{display:inline-flex;align-items:center;gap:.35rem;padding:.45rem 1.1rem;border-radius:var(--radius-pill);font-size:.82rem;font-weight:500;color:rgba(255,255,255,.9);transition:all .25s;cursor:pointer;white-space:nowrap}
+.nav-mega-btn:hover{background:rgba(255,255,255,.15);color:#ffffff}
+.nav-caret{font-size:.7rem;opacity:.7;transition:transform .25s}
+.nav-mega-group:hover .nav-caret{transform:translateY(1px);opacity:1}
+
+.mega-dropdown{position:absolute;top:calc(100% + 14px);left:50%;transform:translateX(-50%) translateY(12px);width:min(68rem,94vw);background:rgba(9,28,64,0.96);backdrop-filter:blur(20px);-webkit-backdrop-filter:blur(20px);border:1px solid rgba(255,255,255,0.15);border-radius:20px;box-shadow:0 30px 70px rgba(0,0,0,0.55);padding:2.2rem 2.4rem 1.8rem;opacity:0;pointer-events:none;visibility:hidden;transition:opacity 280ms cubic-bezier(.16,1,.3,1),transform 280ms cubic-bezier(.16,1,.3,1),visibility 280ms;z-index:100}
+.nav-mega-group:hover .mega-dropdown,.nav-mega-group:focus-within .mega-dropdown,.mega-dropdown.active{opacity:1;pointer-events:auto;visibility:visible;transform:translateX(-50%) translateY(0)}
+.mega-grid{display:grid;grid-template-columns:repeat(4,1fr);gap:2rem}
+.mega-col__title{font-size:.72rem;font-weight:700;text-transform:uppercase;letter-spacing:.12em;color:var(--brand-light);margin-bottom:1.1rem;display:flex;align-items:center;gap:.45rem}
+.mega-col__title::before{content:'';width:6px;height:6px;border-radius:50%;background:var(--brand-green);box-shadow:0 0 8px var(--brand-green)}
+.mega-col__list{display:flex;flex-direction:column;gap:.65rem}
+.mega-col__link{font-size:.82rem;color:rgba(255,255,255,.82);transition:color .2s,transform .2s;display:inline-flex;align-items:center;gap:.35rem}
+.mega-col__link:hover{color:#ffffff;transform:translateX(4px)}
+.mega-badge-hot{font-size:.6rem;font-weight:700;background:var(--brand-green);color:#ffffff;padding:.15rem .4rem;border-radius:4px;margin-left:.35rem}
+.mega-bottom{margin-top:1.8rem;padding-top:1.2rem;border-top:1px solid rgba(255,255,255,.1);display:flex;align-items:center;justify-content:space-between;font-size:.78rem;color:rgba(255,255,255,.7)}
+.mega-bottom a{color:var(--brand-green);font-weight:600;transition:color .2s}
+.mega-bottom a:hover{color:#fff}
+
+/* Right Action Bar */
+.header__right{display:flex;align-items:center;gap:.9rem}
+.header__cat-btn{display:none;align-items:center;gap:.4rem;padding:.5rem 1.15rem;border-radius:var(--radius-pill);border:1px solid rgba(255,255,255,.35);background:rgba(255,255,255,.08);font-size:.8rem;font-weight:500;color:#ffffff;backdrop-filter:blur(8px);-webkit-backdrop-filter:blur(8px);transition:all .25s}
+@media(min-width:768px){.header__cat-btn{display:inline-flex}}
+.header__cat-btn:hover{background:rgba(255,255,255,.2);border-color:#ffffff;transform:translateY(-1px)}
+.header__quote-btn{display:none;align-items:center;justify-content:center;padding:.55rem 1.4rem;background:var(--brand-green);color:#ffffff;border-radius:var(--radius-pill);font-size:.82rem;font-weight:700;letter-spacing:.05em;text-transform:uppercase;transition:all .25s;box-shadow:0 4px 14px rgba(118,184,42,.35)}
+@media(min-width:640px){.header__quote-btn{display:inline-flex}}
+.header__quote-btn:hover{background:var(--brand-green-hover);transform:translateY(-1px);box-shadow:0 6px 18px rgba(118,184,42,.45)}
+
+/* Circular Glass Hamburger Button (=) */
+.burger{width:2.6rem;height:2.6rem;border-radius:var(--radius-pill);background:rgba(255,255,255,.14);border:1px solid rgba(255,255,255,.22);backdrop-filter:blur(8px);-webkit-backdrop-filter:blur(8px);display:flex;align-items:center;justify-content:center;transition:background .25s,transform .25s,border-color .25s;cursor:pointer;flex-shrink:0}
+.burger:hover{background:rgba(255,255,255,.25);border-color:#ffffff;transform:scale(1.05)}
+.burger__inner{display:flex;flex-direction:column;justify-content:space-between;width:1.05rem;height:7px}
+.burger__bar{width:1.05rem;height:1.8px;background:#ffffff;border-radius:1px;transition:transform .3s ease}
+
+/* ── BALANCED HERO LAYOUT (2-COLUMN BRAND + VERTICAL WHAT WE DO CARD) ── */
+.hero__grid {
+  position: relative;
+  z-index: 5;
+  flex: 1;
+  display: grid;
+  grid-template-columns: minmax(0, 1.25fr) minmax(0, 0.95fr);
+  gap: 2.5rem;
+  align-items: flex-end;
+  width: 100%;
+  max-width: 84rem;
+  margin: 0 auto;
+  padding: 2rem 2.4rem 3.2rem;
+}
+@media(max-width: 1024px) {
+  .hero__grid {
+    grid-template-columns: 1fr;
+    gap: 2rem;
+    max-width: 58rem;
+  }
+}
+@media(max-width: 640px) {
+  .hero__grid {
+    padding: 1.6rem 1.6rem 2.5rem;
+  }
+}
+.hero__col-work {
+  display: flex;
+  flex-direction: column;
+  justify-content: flex-end;
+}
+
+/* Hero Brand Statement */
+.hero__col-brand{display:flex;flex-direction:column;justify-content:flex-end}
+.hero__eyebrow-chip{display:inline-flex;align-items:center;gap:.5rem;font-size:.72rem;font-weight:700;text-transform:uppercase;letter-spacing:.12em;color:var(--brand-light);background:rgba(255,255,255,.08);padding:.35rem .85rem;border-radius:var(--radius-pill);border:1px solid rgba(255,255,255,.16);backdrop-filter:blur(8px);-webkit-backdrop-filter:blur(8px);margin-bottom:1.2rem;align-self:flex-start}
+.hero__eyebrow-chip .dot-live{width:6px;height:6px;border-radius:50%;background:var(--brand-green);box-shadow:0 0 8px var(--brand-green)}
+.hero__title{font-size:clamp(2.8rem,5vw,4.8rem);font-weight:700;text-transform:uppercase;line-height:1.05;letter-spacing:-.02em;margin-bottom:1.1rem;max-width:16ch}
+.hero__title .word-wrap{display:inline-block;overflow:hidden;vertical-align:top}
+.hero__title .word-inner{display:inline-block;transform:translateY(115%);opacity:0}
+.hero__tagline{font-size:clamp(1.8rem,2.5vw,2.4rem);font-weight:400;line-height:1.15;color:rgba(255,255,255,.9);margin-bottom:1rem}
+.hero__tagline .line-wrap{display:block;overflow:hidden}
+.hero__tagline .line-inner{display:block;transform:translateY(115%);opacity:0}
+.hero__lead{font-size:.95rem;color:rgba(255,255,255,.84);line-height:1.65;max-width:34rem;margin-top:.4rem}
+.hero__actions{display:flex;gap:1rem;margin-top:1.6rem;flex-wrap:wrap;align-items:center}
+.btn-auto-launch{display:inline-flex;align-items:center;gap:.55rem;padding:.85rem 1.6rem;border-radius:var(--radius-pill);background:rgba(118,184,42,0.22);border:1px solid var(--brand-green);color:#ffffff;font-size:.84rem;font-weight:700;cursor:pointer;backdrop-filter:blur(8px);-webkit-backdrop-filter:blur(8px);transition:all .25s ease}
+.btn-auto-launch:hover{background:var(--brand-green);transform:translateY(-2px);box-shadow:0 8px 22px rgba(118,184,42,0.45)}
+.hero__trust-strip{display:flex;align-items:center;gap:1.2rem;margin-top:2rem;padding-top:1.4rem;border-top:1px solid rgba(255,255,255,.12);font-size:.8rem;color:rgba(255,255,255,.8);flex-wrap:wrap}
+.trust-item strong{color:#ffffff;font-weight:700;margin-right:.3rem}
+.trust-sep{color:var(--brand-green);opacity:.8}
+
+/* ── FULLSCREEN MENU OVERLAY (SPLIT-COLUMN SPEC WITH SPRING ANIMATIONS) ── */
+.fs-menu{position:fixed;inset:0;z-index:180;display:flex;flex-direction:column;pointer-events:none;visibility:hidden}
+.fs-menu.open{pointer-events:auto;visibility:visible}
+.fs-menu__backdrop{position:absolute;inset:0;background:rgba(8,26,60,0.97);backdrop-filter:blur(22px);-webkit-backdrop-filter:blur(22px);opacity:0;will-change:opacity}
+.fs-menu__panel{position:relative;z-index:2;display:flex;flex-direction:column;justify-content:space-between;width:100%;height:100%;padding:1.5rem 1.8rem;opacity:0;transform:translateY(-24px);will-change:transform,opacity;overflow-y:auto}
+@media(min-width:640px){.fs-menu__panel{padding:2rem 2.8rem}}
+
+.fs-menu__top{display:flex;align-items:center;justify-content:space-between;flex-shrink:0;margin-bottom:1.5rem}
+.fs-menu__close{width:2.8rem;height:2.8rem;border-radius:var(--radius-pill);background:rgba(255,255,255,.14);border:1px solid rgba(255,255,255,.22);backdrop-filter:blur(8px);-webkit-backdrop-filter:blur(8px);display:flex;align-items:center;justify-content:center;color:#ffffff;transition:background .25s,transform .3s cubic-bezier(.22,1,.36,1);cursor:pointer}
+.fs-menu__close:hover{background:rgba(255,255,255,.25);transform:rotate(90deg)}
+.fs-menu__close svg{width:1.15rem;height:1.15rem}
+
+/* Split-Column Body */
+.fs-menu__split{flex:1;display:grid;grid-template-columns:1.3fr 1fr;gap:3.5rem;align-items:center;margin:auto 0;padding:1.5rem 0}
+@media(max-width:960px){.fs-menu__split{grid-template-columns:1fr;gap:2.2rem}}
+
+/* Left: Large Vertical Links */
+.fs-menu__nav{display:flex;flex-direction:column;gap:.6rem}
+.fs-menu__link{display:inline-flex;align-items:center;gap:.8rem;font-size:clamp(2.2rem,4.4vw,4rem);font-weight:600;line-height:1.12;letter-spacing:-.02em;color:rgba(255,255,255,.8);opacity:0;transform:translateY(28px);transition:color .3s,transform .3s;will-change:transform,opacity;cursor:pointer}
+.fs-menu__link .menu-arrow{font-size:.75em;color:var(--brand-green);opacity:0;transform:translateX(-12px);transition:opacity .3s,transform .3s}
+.fs-menu__link:hover{color:#ffffff;transform:translateX(12px)}
+.fs-menu__link:hover .menu-arrow{opacity:1;transform:translateX(0)}
+
+/* Right: Contextual Panel */
+.fs-menu__context{background:rgba(255,255,255,.05);border:1px solid rgba(255,255,255,.14);border-radius:22px;padding:2.2rem;backdrop-filter:blur(14px);-webkit-backdrop-filter:blur(14px);display:flex;flex-direction:column;gap:1.5rem;box-shadow:0 20px 45px rgba(0,0,0,.3)}
+.menu-feat{border-bottom:1px solid rgba(255,255,255,.1);padding-bottom:1.2rem}
+.menu-feat-badge{display:inline-flex;align-items:center;gap:.4rem;font-size:.66rem;font-weight:700;text-transform:uppercase;letter-spacing:.1em;color:var(--brand-green);background:rgba(118,184,42,.15);padding:.25rem .65rem;border-radius:var(--radius-pill);margin-bottom:.65rem}
+.menu-feat-badge::before{content:'';width:5px;height:5px;border-radius:50%;background:var(--brand-green)}
+.menu-feat-title{font-size:1.15rem;font-weight:600;color:#ffffff;margin-bottom:.35rem}
+.menu-feat-desc{font-size:.78rem;color:rgba(255,255,255,.7);line-height:1.55}
+
+.menu-contact-info{display:flex;flex-direction:column;gap:.65rem;font-size:.8rem;color:rgba(255,255,255,.82);line-height:1.5}
+.menu-contact-info strong{color:#ffffff}
+.menu-contact-info a{color:var(--brand-light);transition:color .2s}
+.menu-contact-info a:hover{color:var(--brand-green)}
+
+.fs-menu__cta-quote{padding:.85rem 1.8rem;border-radius:var(--radius-pill);background:var(--brand-green);color:#ffffff;font-size:.84rem;font-weight:700;letter-spacing:.04em;text-transform:uppercase;transition:all .3s;text-align:center;box-shadow:0 4px 15px rgba(118,184,42,.35);cursor:pointer;border:none}
+.fs-menu__cta-quote:hover{background:var(--brand-green-hover);transform:translateY(-2px);box-shadow:0 6px 20px rgba(118,184,42,.5)}
+
+/* Bottom Bar */
+.fs-menu__bottom{border-top:1px solid rgba(255,255,255,.12);padding-top:1.5rem;display:flex;flex-wrap:wrap;align-items:center;justify-content:space-between;gap:1.5rem;flex-shrink:0}
+.fs-menu__socials{display:flex;gap:1.5rem}
+.fs-menu__socials a{font-size:.82rem;color:rgba(255,255,255,.7);transition:color .3s}
+.fs-menu__socials a:hover{color:#ffffff}
+
+/* ── 4-PILLAR HOMESCREEN SEGREGATOR HUB ── */
+.home-segregation{background:#ffffff;border-radius:var(--radius-card-lg);padding:3rem 2.2rem;margin-top:.75rem;border:1px solid var(--hairline)}
+.home-segregation__header{display:flex;justify-content:space-between;align-items:flex-end;flex-wrap:wrap;gap:1.5rem;margin-bottom:2.2rem}
+.home-segregation__eyebrow{font-size:.7rem;text-transform:uppercase;letter-spacing:.14em;color:var(--brand);font-weight:600;margin-bottom:.4rem;display:flex;align-items:center;gap:.4rem}
+.home-segregation__eyebrow::before{content:'';width:.4rem;height:.4rem;border-radius:50%;background:var(--brand)}
+.home-segregation__title{font-size:clamp(1.8rem,3.2vw,2.6rem);font-weight:500;line-height:1.15;letter-spacing:-.02em}
+.home-segregation__desc{font-size:.85rem;color:var(--ink-soft);max-width:28rem;line-height:1.6}
+.home-segregation__grid{display:grid;grid-template-columns:repeat(auto-fit,minmax(min(100%,16.5rem),1fr));gap:1.25rem}
+.seg-card{background:var(--surface);border:1px solid var(--hairline);border-radius:var(--radius-card);padding:1.8rem 1.6rem;display:flex;flex-direction:column;justify-content:space-between;text-align:left;cursor:pointer;transition:all .4s cubic-bezier(.22,1,.36,1);position:relative;overflow:hidden}
+.seg-card::before{content:'';position:absolute;top:0;left:0;right:0;height:3px;background:transparent;transition:background .3s}
+.seg-card:hover{transform:translateY(-5px);background:#ffffff;border-color:var(--brand-light);box-shadow:0 14px 35px rgba(15,47,99,.08)}
+.seg-card:hover::before{background:var(--brand)}
+.seg-card__top{display:flex;justify-content:space-between;align-items:center;margin-bottom:1.2rem}
+.seg-card__num{font-size:.75rem;font-weight:600;color:var(--ink-soft);letter-spacing:.08em}
+.seg-card__icon{width:2.5rem;height:2.5rem;border-radius:.65rem;background:rgba(37,99,201,.08);color:var(--brand);display:flex;align-items:center;justify-content:center;transition:all .3s}
+.seg-card:hover .seg-card__icon{background:var(--brand);color:#ffffff;transform:scale(1.08)}
+.seg-card__icon svg{width:1.25rem;height:1.25rem}
+.seg-card__tag{display:inline-block;font-size:.65rem;font-weight:600;color:var(--accent-teal);letter-spacing:.05em;margin-bottom:.4rem;text-transform:uppercase}
+.seg-card__heading{font-size:1.15rem;font-weight:500;line-height:1.25;color:var(--ink);margin-bottom:.6rem}
+.seg-card__body{font-size:.78rem;color:var(--ink-soft);line-height:1.55;margin-bottom:1.2rem;flex:1}
+.seg-card__link{font-size:.76rem;font-weight:600;color:var(--brand);display:inline-flex;align-items:center;gap:.35rem;transition:gap .3s}
+.seg-card:hover .seg-card__link{gap:.6rem}
+
+/* ── CLIENT STRIP ── */
+.client-strip{margin-top:.75rem;background:var(--surface);border-radius:var(--radius-card);padding:1.1rem 1.8rem;display:flex;align-items:center;gap:1.5rem;overflow:hidden;border:1px solid var(--hairline)}
+.client-strip__label{font-size:.7rem;text-transform:uppercase;letter-spacing:.12em;color:var(--ink-soft);font-weight:600;white-space:nowrap;display:flex;align-items:center;gap:.4rem}
+.client-strip__label::before{content:'';width:.4rem;height:.4rem;border-radius:50%;background:var(--brand);display:inline-block}
+.client-strip__track{display:flex;gap:1.5rem;overflow-x:auto;scrollbar-width:none;flex:1}
+.client-strip__track::-webkit-scrollbar{display:none}
+.client-strip__items{display:flex;align-items:center;gap:1.6rem;font-size:.8rem;font-weight:500;color:var(--ink);letter-spacing:.08em;white-space:nowrap}
+.client-dot{color:var(--brand);font-size:.7rem}
+
+/* ── TRUST & INDUSTRY LEADERSHIP (KINETIC TYPOGRAPHY) ── */
+.trust{padding:5.5rem 2.5rem 5rem;background:#fff;border-radius:var(--radius-card-lg);margin-top:.75rem}
+.trust__top{display:flex;flex-wrap:wrap;gap:2rem;margin-bottom:3.5rem;justify-content:space-between;align-items:flex-start}
+.trust__pct{display:flex;align-items:baseline;gap:.8rem}
+.trust__pct-num{font-size:4.2rem;font-weight:500;color:var(--brand)}
+.trust__pct-text{font-size:.85rem;color:var(--ink-soft);max-width:14rem;line-height:1.5}
+.trust__badge{background:var(--surface);border-radius:var(--radius-card);padding:1.6rem 2rem;max-width:32rem;border:1px solid var(--hairline)}
+.trust__chip{display:inline-block;font-size:.65rem;font-weight:600;letter-spacing:.08em;text-transform:uppercase;background:var(--brand);color:#fff;padding:.25rem .75rem;border-radius:var(--radius-pill);margin-bottom:.7rem}
+.trust__badge h3{font-size:1.3rem;font-weight:500;margin-bottom:.5rem}
+.trust__badge p{font-size:.82rem;color:var(--ink-soft);line-height:1.6}
+
+.trust__ghost{max-width:88rem;margin:3.5rem auto 1.5rem;display:flex;flex-direction:column;gap:.8rem;pointer-events:none;user-select:none;text-align:center}
+.trust__ghost-row{display:flex;justify-content:space-between;gap:1.5rem}
+.trust__ghost-word{font-size:clamp(2.5rem,7.5vw,7.8rem);font-weight:500;text-transform:uppercase;line-height:.95;letter-spacing:-.02em;color:var(--ghost);transition:opacity 700ms cubic-bezier(.16,1,.3,1)}
+.trust__ghost-word.ink{color:var(--ink)}
+
+/* ── COMPREHENSIVE PRODUCT & HARDWARE CATALOG (22 PRODUCTS) ── */
+.catalog-section{padding:5.5rem 2.5rem;background:#fff;border-radius:var(--radius-card-lg);margin-top:.75rem}
+.catalog-header{text-align:center;max-width:44rem;margin:0 auto 3rem}
+.catalog-eyebrow{font-size:.7rem;text-transform:uppercase;letter-spacing:.14em;color:var(--brand);font-weight:600;margin-bottom:.6rem;display:inline-flex;align-items:center;gap:.4rem}
+.catalog-eyebrow::before{content:'';width:.4rem;height:.4rem;border-radius:50%;background:var(--brand)}
+.catalog-title{font-size:clamp(2.2rem,4.5vw,3.4rem);font-weight:500;line-height:1.1;letter-spacing:-.02em;margin-bottom:1rem}
+.catalog-subtitle{font-size:.88rem;color:var(--ink-soft);line-height:1.6}
+
+.catalog-tabs{display:flex;justify-content:center;gap:.6rem;flex-wrap:wrap;margin-bottom:3rem}
+.cat-tab{padding:.6rem 1.4rem;border-radius:var(--radius-pill);border:1px solid var(--hairline);background:var(--surface);font-size:.78rem;font-weight:500;color:var(--ink-soft);cursor:pointer;transition:all .3s}
+.cat-tab:hover{border-color:var(--brand);color:var(--brand)}
+.cat-tab.active{background:var(--brand-deep);color:#fff;border-color:var(--brand-deep);box-shadow:0 4px 14px rgba(15,47,99,.2)}
+
+.catalog-grid{display:grid;grid-template-columns:repeat(auto-fit,minmax(min(100%,18.5rem),1fr));gap:1.5rem}
+.prod-card{background:var(--surface);border:1px solid var(--hairline);border-radius:var(--radius-card);padding:1.6rem;display:flex;flex-direction:column;justify-content:space-between;transition:transform .4s cubic-bezier(.22,1,.36,1),box-shadow .4s,border-color .3s;position:relative}
+.prod-card:hover{transform:translateY(-6px);box-shadow:0 14px 35px rgba(15,47,99,.09);border-color:var(--brand-light);background:#ffffff}
+
+.prod-card__img-wrap{background:#ffffff;border:1px solid var(--hairline);border-radius:.9rem;padding:1.2rem;aspect-ratio:4/3;display:flex;align-items:center;justify-content:center;margin-bottom:1.2rem;overflow:hidden;position:relative;cursor:pointer}
+.prod-card__img{max-height:100%;max-width:100%;object-fit:contain;transition:transform .5s cubic-bezier(.22,1,.36,1)}
+.prod-card:hover .prod-card__img{transform:scale(1.08)}
+.prod-card__zoom-hint{position:absolute;bottom:.6rem;right:.6rem;width:1.8rem;height:1.8rem;border-radius:50%;background:rgba(15,47,99,.7);color:#fff;display:flex;align-items:center;justify-content:center;opacity:0;transition:opacity .3s}
+.prod-card__zoom-hint svg{width:.9rem;height:.9rem}
+.prod-card:hover .prod-card__zoom-hint{opacity:1}
+
+.prod-card__tag{font-size:.65rem;text-transform:uppercase;letter-spacing:.08em;font-weight:600;color:var(--brand);background:rgba(37,99,201,.08);padding:.25rem .65rem;border-radius:var(--radius-pill);align-self:flex-start;margin-bottom:.6rem}
+.prod-card__title{font-size:1.15rem;font-weight:500;line-height:1.25;margin-bottom:.5rem;color:var(--ink)}
+.prod-card__desc{font-size:.78rem;color:var(--ink-soft);line-height:1.55;margin-bottom:1.2rem;flex:1}
+
+.prod-card__specs{border-top:1px dashed var(--hairline);padding-top:.8rem;margin-bottom:1.2rem;display:flex;flex-direction:column;gap:.35rem;font-size:.72rem;color:var(--ink-soft)}
+.prod-spec-row{display:flex;justify-content:space-between}
+.prod-spec-row strong{color:var(--ink);font-weight:500}
+
+.prod-card__actions{display:flex;gap:.6rem;align-items:center}
+.btn-inquire{flex:1;padding:.6rem 1rem;background:var(--brand);color:#fff;border-radius:var(--radius-pill);font-size:.78rem;font-weight:500;text-align:center;transition:background .3s;cursor:pointer;border:none}
+.btn-inquire:hover{background:var(--brand-deep)}
+.btn-inspect{padding:.6rem .9rem;border:1px solid var(--hairline);border-radius:var(--radius-pill);font-size:.78rem;color:var(--ink);display:flex;align-items:center;gap:.3rem;transition:all .3s;cursor:pointer}
+.btn-inspect:hover{border-color:var(--brand);color:var(--brand);background:rgba(37,99,201,.05)}
+
+/* ── INTERACTIVE MULTI-WINDOW PLANT CONSOLE ── */
+.console-section{padding:5.5rem 2.5rem;background:#0b192e;color:#fff;border-radius:var(--radius-card-lg);margin-top:.75rem}
+.console-header{display:flex;justify-content:space-between;align-items:flex-end;flex-wrap:wrap;gap:1.5rem;margin-bottom:3rem}
+.console-eyebrow{font-size:.7rem;text-transform:uppercase;letter-spacing:.14em;color:var(--brand-light);font-weight:600;margin-bottom:.5rem;display:flex;align-items:center;gap:.4rem}
+.console-eyebrow::before{content:'';width:.4rem;height:.4rem;border-radius:50%;background:var(--brand-light);box-shadow:0 0 8px var(--brand-light)}
+.console-title{font-size:clamp(2rem,4vw,3.2rem);font-weight:500;line-height:1.1;letter-spacing:-.02em}
+.console-desc{font-size:.85rem;color:rgba(255,255,255,.75);max-width:32rem;line-height:1.6}
+
+.console-container{display:grid;grid-template-columns:1fr;gap:2rem}
+@media(min-width:1024px){.console-container{grid-template-columns:23rem 1fr}}
+.console-dock{display:flex;flex-direction:column;gap:.75rem}
+.dock-btn{display:flex;align-items:center;gap:1rem;background:rgba(255,255,255,.05);border:1px solid rgba(255,255,255,.1);border-radius:var(--radius-card);padding:1.05rem 1.25rem;text-align:left;color:#fff;transition:all .3s cubic-bezier(.22,1,.36,1);cursor:pointer}
+.dock-btn:hover{background:rgba(255,255,255,.12);border-color:var(--brand-light);transform:translateX(5px)}
+.dock-btn.active{background:var(--brand);border-color:var(--brand-light);box-shadow:0 8px 25px rgba(37,99,201,.4)}
+.dock-icon{width:2.5rem;height:2.5rem;border-radius:50%;background:rgba(255,255,255,.15);display:flex;align-items:center;justify-content:center;flex-shrink:0}
+.dock-icon svg{width:1.25rem;height:1.25rem}
+.dock-meta strong{display:block;font-size:.85rem;font-weight:600}
+.dock-meta span{font-size:.72rem;color:rgba(255,255,255,.7)}
+
+.console-viewport{background:rgba(255,255,255,.04);border:1px solid rgba(255,255,255,.12);border-radius:var(--radius-card-lg);overflow:hidden;box-shadow:0 20px 50px rgba(0,0,0,.35)}
+.viewport-window{display:flex;flex-direction:column;height:100%}
+@media(min-width:768px){.viewport-window{display:grid;grid-template-columns:1.2fr 1fr}}
+.viewport-media{position:relative;background:#000;overflow:hidden;aspect-ratio:4/3;cursor:pointer;display:flex;align-items:center;justify-content:center}
+@media(min-width:768px){.viewport-media{aspect-ratio:auto;min-height:27rem}}
+.viewport-media img{width:100%;height:100%;object-fit:cover;transition:transform .6s cubic-bezier(.22,1,.36,1),opacity .4s}
+.viewport-media:hover img{transform:scale(1.05)}
+.viewport-expand-pill{position:absolute;bottom:1.2rem;left:1.2rem;background:rgba(15,47,99,.85);backdrop-filter:blur(8px);border:1px solid rgba(255,255,255,.2);padding:.45rem 1rem;border-radius:var(--radius-pill);font-size:.74rem;color:#fff;display:flex;align-items:center;gap:.45rem;pointer-events:none}
+.viewport-expand-pill svg{width:.85rem;height:.85rem}
+.viewport-hud{padding:2.2rem;display:flex;flex-direction:column;justify-content:space-between;background:linear-gradient(to bottom,rgba(15,47,99,.5),rgba(15,47,99,.95))}
+.hud-status{display:flex;align-items:center;gap:.5rem;font-size:.68rem;text-transform:uppercase;letter-spacing:.1em;color:#22c55e;margin-bottom:1rem}
+.status-pulse{width:.5rem;height:.5rem;border-radius:50%;background:#22c55e;box-shadow:0 0 10px #22c55e;animation:pulse 2s infinite}
+@keyframes pulse{0%,100%{opacity:1;transform:scale(1)}50%{opacity:.4;transform:scale(1.3)}}
+.hud-title{font-size:1.45rem;font-weight:500;line-height:1.25;margin-bottom:.8rem;color:#fff}
+.hud-desc{font-size:.82rem;color:rgba(255,255,255,.75);line-height:1.6;margin-bottom:1.5rem}
+.hud-specs{display:flex;flex-wrap:wrap;gap:.5rem;margin-bottom:2rem}
+.hud-spec-pill{font-size:.72rem;background:rgba(255,255,255,.1);border:1px solid rgba(255,255,255,.15);padding:.35rem .75rem;border-radius:.5rem;color:rgba(255,255,255,.9)}
+.hud-spec-pill strong{color:var(--brand-light)}
+.hud-actions{display:flex;gap:.8rem;align-items:center}
+
+/* ── TURNKEY WATER & WASTEWATER ENGINEERING ── */
+.water-section{padding:5.5rem 2.5rem;background:var(--surface);border-radius:var(--radius-card-lg);margin-top:.75rem}
+.water-header{display:flex;justify-content:space-between;align-items:flex-end;flex-wrap:wrap;gap:1.5rem;margin-bottom:3rem}
+.water-eyebrow{font-size:.7rem;text-transform:uppercase;letter-spacing:.14em;color:var(--brand);font-weight:600;margin-bottom:.5rem;display:flex;align-items:center;gap:.4rem}
+.water-eyebrow::before{content:'';width:.4rem;height:.4rem;border-radius:50%;background:var(--brand)}
+.water-title{font-size:clamp(2rem,4vw,3.2rem);font-weight:500;line-height:1.1;letter-spacing:-.02em}
+.water-desc{font-size:.85rem;color:var(--ink-soft);max-width:30rem;line-height:1.6}
+
+.water-grid{display:grid;grid-template-columns:repeat(auto-fit,minmax(min(100%,20rem),1fr));gap:1.5rem}
+.water-card{background:#ffffff;border:1px solid var(--hairline);border-radius:var(--radius-card);padding:2.2rem;display:flex;flex-direction:column;justify-content:space-between;transition:transform .4s cubic-bezier(.22,1,.36,1),box-shadow .4s}
+.water-card:hover{transform:translateY(-6px);box-shadow:0 14px 35px rgba(15,47,99,.09);border-color:var(--brand-light)}
+.water-card__badge{font-size:.65rem;text-transform:uppercase;letter-spacing:.08em;font-weight:600;color:var(--brand);background:rgba(37,99,201,.08);padding:.25rem .7rem;border-radius:var(--radius-pill);align-self:flex-start;margin-bottom:1rem}
+.water-card__title{font-size:1.3rem;font-weight:500;line-height:1.25;margin-bottom:.6rem;color:var(--ink)}
+.water-card__desc{font-size:.82rem;color:var(--ink-soft);line-height:1.6;margin-bottom:1.5rem;flex:1}
+.water-card__specs{border-top:1px dashed var(--hairline);padding-top:1rem;margin-bottom:1.5rem;font-size:.74rem;color:var(--ink-soft);display:flex;flex-direction:column;gap:.4rem}
+.water-card__spec-item{display:flex;justify-content:space-between}
+.water-card__spec-item strong{color:var(--ink);font-weight:500}
+
+/* ── SERVICES / SOLUTIONS ── */
+.services{background:#fff;padding:6rem 2.5rem;border-radius:var(--radius-card-lg);margin-top:.75rem}
+.services__eyebrow{font-size:.7rem;text-transform:uppercase;letter-spacing:.12em;color:var(--brand);font-weight:600;margin-bottom:1rem}
+.services__title{font-size:3.2rem;font-weight:500;line-height:1.1;margin-bottom:3rem}
+@media(max-width:640px){.services__title{font-size:2rem}}
+.service-row{border-top:1px solid var(--hairline);padding:1.6rem 0;display:flex;align-items:flex-start;gap:1.5rem;cursor:pointer;transition:background .2s}
+.service-row:last-child{border-bottom:1px solid var(--hairline)}
+.service-row__num{font-size:.75rem;color:var(--ink-soft);min-width:2rem;padding-top:.35rem}
+.service-row__name{font-size:1.4rem;font-weight:500;flex:1;min-width:0}
+@media(max-width:640px){.service-row__name{font-size:1.05rem}}
+.service-row__desc{font-size:.82rem;color:var(--ink-soft);line-height:1.6;max-width:28rem;flex:1.5;display:none}
+@media(min-width:768px){.service-row__desc{display:block}}
+.service-row__arrow{width:2.2rem;height:2.2rem;border-radius:50%;border:1px solid var(--hairline);display:flex;align-items:center;justify-content:center;transition:transform .4s cubic-bezier(.22,1,.36,1),background .3s;flex-shrink:0}
+.service-row__arrow svg{width:.85rem;height:.85rem;color:var(--ink-soft)}
+.service-row:hover .service-row__arrow{transform:translateX(.3rem) rotate(-45deg);background:var(--brand);border-color:var(--brand)}
+.service-row:hover .service-row__arrow svg{color:#fff}
+
+/* ── INDUSTRIES ── */
+.industries{background:var(--surface);border-radius:var(--radius-card-lg);margin-top:.75rem;padding:6rem 2.5rem;position:relative;z-index:2}
+.industries__intro{display:flex;gap:2rem;align-items:flex-start;flex-wrap:wrap;margin-bottom:4rem}
+.industries__thumb{width:4.8rem;height:4.8rem;border-radius:.9rem;object-fit:cover;flex-shrink:0;box-shadow:0 6px 18px rgba(0,0,0,.15)}
+.industries__title{font-size:2.6rem;font-weight:500;line-height:1.1;flex:1;min-width:12rem}
+@media(max-width:640px){.industries__title{font-size:1.6rem}}
+.industries__body{font-size:.85rem;color:var(--ink-soft);line-height:1.7;max-width:28rem;flex:1;min-width:14rem}
+.industries__cards{display:grid;grid-template-columns:repeat(auto-fit,minmax(min(100%,22rem),1fr));gap:1.5rem}
+.industry-card{position:relative;border-radius:var(--radius-card-lg);overflow:hidden;aspect-ratio:4/5;cursor:default}
+.industry-card img{width:100%;height:100%;object-fit:cover;transition:transform .6s cubic-bezier(.22,1,.36,1)}
+.industry-card:hover img{transform:scale(1.04)}
+.industry-card__overlay{position:absolute;inset:0}
+.industry-card--clay .industry-card__overlay{background:rgba(15,47,99,.4)}
+.industry-card--blue .industry-card__overlay{background:rgba(11,110,151,.55)}
+.industry-card__glass{position:absolute;bottom:1.2rem;left:1.2rem;right:1.2rem;padding:1.2rem 1.4rem;background:rgba(255,255,255,.14);backdrop-filter:blur(14px);border-radius:var(--radius-card);color:#fff}
+.industry-card__glass h3{font-size:1.15rem;font-weight:500;margin-bottom:.3rem}
+.industry-card__glass p{font-size:.76rem;opacity:.85;line-height:1.5}
+
+/* ── STATS ── */
+.stats-section{background:var(--brand-deep);color:#fff;border-radius:var(--radius-card-lg);margin-top:.75rem;padding:5rem 2.5rem}
+.stats-section__eyebrow{font-size:.7rem;text-transform:uppercase;letter-spacing:.12em;opacity:.5;margin-bottom:1rem}
+.stats-section__title{font-size:3rem;font-weight:500;line-height:1.1;margin-bottom:3.5rem}
+@media(max-width:640px){.stats-section__title{font-size:1.8rem}}
+.stats-grid{display:grid;grid-template-columns:repeat(2,1fr);gap:2rem}
+@media(min-width:768px){.stats-grid{grid-template-columns:repeat(4,1fr)}}
+.stat-cell{text-align:center;padding:1.5rem 0;border-top:1px solid rgba(255,255,255,.15)}
+.stat-cell__num{font-size:3.2rem;font-weight:500;line-height:1;margin-bottom:.5rem}
+.stat-cell__label{font-size:.78rem;opacity:.65;line-height:1.4}
+
+/* ── FOOTER ── */
+.footer{background:var(--brand-deep);color:#fff;border-radius:var(--radius-card-lg);margin-top:.75rem;padding:4.5rem 2.5rem 2rem;overflow:hidden}
+.footer__cta{text-align:center;margin-bottom:4rem;padding-bottom:4rem;border-bottom:1px solid rgba(255,255,255,.1)}
+.footer__cta-eye{font-size:.7rem;text-transform:uppercase;letter-spacing:.12em;opacity:.5;margin-bottom:.8rem}
+.footer__cta-title{font-size:3.5rem;font-weight:500;line-height:1.05;margin-bottom:2rem}
+@media(max-width:640px){.footer__cta-title{font-size:2rem}}
+.pill-btn{display:inline-flex;align-items:center;gap:.5rem;padding:.85rem 2.2rem;border-radius:var(--radius-pill);background:#fff;color:var(--brand-deep);font-size:.85rem;font-weight:600;transition:transform .3s,box-shadow .3s}
+.pill-btn:hover{transform:translateY(-2px);box-shadow:0 6px 25px rgba(0,0,0,.2);background:var(--brand-light);color:#fff}
+.footer__cols{display:grid;grid-template-columns:repeat(auto-fit,minmax(min(100%,12rem),1fr));gap:2.5rem;margin-bottom:3rem}
+.footer__col-title{font-size:.7rem;text-transform:uppercase;letter-spacing:.1em;opacity:.5;margin-bottom:1rem;font-weight:600}
+.footer__links li{margin-bottom:.5rem}
+.footer__links a{font-size:.82rem;opacity:.65;transition:opacity .3s}
+.footer__links a:hover{opacity:1;color:var(--brand-light)}
+.footer__contact p{font-size:.8rem;opacity:.7;line-height:1.6;margin-bottom:.3rem}
+.footer__bottom{display:flex;flex-wrap:wrap;align-items:center;justify-content:space-between;gap:1rem;padding-top:2rem;border-top:1px solid rgba(255,255,255,.1)}
+.footer__copy{font-size:.72rem;opacity:.5}
+
+/* ── MODAL ── */
+.modal{position:fixed;inset:0;z-index:190;display:flex;align-items:center;justify-content:center;opacity:0;pointer-events:none;transition:opacity .4s}
+.modal.open{opacity:1;pointer-events:auto}
+.modal__backdrop{position:absolute;inset:0;background:rgba(15,47,99,.55);backdrop-filter:blur(8px)}
+.modal__panel{position:relative;background:#fff;color:var(--ink);border-radius:var(--radius-card-lg);padding:2.5rem;width:min(32rem,92vw);max-height:92vh;overflow-y:auto;box-shadow:0 20px 50px rgba(0,0,0,.25)}
+.modal__close{position:absolute;top:1.2rem;right:1.2rem;width:2.2rem;height:2.2rem;border-radius:50%;background:var(--surface);display:flex;align-items:center;justify-content:center;font-size:.9rem;transition:background .2s}
+.modal__close:hover{background:var(--hairline)}
+.modal__eyebrow{font-size:.7rem;text-transform:uppercase;letter-spacing:.12em;color:var(--brand);margin-bottom:.5rem;font-weight:600}
+.modal__title{font-size:2rem;font-weight:500;line-height:1.1;margin-bottom:1.5rem}
+.modal__form{display:flex;flex-direction:column;gap:1.1rem}
+.modal__field{display:flex;flex-direction:column;gap:.3rem}
+.modal__field label{font-size:.72rem;text-transform:uppercase;letter-spacing:.08em;color:var(--ink-soft);font-weight:500}
+.modal__field input,.modal__field textarea,.modal__field select{padding:.75rem 1rem;border:1px solid var(--hairline);border-radius:.6rem;font:inherit;font-size:.85rem;resize:vertical;background:#fff;color:var(--ink)}
+.modal__field input:focus,.modal__field textarea:focus,.modal__field select:focus{outline:none;border-color:var(--brand)}
+.modal__submit{padding:.85rem 2rem;border-radius:var(--radius-pill);background:var(--brand);color:#fff;font-weight:600;font-size:.85rem;transition:background .3s;align-self:flex-start}
+.modal__submit:hover{background:var(--brand-deep)}
+.modal__success{text-align:center;padding:2rem 0}
+
+/* Inspection Lightbox Modal */
+.inspect-modal{position:fixed;inset:0;z-index:195;display:flex;align-items:center;justify-content:center;opacity:0;pointer-events:none;transition:opacity .4s}
+.inspect-modal.open{opacity:1;pointer-events:auto}
+.inspect-panel{position:relative;background:#fff;border-radius:var(--radius-card-lg);max-width:58rem;width:94vw;max-height:92vh;overflow:hidden;box-shadow:0 25px 60px rgba(0,0,0,.4)}
+.inspect-body{display:flex;flex-direction:column;max-height:92vh;overflow-y:auto}
+@media(min-width:768px){.inspect-body{display:grid;grid-template-columns:1.2fr 1fr;overflow:hidden;height:80vh}}
+.inspect-view{background:#0b192e;display:flex;align-items:center;justify-content:center;overflow:hidden;padding:2rem}
+.inspect-view img{max-height:100%;max-width:100%;object-fit:contain}
+.inspect-details{padding:2.5rem;display:flex;flex-direction:column;justify-content:space-between;overflow-y:auto;background:#fff}
+.inspect-tag{font-size:.68rem;text-transform:uppercase;letter-spacing:.12em;font-weight:600;color:var(--brand);margin-bottom:.5rem}
+.inspect-details h3{font-size:1.6rem;font-weight:500;margin-bottom:.8rem;color:var(--ink)}
+.inspect-details p{font-size:.85rem;color:var(--ink-soft);line-height:1.6;margin-bottom:1.5rem}
+.inspect-specs{display:flex;flex-direction:column;gap:.6rem;border-top:1px solid var(--hairline);border-bottom:1px solid var(--hairline);padding:1.2rem 0;margin-bottom:1.8rem;font-size:.8rem}
+.inspect-spec-row{display:flex;justify-content:space-between}
+.inspect-spec-row strong{color:var(--ink)}
+
+/* Floating WhatsApp Button */
+.whatsapp-float{position:fixed;bottom:1.8rem;right:1.8rem;z-index:90;display:flex;align-items:center;gap:.6rem;background:#25d366;color:#ffffff;padding:.75rem 1.25rem;border-radius:var(--radius-pill);box-shadow:0 10px 25px rgba(37,211,102,.4);font-size:.85rem;font-weight:600;transition:transform .3s,box-shadow .3s}
+.whatsapp-float:hover{transform:translateY(-3px);box-shadow:0 14px 30px rgba(37,211,102,.5)}
+.whatsapp-float svg{width:1.3rem;height:1.3rem;fill:currentColor}
+
+/* Inview Reveal */
+.reveal-up{opacity:0;transform:translateY(24px);transition:opacity 700ms cubic-bezier(.16,1,.3,1),transform 700ms cubic-bezier(.16,1,.3,1)}
+.reveal-up.revealed{opacity:1;transform:translateY(0)}
+</style>
+</head>
+<body>
+
+<!-- ═══ GSAP INTRO LOADING OVERLAY (3-SECOND EXACT TIMELINE) ═══ -->
+<div class="preloader" id="preloader">
+  <div class="logo-anim-wrap">
+    <!-- Top Row: R E S O (grey squares) + L I N E (cyan letters) -->
+    <div class="logo-grid-row top-row">
+      <div class="square-grey" id="sqR">R</div>
+      <div class="square-grey" id="sqE">E</div>
+      <div class="square-grey" id="sqS">S</div>
+      <div class="square-grey" id="sqO">O</div>
+      <div class="letter-cyan" id="letL">L</div>
+      <div class="letter-cyan" id="letI">I</div>
+      <div class="letter-cyan" id="letN">N</div>
+      <div class="letter-cyan" id="letE">E</div>
+    </div>
+
+    <!-- Center Thin Cyan Baseline -->
+    <div class="baseline-wrap">
+      <div class="baseline-line" id="baseline"></div>
+    </div>
+
+    <!-- Bottom Row: Solid Cyan Block + Grey Rectangle (TECHBIS / TECHSOL) -->
+    <div class="logo-grid-row bottom-row">
+      <div class="cyan-square-block" id="cyanBlock"></div>
+      <div class="grey-tech-rect" id="greyRect">
+        <span class="tech-char">T</span>
+        <span class="tech-char">E</span>
+        <span class="tech-char">C</span>
+        <span class="tech-char">H</span>
+        <span class="tech-char">B</span>
+        <span class="tech-char">I</span>
+        <span class="tech-char">S</span>
+      </div>
+    </div>
+
+    <!-- Tagline: Cursive 'Partnering for Success' -->
+    <div class="tagline-row" id="taglineWrap">
+      <div class="tagline-text">Partnering for Success</div>
+    </div>
+  </div>
+</div>
+
+<main>
+<!-- ═══ HERO SECTION (BASELINE ROUNDED CARD + SEAMLESS AESTHETIC TRANSITION) ═══ -->
+<section class="hero" id="hero">
+  <div class="hero__parallax" id="heroParallax">
+    <!-- Cinematic Slow-Moving Ambient Hero Slideshow -->
+    <div class="hero__slides" id="heroSlides">
+      <!-- Slide 0: The Green Image — Wastewater Treatment & Clarifiers -->
+      <div class="hero__slide active" data-index="0" data-caption="01 / 06 • Water &amp; Wastewater Treatment Plant">
+        <img src="assets/hero-aerial-plant.jpg" alt="Aerial view of industrial wastewater treatment and environmental engineering plant" class="hero__slide-img"/>
+      </div>
+      <!-- Slide 1: Industrial PLC Automation Control Panels -->
+      <div class="hero__slide" data-index="1" data-caption="02 / 06 • Turnkey Modular PLC Automation &amp; Panels">
+        <img src="assets/gallery-plc-controllers.jpg" alt="Industrial modular PLC control panels, relays and wiring" class="hero__slide-img"/>
+      </div>
+      <!-- Slide 2: Central SCADA Telemetry & Control Center -->
+      <div class="hero__slide" data-index="2" data-caption="03 / 06 • Central SCADA Telemetry &amp; Command Center">
+        <img src="assets/gallery-scada-control.jpg" alt="Supervisory SCADA telemetry workstation and control room" class="hero__slide-img"/>
+      </div>
+      <!-- Slide 3: Heavy-Duty Electrical MCC Switchgear & Drives -->
+      <div class="hero__slide" data-index="3" data-caption="04 / 06 • Heavy-Duty MCC Switchgear &amp; VFD Lineups">
+        <img src="assets/gallery-mcc-switchgear.jpg" alt="Motor Control Centers (MCC), switchgear lineup and VFD drives" class="hero__slide-img"/>
+      </div>
+      <!-- Slide 4: High-Capacity Fluid Booster Pumps & Utilities -->
+      <div class="hero__slide" data-index="4" data-caption="05 / 06 • Industrial High-Head Pumping &amp; Utilities">
+        <img src="assets/gallery-fluid-pumps.jpg" alt="Industrial high-head fluid booster pumps and water utility infrastructure" class="hero__slide-img"/>
+      </div>
+      <!-- Slide 5: Precision Process Instrumentation & Calibration Lab -->
+      <div class="hero__slide" data-index="5" data-caption="06 / 06 • Process Instrumentation &amp; Calibration Lab">
+        <img src="assets/gallery-pcb-calibration.jpg" alt="Electronic calibration and precision process instrumentation laboratory" class="hero__slide-img"/>
+      </div>
+    </div>
+    <div class="hero__overlay"></div>
+
+    <!-- Slow Slide Progress / Switcher Bar -->
+    <div class="hero__slide-controls" id="heroSlideControls">
+      <div class="hero__slide-badge" id="heroSlideBadge">
+        <span class="slide-indicator-dot"></span>
+        <span id="heroSlideCaption">01 / 06 • Water &amp; Wastewater Treatment Plant</span>
+      </div>
+      <div class="hero__slide-dots" id="heroSlideDots">
+        <button class="slide-dot active" data-slide="0" aria-label="Slide 1: Water &amp; Environmental Plant"></button>
+        <button class="slide-dot" data-slide="1" aria-label="Slide 2: PLC Automation Panels"></button>
+        <button class="slide-dot" data-slide="2" aria-label="Slide 3: SCADA Control Center"></button>
+        <button class="slide-dot" data-slide="3" aria-label="Slide 4: MCC Switchgear &amp; Drives"></button>
+        <button class="slide-dot" data-slide="4" aria-label="Slide 5: Industrial Fluid Pumps"></button>
+        <button class="slide-dot" data-slide="5" aria-label="Slide 6: Instrumentation Lab"></button>
+      </div>
+    </div>
+  </div>
+
+  <!-- Floating Header & 4-Column Mega Dropdown -->
+  <header class="header">
+    <!-- Left: White rounded pill container holding the logo -->
+    <a href="#" class="header__brand" aria-label="Resoline Techbis Home">
+      <span class="brand-pill">
+        <img src="assets/logo-resoline.png" alt="Resoline Techbis — Precision In Every Solution" class="brand-logo-img"/>
+      </span>
+    </a>
+
+    <!-- Center Navigation Bar: Direct Automation Dropdown + Mega Dropdown triggers -->
+    <div class="header__center">
+      <div class="nav-mega-group" id="navMegaGroup">
+        <!-- Direct Automation Dropdown -->
+        <div class="nav-dropdown-item">
+          <button class="nav-mega-btn" id="navAutoDropdownBtn" type="button" aria-haspopup="true">
+            <span>Automation</span> <span class="nav-caret">▾</span>
+          </button>
+          <div class="nav-sub-dropdown" id="navAutoDropdown">
+            <button type="button" class="auto-drop-item" data-open-auto="plc">
+              <span class="auto-drop-icon">⚡</span>
+              <div class="auto-drop-text">
+                <strong>PLC</strong>
+                <span>Programmable Logic Controllers &amp; Panels</span>
+              </div>
+            </button>
+            <button type="button" class="auto-drop-item" data-open-auto="hmi">
+              <span class="auto-drop-icon">🖥️</span>
+              <div class="auto-drop-text">
+                <strong>HMI</strong>
+                <span>Touchscreen Operator Interfaces</span>
+              </div>
+            </button>
+            <button type="button" class="auto-drop-item" data-open-auto="vfd">
+              <span class="auto-drop-icon">⚙️</span>
+              <div class="auto-drop-text">
+                <strong>VFD</strong>
+                <span>Variable Frequency Drives &amp; Panels</span>
+              </div>
+            </button>
+            <button type="button" class="auto-drop-item" data-open-auto="scada">
+              <span class="auto-drop-icon">📊</span>
+              <div class="auto-drop-text">
+                <strong>SCADA</strong>
+                <span>Supervisory Telemetry &amp; Central Control</span>
+              </div>
+            </button>
+            <button type="button" class="auto-drop-item" data-open-auto="servo">
+              <span class="auto-drop-icon">🎯</span>
+              <div class="auto-drop-text">
+                <strong>SERVO METER</strong>
+                <span>High-Precision Servo Drives &amp; Motion</span>
+              </div>
+            </button>
+          </div>
+        </div>
+
+        <button class="nav-mega-btn" data-mega-col="1"><span>What We Do</span> <span class="nav-caret">▾</span></button>
+        <button class="nav-mega-btn" data-mega-col="2"><span>Products</span> <span class="nav-caret">▾</span></button>
+        <button class="nav-mega-btn" data-mega-col="3"><span>Industries</span> <span class="nav-caret">▾</span></button>
+        <button class="nav-mega-btn" data-mega-col="4"><span>Consultation</span> <span class="nav-caret">▾</span></button>
+
+        <!-- Glassmorphic 4-Column Mega Dropdown -->
+        <div class="mega-dropdown" id="megaDropdown">
+          <div class="mega-grid">
+            <!-- Column 1: WHAT WE DO (6 DIVISIONS) -->
+            <div class="mega-col">
+              <div class="mega-col__title">What We Do</div>
+              <div class="mega-col__list">
+                <a href="#divisions" class="mega-col__link" data-open-auto="plc">1. Automation (PLC, HMI, VFD, SCADA, Servo)</a>
+                <a href="#divisions" class="mega-col__link" data-target-filter="flow">2. Instrumentation</a>
+                <a href="#divisions" class="mega-col__link" data-target-filter="power">3. Electrical and Utilities</a>
+                <a href="#divisions" class="mega-col__link" data-scroll-to="console">4. Utility System</a>
+                <a href="#divisions" class="mega-col__link" data-scroll-to="water-solutions">5. Environmental Solution</a>
+                <a href="#divisions" class="mega-col__link" data-open-modal>6. Consultation</a>
+              </div>
+            </div>
+
+            <!-- Column 2: PRODUCTS & DRIVES -->
+            <div class="mega-col">
+              <div class="mega-col__title">Products</div>
+              <div class="mega-col__list">
+                <a href="#equipment" class="mega-col__link" data-nav-filter="power">Variable Frequency Drives (VFD) &amp; Panels</a>
+                <a href="#equipment" class="mega-col__link" data-nav-filter="power">Softstarters &amp; Electric Motors</a>
+                <a href="#equipment" class="mega-col__link" data-nav-filter="automation">PLC &amp; SCADA Control Panels</a>
+                <a href="#equipment" class="mega-col__link" data-nav-filter="flow">Flow &amp; Level Transmitters</a>
+                <a href="#equipment" class="mega-col__link" data-nav-filter="flow">Pressure &amp; Temperature Sensors</a>
+              </div>
+            </div>
+
+            <!-- Column 3: INDUSTRIES -->
+            <div class="mega-col">
+              <div class="mega-col__title">Industries</div>
+              <div class="mega-col__list">
+                <a href="#industries" class="mega-col__link">Water &amp; Wastewater</a>
+                <a href="#industries" class="mega-col__link">Power &amp; Utilities</a>
+                <a href="#industries" class="mega-col__link">Manufacturing &amp; Process</a>
+                <a href="#industries" class="mega-col__link">Mining &amp; Metals</a>
+                <a href="#industries" class="mega-col__link">HVAC &amp; Infrastructure</a>
+              </div>
+            </div>
+
+            <!-- Column 4: CONSULTATION & SERVICES -->
+            <div class="mega-col">
+              <div class="mega-col__title">Consultation</div>
+              <div class="mega-col__list">
+                <a href="#services" class="mega-col__link" data-open-modal>Engineering Energy Audits</a>
+                <a href="#services" class="mega-col__link">Testing &amp; Commissioning</a>
+                <a href="#services" class="mega-col__link">Annual Maintenance (AMC)</a>
+                <a href="#services" class="mega-col__link">VFD &amp; Panel Retrofitting</a>
+                <a href="#contact" class="mega-col__link" data-open-modal>24/7 Technical Desk</a>
+              </div>
+            </div>
+          </div>
+
+          <div class="mega-bottom">
+            <div><span style="color:var(--brand-green);margin-right:0.4rem">●</span> Dedicated Engineering &amp; Commissioning Partner — Bhubaneswar, Odisha</div>
+            <a href="#contact" data-open-modal>Consult an Application Engineer →</a>
+          </div>
+        </div>
+      </div>
+    </div>
+
+    <!-- Right Action Bar -->
+    <div class="header__right">
+      <a href="RESOLINE CATALOGUE.pdf" download class="header__cat-btn" title="Download Product Catalogue">
+        <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" style="width:.85rem;height:.85rem"><path d="M21 15v4a2 2 0 0 1-2 2H5a2 2 0 0 1-2-2v-4"/><polyline points="7 10 12 15 17 10"/><line x1="12" y1="15" x2="12" y2="3"/></svg>
+        <span>↓ Catalogue</span>
+      </a>
+
+      <!-- Green CTA button -->
+      <button class="header__quote-btn" data-open-modal>CONTACT US</button>
+
+      <!-- Circular glass hamburger button (=) -->
+      <button class="burger" id="burgerBtn" aria-label="Toggle Menu" title="Toggle Navigation Menu">
+        <div class="burger__inner">
+          <span class="burger__bar"></span>
+          <span class="burger__bar"></span>
+        </div>
+      </button>
+    </div>
+  </header>
+
+  <!-- Balanced Hero Grid (Clean, Spacious & Cinematic) -->
+  <div class="hero__grid">
+    <div class="hero__col-brand">
+      <div class="hero__eyebrow-chip">
+        <span class="dot-live"></span>
+        <span>Engineering &amp; Automation Facility • Bhubaneswar, Odisha</span>
+      </div>
+      <h1 class="hero__title" id="heroTitle">PRECISION IN EVERY SOLUTION</h1>
+      <div class="hero__tagline" id="heroTagline">
+        <span class="line-wrap"><span class="line-inner">Innovate,</span></span>
+        <span class="line-wrap"><span class="line-inner">Automate</span></span>
+      </div>
+      <p class="hero__lead">Engineering future-ready industrial automation panels, process instrumentation, and mission-critical turnkey water engineering systems.</p>
+      <div class="hero__actions">
+        <a href="#divisions" class="btn-primary">Explore 5 Core Divisions ↓</a>
+        <button type="button" class="btn-auto-launch" data-open-auto="plc">
+          <span style="font-size:1rem">⚡</span>
+          <span>Automation Hardware Pop-up</span>
+        </button>
+        <button class="btn-outline" data-open-modal>Request Engineering Quote</button>
+      </div>
+      <div class="hero__trust-strip">
+        <div class="trust-item"><strong>500+</strong> <span>Delivered Projects</span></div>
+        <div class="trust-sep">•</div>
+        <div class="trust-item"><strong>ISO 9001:2015</strong> <span>Compliant Standards</span></div>
+        <div class="trust-sep">•</div>
+        <div class="trust-item"><strong>24/7</strong> <span>Field Support Desk</span></div>
+      </div>
+    </div>
+
+    <!-- Column 2 (Right): Vertical "What We Do" Accordion Card -->
+    <div class="hero__col-work">
+      <div class="what-we-do-card">
+        <div class="wwd-header">
+          <div class="wwd-eyebrow">WHAT WE DO</div>
+          <span class="wwd-badge">5 CORE DIVISIONS</span>
+        </div>
+
+        <div class="wwd-list" id="wwdList">
+          <!-- 01: Automation -->
+          <div class="wwd-item active" data-wwd="automation">
+            <button class="wwd-trigger" type="button" aria-expanded="true">
+              <div class="wwd-trigger-left">
+                <span class="wwd-num">01</span>
+                <span class="wwd-name">Automation</span>
+              </div>
+              <span class="wwd-caret">▾</span>
+            </button>
+            <div class="wwd-drawer">
+              <p class="wwd-drawer-desc">Modular PLC units, touchscreen HMIs, SCADA telemetry suites &amp; custom-wired automation control panels.</p>
+              <a href="#divisions" class="wwd-drawer-link" data-open-auto="plc">Explore Automation Hardware →</a>
+            </div>
+          </div>
+
+          <!-- 02: Instrumentation -->
+          <div class="wwd-item" data-wwd="instrumentation">
+            <button class="wwd-trigger" type="button" aria-expanded="false">
+              <div class="wwd-trigger-left">
+                <span class="wwd-num">02</span>
+                <span class="wwd-name">Instrumentation</span>
+              </div>
+              <span class="wwd-caret">▾</span>
+            </button>
+            <div class="wwd-drawer">
+              <p class="wwd-drawer-desc">Electromagnetic &amp; Coriolis mass flow meters, ultrasonic level sensors &amp; smart pressure transmitters.</p>
+              <a href="#divisions" class="wwd-drawer-link" data-target-filter="flow">Explore Process Instruments →</a>
+            </div>
+          </div>
+
+          <!-- 03: Electrical and Utilities -->
+          <div class="wwd-item" data-wwd="electrical">
+            <button class="wwd-trigger" type="button" aria-expanded="false">
+              <div class="wwd-trigger-left">
+                <span class="wwd-num">03</span>
+                <span class="wwd-name">Electrical and Utilities</span>
+              </div>
+              <span class="wwd-caret">▾</span>
+            </button>
+            <div class="wwd-drawer">
+              <p class="wwd-drawer-desc">Variable Frequency Drives (VFDs), MCC panel switchgear lineups, and heavy-duty motor control centers.</p>
+              <a href="#divisions" class="wwd-drawer-link" data-target-filter="power">Explore Drives &amp; Panels →</a>
+            </div>
+          </div>
+
+          <!-- 04: Utility System -->
+          <div class="wwd-item" data-wwd="utilities">
+            <button class="wwd-trigger" type="button" aria-expanded="false">
+              <div class="wwd-trigger-left">
+                <span class="wwd-num">04</span>
+                <span class="wwd-name">Utility System</span>
+              </div>
+              <span class="wwd-caret">▾</span>
+            </button>
+            <div class="wwd-drawer">
+              <p class="wwd-drawer-desc">High-head fluid booster pumps, compressed air manifolds &amp; plant utility infrastructure.</p>
+              <a href="#console" class="wwd-drawer-link">Explore Utility Systems →</a>
+            </div>
+          </div>
+
+          <!-- 05: Environmental Solution -->
+          <div class="wwd-item" data-wwd="environmental">
+            <button class="wwd-trigger" type="button" aria-expanded="false">
+              <div class="wwd-trigger-left">
+                <span class="wwd-num">05</span>
+                <span class="wwd-name">Environmental Solution</span>
+              </div>
+              <span class="wwd-caret">▾</span>
+            </button>
+            <div class="wwd-drawer">
+              <p class="wwd-drawer-desc">Turnkey industrial Reverse Osmosis (RO), DM plants, ETP, STP, and Zero Liquid Discharge (ZLD) plants.</p>
+              <a href="#water-solutions" class="wwd-drawer-link">Explore Water Engineering →</a>
+            </div>
+          </div>
+        </div>
+
+        <div class="wwd-footer">
+          <div class="wwd-metrics-pill">
+            <strong>500+</strong> Delivered Projects
+          </div>
+          <a href="#consultation-part" class="wwd-consult-link">Part 02: Consultation &amp; AMC ↓</a>
+        </div>
+      </div>
+    </div>
+    </div>
+  </div>
+</section>
+
+<!-- ═══ WHAT WE DO: 5-PILLAR CORE DIVISIONS + CONSULTATION PART 02 ═══ -->
+<section class="home-segregation reveal-up" id="divisions">
+  <div class="home-segregation__header">
+    <div>
+      <div class="home-segregation__eyebrow">What We Do • Part 01</div>
+      <h2 class="home-segregation__title">5 Core Engineering Divisions</h2>
+    </div>
+    <p class="home-segregation__desc">
+      Our operations are segregated into five specialized industrial disciplines, providing seamless end-to-end execution from panel fabrication and instrumentation to utility systems and environmental engineering.
+    </p>
+  </div>
+
+  <div class="home-segregation__grid">
+    <!-- 01: Automation -->
+    <div class="seg-card" data-target-filter="automation">
+      <div>
+        <div class="seg-card__top">
+          <span class="seg-card__num">#01</span>
+          <div class="seg-card__icon">
+            <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><rect x="4" y="4" width="16" height="16" rx="2"/><rect x="9" y="9" width="6" height="6"/><line x1="9" y1="1" x2="9" y2="4"/><line x1="15" y1="1" x2="15" y2="4"/></svg>
+          </div>
+        </div>
+        <span class="seg-card__tag">Turnkey Control</span>
+        <h3 class="seg-card__heading">Automation</h3>
+        <p class="seg-card__body">Modular PLC units, custom-wired automation control panels, touchscreen HMIs, and plant-wide supervisory SCADA telemetry suites.</p>
+        <div class="auto-chips-row">
+          <button type="button" class="auto-chip-btn" data-open-auto="plc"><span>⚡ PLC</span></button>
+          <button type="button" class="auto-chip-btn" data-open-auto="hmi"><span>🖥️ HMI</span></button>
+          <button type="button" class="auto-chip-btn" data-open-auto="vfd"><span>⚙️ VFD</span></button>
+          <button type="button" class="auto-chip-btn" data-open-auto="scada"><span>📊 SCADA</span></button>
+          <button type="button" class="auto-chip-btn" data-open-auto="servo"><span>🎯 SERVO METER</span></button>
+        </div>
+      </div>
+      <button type="button" class="seg-card__link" data-open-auto="plc" style="background:none;border:none;cursor:pointer;padding:0;text-align:left">Open Automation Hardware Pop-up →</button>
+    </div>
+
+    <!-- 02: Instrumentation -->
+    <div class="seg-card" data-target-filter="flow">
+      <div>
+        <div class="seg-card__top">
+          <span class="seg-card__num">#02</span>
+          <div class="seg-card__icon">
+            <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><circle cx="12" cy="12" r="9"/><line x1="12" y1="3" x2="12" y2="7"/><line x1="12" y1="17" x2="12" y2="21"/></svg>
+          </div>
+        </div>
+        <span class="seg-card__tag">Precision Measurement</span>
+        <h3 class="seg-card__heading">Instrumentation</h3>
+        <p class="seg-card__body">Electromagnetic &amp; Coriolis mass flow meters, ultrasonic level probes, smart pressure transmitters, and digital PID temperature loops.</p>
+      </div>
+      <span class="seg-card__link">Explore Instrumentation Range →</span>
+    </div>
+
+    <!-- 03: Electrical and Utilities -->
+    <div class="seg-card" data-target-filter="power">
+      <div>
+        <div class="seg-card__top">
+          <span class="seg-card__num">#03</span>
+          <div class="seg-card__icon">
+            <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><polygon points="13 2 3 14 12 14 11 22 21 10 12 10 13 2"/></svg>
+          </div>
+        </div>
+        <span class="seg-card__tag">Power &amp; Drives</span>
+        <h3 class="seg-card__heading">Electrical and Utilities</h3>
+        <p class="seg-card__body">Variable Frequency Drives (VFDs), heavy-duty motor softstarters, MCC switchgear lineups, and heavy busbar motor control centers.</p>
+      </div>
+      <span class="seg-card__link">Explore Electrical &amp; Drives →</span>
+    </div>
+
+    <!-- 04: Utility System -->
+    <div class="seg-card" data-scroll-to="console">
+      <div>
+        <div class="seg-card__top">
+          <span class="seg-card__num">#04</span>
+          <div class="seg-card__icon">
+            <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><circle cx="12" cy="12" r="3"/><path d="M19.4 15a1.65 1.65 0 0 0 .33 1.82l.06.06a2 2 0 0 1 0 2.83 2 2 0 0 1-2.83 0l-.06-.06a1.65 1.65 0 0 0-1.82-.33 1.65 1.65 0 0 0-1 1.51V21a2 2 0 0 1-2 2 2 2 0 0 1-2-2v-.09A1.65 1.65 0 0 0 9 19.4a1.65 1.65 0 0 0-1.82.33l-.06.06a2 2 0 0 1-2.83 0 2 2 0 0 1 0-2.83l.06-.06a1.65 1.65 0 0 0 .33-1.82 1.65 1.65 0 0 0-1.51-1H3a2 2 0 0 1-2-2 2 2 0 0 1 2-2h.09A1.65 1.65 0 0 0 4.6 9a1.65 1.65 0 0 0-.33-1.82l-.06-.06a2 2 0 0 1 0-2.83 2 2 0 0 1 2.83 0l.06.06a1.65 1.65 0 0 0 1.82.33H9a1.65 1.65 0 0 0 1-1.51V3a2 2 0 0 1 2-2 2 2 0 0 1 2 2v.09a1.65 1.65 0 0 0 1 1.51 1.65 1.65 0 0 0 1.82-.33l.06-.06a2 2 0 0 1 2.83 0 2 2 0 0 1 0 2.83l-.06.06a1.65 1.65 0 0 0-.33 1.82V9a1.65 1.65 0 0 0 1.51 1H21a2 2 0 0 1 2 2 2 2 0 0 1-2 2h-.09a1.65 1.65 0 0 0-1.51 1z"/></svg>
+          </div>
+        </div>
+        <span class="seg-card__tag">Fluid &amp; Mechanical</span>
+        <h3 class="seg-card__heading">Utility System</h3>
+        <p class="seg-card__body">Industrial high-pressure pumping skids, air compressor automation, cooling fluid loops, and vibration-damped mechanical bases.</p>
+      </div>
+      <span class="seg-card__link">Explore Utility Systems →</span>
+    </div>
+
+    <!-- 05: Environmental Solution -->
+    <div class="seg-card" data-scroll-to="water-solutions">
+      <div>
+        <div class="seg-card__top">
+          <span class="seg-card__num">#05</span>
+          <div class="seg-card__icon">
+            <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M12 2.69l5.66 5.66a8 8 0 1 1-11.31 0z"/></svg>
+          </div>
+        </div>
+        <span class="seg-card__tag">Ecological &amp; Water</span>
+        <h3 class="seg-card__heading">Environmental Solution</h3>
+        <p class="seg-card__body">Turnkey industrial Reverse Osmosis (RO), Ultrafiltration, Demineralisation (DM), ETP, STP, and Zero Liquid Discharge (ZLD) plants.</p>
+      </div>
+      <span class="seg-card__link">Explore Environmental Tech →</span>
+    </div>
+  </div>
+
+  <!-- ═══ WHAT WE DO • PART 02: CONSULTATION, AUDITS & AMC ═══ -->
+  <div class="consultation-part" id="consultation-part">
+    <div class="home-segregation__header" style="margin-bottom:1.8rem">
+      <div>
+        <div class="home-segregation__eyebrow">What We Do • Part 02</div>
+        <h3 class="home-segregation__title" style="font-size:clamp(1.6rem,3.2vw,2.2rem)">Engineering Consultation, Audits &amp; AMC</h3>
+      </div>
+      <p class="home-segregation__desc">
+        Direct technical partnership, on-site diagnostics, plant efficiency audits, and round-the-clock maintenance agreements managed by senior industrial engineers.
+      </p>
+    </div>
+
+    <div class="consultation-grid">
+      <!-- Consult Card 1 -->
+      <div class="consult-card">
+        <div>
+          <div class="consult-card__icon">⚡</div>
+          <h4>Plant Energy Audits</h4>
+          <p>Comprehensive power factor analysis, harmonic distortion evaluations, and VFD energy conservation ROI studies for industrial pumps and fans.</p>
+        </div>
+        <span class="consult-card__chip">Efficiency Optimization</span>
+      </div>
+
+      <!-- Consult Card 2 -->
+      <div class="consult-card">
+        <div>
+          <div class="consult-card__icon">🎯</div>
+          <h4>NABL Traceable Calibration</h4>
+          <p>On-site flow rig verification, electromagnetic meter profiling, precision pressure transmitter calibration, and RTD temperature loop validation.</p>
+        </div>
+        <span class="consult-card__chip">Compliance &amp; QA</span>
+      </div>
+
+      <!-- Consult Card 3 -->
+      <div class="consult-card">
+        <div>
+          <div class="consult-card__icon">🔄</div>
+          <h4>VFD &amp; Panel Retrofitting</h4>
+          <p>Modernization of obsolete MCC lineups, DOL to VFD drive conversions, PLC ladder logic migration, and busbar capacity expansions.</p>
+        </div>
+        <span class="consult-card__chip">System Modernization</span>
+      </div>
+
+      <!-- Consult Card 4 -->
+      <div class="consult-card">
+        <div>
+          <div class="consult-card__icon">🛠️</div>
+          <h4>24/7 AMC &amp; Field Support</h4>
+          <p>Annual Maintenance Contracts (AMC) with guaranteed emergency dispatch, routine preventive inspections, and remote SCADA telemetry assistance.</p>
+        </div>
+        <span class="consult-card__chip">24/7 Operations</span>
+      </div>
+    </div>
+
+    <!-- Direct Action Consultation Banner -->
+    <div class="consultation-cta-banner">
+      <div>
+        <h4 style="font-size:1.15rem;font-weight:700;color:#ffffff;margin-bottom:.3rem">Need Plant Consultation or an Energy Audit?</h4>
+        <p style="font-size:.82rem;color:rgba(255,255,255,.8);max-width:32rem">Speak directly with senior application engineers in Bhubaneswar. We evaluate on-site requirements across Odisha and Eastern India.</p>
+      </div>
+      <div style="display:flex;gap:.75rem;flex-wrap:wrap">
+        <a href="tel:+91637053100" class="btn-primary" style="padding:.65rem 1.4rem;font-size:.8rem;background:var(--brand-green);border-color:var(--brand-green)">Call +91 637053100</a>
+        <button type="button" class="btn-outline" data-open-modal style="padding:.65rem 1.4rem;font-size:.8rem;border-color:rgba(255,255,255,.3);color:#fff">Request Engineering Consultation →</button>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- ═══ CLIENT LOGO STRIP ═══ -->
+<div class="client-strip reveal-up" id="clients">
+  <div class="client-strip__label">Trusted by Giants</div>
+  <div class="client-strip__track">
+    <div class="client-strip__items">
+      <span>TATA &amp; SUBSIDIARIES</span>
+      <span class="client-dot">•</span>
+      <span>NALCO</span>
+      <span class="client-dot">•</span>
+      <span>JINDAL GROUP</span>
+      <span class="client-dot">•</span>
+      <span>ITC LIMITED</span>
+      <span class="client-dot">•</span>
+      <span>IMFA</span>
+      <span class="client-dot">•</span>
+      <span>VISA STEEL</span>
+      <span class="client-dot">•</span>
+      <span>BIRLA TYRES</span>
+      <span class="client-dot">•</span>
+      <span>PARADEEP PHOSPHATES</span>
+      <span class="client-dot">•</span>
+      <span>APOLLO HOSPITALS</span>
+      <span class="client-dot">•</span>
+      <span>MAYFAIR HOTELS</span>
+      <span class="client-dot">•</span>
+      <span>SUM HOSPITAL</span>
+      <span class="client-dot">•</span>
+      <span>KIIT &amp; KIIMS</span>
+    </div>
+  </div>
+</div>
+
+<!-- ═══ TRUST & LEADERSHIP ═══ -->
+<section class="trust">
+  <div class="trust__top reveal-up">
+    <div class="trust__pct">
+      <div class="trust__pct-num">100%</div>
+      <div class="trust__pct-text">Solutions engineered around your plant's exact technical criteria</div>
+    </div>
+    <div class="trust__badge">
+      <span class="trust__chip">#01</span>
+      <h3>Built for Mission-Critical Plants</h3>
+      <p>From TATA and NALCO to Jindal and ITC — Eastern India's top industrial operations rely on Resoline Techbis for water engineering, process automation, and instrumentation reliability.</p>
+    </div>
+  </div>
+
+  <div class="trust__ghost" id="trustGhost">
+    <div class="trust__ghost-row">
+      <span class="trust__ghost-word">Expert</span>
+      <span class="trust__ghost-word">Industry</span>
+    </div>
+    <div class="trust__ghost-row">
+      <span class="trust__ghost-word ink">Leading</span>
+      <span class="trust__ghost-word">Solutions</span>
+    </div>
+  </div>
+</section>
+
+<!-- ═══ COMPREHENSIVE PRODUCT & HARDWARE CATALOG (22 PRODUCTS) ═══ -->
+<section class="catalog-section reveal-up" id="equipment">
+  <div class="catalog-header">
+    <div class="catalog-eyebrow">Engineered Equipment &amp; Instrumentation</div>
+    <h2 class="catalog-title">Precision Hardware Catalog</h2>
+    <p class="catalog-subtitle">
+      Explore our certified portfolio of programmable controllers, precision flow &amp; level transmitters, variable frequency drives, and custom-built industrial control panels.
+    </p>
+  </div>
+
+  <div class="catalog-tabs" id="catalogTabs">
+    <button class="cat-tab active" data-cat="all">All Equipment (22)</button>
+    <button class="cat-tab" data-cat="automation">Automation &amp; Panels</button>
+    <button class="cat-tab" data-cat="flow">Flow Measurement</button>
+    <button class="cat-tab" data-cat="level">Level Sensing</button>
+    <button class="cat-tab" data-cat="pressure-temp">Pressure &amp; Temperature</button>
+    <button class="cat-tab" data-cat="power">Power, Drives &amp; Motors</button>
+  </div>
+
+  <div class="catalog-grid" id="catalogGrid">
+    <!-- 1: PLC -->
+    <div class="prod-card" data-cat="automation">
+      <div class="prod-card__img-wrap" data-inspect="plc.png" title="Click to Inspect">
+        <img src="plc.png" alt="Programmable Logic Controller (PLC)" class="prod-card__img"/>
+        <div class="prod-card__zoom-hint"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><circle cx="11" cy="11" r="8"/><line x1="21" y1="21" x2="16.65" y2="16.65"/></svg></div>
+      </div>
+      <div>
+        <span class="prod-card__tag">Automation &amp; Control</span>
+        <h3 class="prod-card__title">Modular Programmable Logic Controller</h3>
+        <p class="prod-card__desc">High-speed industrial CPU with expandable digital/analog I/O and multi-protocol fieldbus communication for machine sequencing.</p>
+        <div class="prod-card__specs">
+          <div class="prod-spec-row"><span>Protocols:</span><strong>RS-485 / Modbus RTU / Ethernet</strong></div>
+          <div class="prod-spec-row"><span>Mounting:</span><strong>Standard 35mm DIN-Rail</strong></div>
+        </div>
+      </div>
+      <div class="prod-card__actions">
+        <button class="btn-inquire" data-open-modal data-product="Programmable Logic Controller (PLC)">Inquire / Quote →</button>
+        <button class="btn-inspect" data-inspect="plc.png">Inspect ↗</button>
+      </div>
+    </div>
+
+    <!-- 2: PLC Panel -->
+    <div class="prod-card" data-cat="automation">
+      <div class="prod-card__img-wrap" data-inspect="plc pannel.png" title="Click to Inspect">
+        <img src="plc pannel.png" alt="PLC Automation Control Panel" class="prod-card__img"/>
+        <div class="prod-card__zoom-hint"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><circle cx="11" cy="11" r="8"/><line x1="21" y1="21" x2="16.65" y2="16.65"/></svg></div>
+      </div>
+      <div>
+        <span class="prod-card__tag">Automation &amp; Control</span>
+        <h3 class="prod-card__title">Industrial PLC Automation Control Panel</h3>
+        <p class="prod-card__desc">Factory-wired, fully tested control cabinets with integrated isolation barriers, surge protection, and numbered ferruled wiring.</p>
+        <div class="prod-card__specs">
+          <div class="prod-spec-row"><span>Enclosure:</span><strong>IP54 / IP55 Powder Coated</strong></div>
+          <div class="prod-spec-row"><span>Testing:</span><strong>100% Factory Simulated</strong></div>
+        </div>
+      </div>
+      <div class="prod-card__actions">
+        <button class="btn-inquire" data-open-modal data-product="Industrial PLC Automation Control Panel">Inquire / Quote →</button>
+        <button class="btn-inspect" data-inspect="plc pannel.png">Inspect ↗</button>
+      </div>
+    </div>
+
+    <!-- 3: HMI -->
+    <div class="prod-card" data-cat="automation">
+      <div class="prod-card__img-wrap" data-inspect="hmi.png" title="Click to Inspect">
+        <img src="hmi.png" alt="Touchscreen HMI Console" class="prod-card__img"/>
+        <div class="prod-card__zoom-hint"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><circle cx="11" cy="11" r="8"/><line x1="21" y1="21" x2="16.65" y2="16.65"/></svg></div>
+      </div>
+      <div>
+        <span class="prod-card__tag">Automation &amp; Control</span>
+        <h3 class="prod-card__title">Touchscreen Human-Machine Interface</h3>
+        <p class="prod-card__desc">Industrial operator display terminal providing real-time graphic process mimics, setpoint entries, historical trends, and alarms.</p>
+        <div class="prod-card__specs">
+          <div class="prod-spec-row"><span>Display:</span><strong>7" / 10" / 15" High-Res TFT</strong></div>
+          <div class="prod-spec-row"><span>Ingress:</span><strong>IP65 Dust &amp; Water Resistant</strong></div>
+        </div>
+      </div>
+      <div class="prod-card__actions">
+        <button class="btn-inquire" data-open-modal data-product="Touchscreen HMI Console">Inquire / Quote →</button>
+        <button class="btn-inspect" data-inspect="hmi.png">Inspect ↗</button>
+      </div>
+    </div>
+
+    <!-- 4: SCADA -->
+    <div class="prod-card" data-cat="automation">
+      <div class="prod-card__img-wrap" data-inspect="sccada.png" title="Click to Inspect">
+        <img src="sccada.png" alt="SCADA Supervisory Workstation" class="prod-card__img"/>
+        <div class="prod-card__zoom-hint"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><circle cx="11" cy="11" r="8"/><line x1="21" y1="21" x2="16.65" y2="16.65"/></svg></div>
+      </div>
+      <div>
+        <span class="prod-card__tag">Automation &amp; Control</span>
+        <h3 class="prod-card__title">Central SCADA Software &amp; Workstation</h3>
+        <p class="prod-card__desc">Plant-wide supervisory control architecture featuring dynamic plant synoptics, automated SQL shift logs, and cloud telemetry transmission.</p>
+        <div class="prod-card__specs">
+          <div class="prod-spec-row"><span>Architecture:</span><strong>Client-Server Redundant</strong></div>
+          <div class="prod-spec-row"><span>Telemetry:</span><strong>CPCB / SPCB Cloud Telemetry</strong></div>
+        </div>
+      </div>
+      <div class="prod-card__actions">
+        <button class="btn-inquire" data-open-modal data-product="Central SCADA Supervisory Workstation">Inquire / Quote →</button>
+        <button class="btn-inspect" data-inspect="sccada.png">Inspect ↗</button>
+      </div>
+    </div>
+
+    <!-- 5: Coriolis Mass Flow Meter -->
+    <div class="prod-card" data-cat="flow">
+      <div class="prod-card__img-wrap" data-inspect="coriolis mass flow meter.png" title="Click to Inspect">
+        <img src="coriolis mass flow meter.png" alt="Coriolis Mass Flow Meter" class="prod-card__img"/>
+        <div class="prod-card__zoom-hint"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><circle cx="11" cy="11" r="8"/><line x1="21" y1="21" x2="16.65" y2="16.65"/></svg></div>
+      </div>
+      <div>
+        <span class="prod-card__tag">Flow Measurement</span>
+        <h3 class="prod-card__title">Coriolis Mass Flow Meter</h3>
+        <p class="prod-card__desc">Direct mass, density, and temperature measurement unaffected by fluid viscosity, velocity profile, or temperature variations.</p>
+        <div class="prod-card__specs">
+          <div class="prod-spec-row"><span>Accuracy:</span><strong>±0.1% Measured Rate</strong></div>
+          <div class="prod-spec-row"><span>Sensor MOC:</span><strong>SS316L / Hastelloy C-22</strong></div>
+        </div>
+      </div>
+      <div class="prod-card__actions">
+        <button class="btn-inquire" data-open-modal data-product="Coriolis Mass Flow Meter">Inquire / Quote →</button>
+        <button class="btn-inspect" data-inspect="coriolis mass flow meter.png">Inspect ↗</button>
+      </div>
+    </div>
+
+    <!-- 6: Electromagnetic Flow Meter -->
+    <div class="prod-card" data-cat="flow">
+      <div class="prod-card__img-wrap" data-inspect="e.m flow meter.png" title="Click to Inspect">
+        <img src="e.m flow meter.png" alt="Electromagnetic Flow Meter" class="prod-card__img"/>
+        <div class="prod-card__zoom-hint"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><circle cx="11" cy="11" r="8"/><line x1="21" y1="21" x2="16.65" y2="16.65"/></svg></div>
+      </div>
+      <div>
+        <span class="prod-card__tag">Flow Measurement</span>
+        <h3 class="prod-card__title">Electromagnetic Flow Meter (Magmeter)</h3>
+        <p class="prod-card__desc">Obstructionless full-bore flow meter for conductive liquids, effluent, acids, and water lines with zero pressure drop across the pipe.</p>
+        <div class="prod-card__specs">
+          <div class="prod-spec-row"><span>Accuracy:</span><strong>±0.5% Full Scale</strong></div>
+          <div class="prod-spec-row"><span>Size Range:</span><strong>DN15 to DN1200 Flanged</strong></div>
+        </div>
+      </div>
+      <div class="prod-card__actions">
+        <button class="btn-inquire" data-open-modal data-product="Electromagnetic Flow Meter">Inquire / Quote →</button>
+        <button class="btn-inspect" data-inspect="e.m flow meter.png">Inspect ↗</button>
+      </div>
+    </div>
+
+    <!-- 7: Ultrasonic Flow Meter -->
+    <div class="prod-card" data-cat="flow">
+      <div class="prod-card__img-wrap" data-inspect="ultra sonic flow meter.png" title="Click to Inspect">
+        <img src="ultra sonic flow meter.png" alt="Non-Invasive Ultrasonic Flow Meter" class="prod-card__img"/>
+        <div class="prod-card__zoom-hint"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><circle cx="11" cy="11" r="8"/><line x1="21" y1="21" x2="16.65" y2="16.65"/></svg></div>
+      </div>
+      <div>
+        <span class="prod-card__tag">Flow Measurement</span>
+        <h3 class="prod-card__title">Non-Invasive Ultrasonic Flow Meter</h3>
+        <p class="prod-card__desc">Transit-time acoustic flow measurement utilizing clamp-on or insertion transducers without requiring pipe shutdown.</p>
+        <div class="prod-card__specs">
+          <div class="prod-spec-row"><span>Installation:</span><strong>Clamp-On / Hot-Tap</strong></div>
+          <div class="prod-spec-row"><span>Pipe Range:</span><strong>25mm to 3000mm OD</strong></div>
+        </div>
+      </div>
+      <div class="prod-card__actions">
+        <button class="btn-inquire" data-open-modal data-product="Non-Invasive Ultrasonic Flow Meter">Inquire / Quote →</button>
+        <button class="btn-inspect" data-inspect="ultra sonic flow meter.png">Inspect ↗</button>
+      </div>
+    </div>
+
+    <!-- 8: Vortex Flow Meter -->
+    <div class="prod-card" data-cat="flow">
+      <div class="prod-card__img-wrap" data-inspect="vertex flow meter.png" title="Click to Inspect">
+        <img src="vertex flow meter.png" alt="Vortex Shedding Flow Meter" class="prod-card__img"/>
+        <div class="prod-card__zoom-hint"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><circle cx="11" cy="11" r="8"/><line x1="21" y1="21" x2="16.65" y2="16.65"/></svg></div>
+      </div>
+      <div>
+        <span class="prod-card__tag">Flow Measurement</span>
+        <h3 class="prod-card__title">Vortex Shedding Flow Meter</h3>
+        <p class="prod-card__desc">Engineered for steam mass calculation, compressed gas lines, and clean fluids with built-in temperature &amp; pressure sensors.</p>
+        <div class="prod-card__specs">
+          <div class="prod-spec-row"><span>Medium:</span><strong>Steam &amp; Compressed Gas</strong></div>
+          <div class="prod-spec-row"><span>Temperature:</span><strong>Up to +350°C Continuous</strong></div>
+        </div>
+      </div>
+      <div class="prod-card__actions">
+        <button class="btn-inquire" data-open-modal data-product="Vortex Shedding Flow Meter">Inquire / Quote →</button>
+        <button class="btn-inspect" data-inspect="vertex flow meter.png">Inspect ↗</button>
+      </div>
+    </div>
+
+    <!-- 9: Ultrasonic Level Transmitter -->
+    <div class="prod-card" data-cat="level">
+      <div class="prod-card__img-wrap" data-inspect="ultrasonic level transmitter.png" title="Click to Inspect">
+        <img src="ultrasonic level transmitter.png" alt="Ultrasonic Level Transmitter" class="prod-card__img"/>
+        <div class="prod-card__zoom-hint"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><circle cx="11" cy="11" r="8"/><line x1="21" y1="21" x2="16.65" y2="16.65"/></svg></div>
+      </div>
+      <div>
+        <span class="prod-card__tag">Level Sensing</span>
+        <h3 class="prod-card__title">Non-Contact Ultrasonic Level Transmitter</h3>
+        <p class="prod-card__desc">Continuous level transmitter for liquid storage tanks, sumps, and open channels with narrow focused acoustic beam.</p>
+        <div class="prod-card__specs">
+          <div class="prod-spec-row"><span>Measuring Range:</span><strong>0.4m to 15m Liquid Level</strong></div>
+          <div class="prod-spec-row"><span>Signal Output:</span><strong>4-20mA 2-Wire with HART</strong></div>
+        </div>
+      </div>
+      <div class="prod-card__actions">
+        <button class="btn-inquire" data-open-modal data-product="Non-Contact Ultrasonic Level Transmitter">Inquire / Quote →</button>
+        <button class="btn-inspect" data-inspect="ultrasonic level transmitter.png">Inspect ↗</button>
+      </div>
+    </div>
+
+    <!-- 10: Capacitance Level Transmitter -->
+    <div class="prod-card" data-cat="level">
+      <div class="prod-card__img-wrap" data-inspect="capacitance level transmitter.png" title="Click to Inspect">
+        <img src="capacitance level transmitter.png" alt="Capacitance Level Transmitter" class="prod-card__img"/>
+        <div class="prod-card__zoom-hint"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><circle cx="11" cy="11" r="8"/><line x1="21" y1="21" x2="16.65" y2="16.65"/></svg></div>
+      </div>
+      <div>
+        <span class="prod-card__tag">Level Sensing</span>
+        <h3 class="prod-card__title">Continuous Capacitance Level Transmitter</h3>
+        <p class="prod-card__desc">Immersion probe for aggressive chemicals, boiler feed drums, and viscous fluids with heavy turbulence or high pressure.</p>
+        <div class="prod-card__specs">
+          <div class="prod-spec-row"><span>Probe Type:</span><strong>PTFE Insulated Rod / Rope</strong></div>
+          <div class="prod-spec-row"><span>Pressure:</span><strong>Up to 40 Bar High Pressure</strong></div>
+        </div>
+      </div>
+      <div class="prod-card__actions">
+        <button class="btn-inquire" data-open-modal data-product="Capacitance Level Transmitter">Inquire / Quote →</button>
+        <button class="btn-inspect" data-inspect="capacitance level transmitter.png">Inspect ↗</button>
+      </div>
+    </div>
+
+    <!-- 11: Level Indicator Gauge -->
+    <div class="prod-card" data-cat="level">
+      <div class="prod-card__img-wrap" data-inspect="level indicator.png" title="Click to Inspect">
+        <img src="level indicator.png" alt="Magnetic Bypass Level Indicator Gauge" class="prod-card__img"/>
+        <div class="prod-card__zoom-hint"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><circle cx="11" cy="11" r="8"/><line x1="21" y1="21" x2="16.65" y2="16.65"/></svg></div>
+      </div>
+      <div>
+        <span class="prod-card__tag">Level Sensing</span>
+        <h3 class="prod-card__title">Magnetic Bypass Level Indicator Gauge</h3>
+        <p class="prod-card__desc">Direct visual level indicator utilizing hermetically sealed magnetic flappers. Eliminates glass breakage risk in toxic tanks.</p>
+        <div class="prod-card__specs">
+          <div class="prod-spec-row"><span>Display:</span><strong>Bicolor Magnetic Flappers</strong></div>
+          <div class="prod-spec-row"><span>Chamber:</span><strong>SS304 / SS316 / Polypropylene</strong></div>
+        </div>
+      </div>
+      <div class="prod-card__actions">
+        <button class="btn-inquire" data-open-modal data-product="Magnetic Bypass Level Indicator Gauge">Inquire / Quote →</button>
+        <button class="btn-inspect" data-inspect="level indicator.png">Inspect ↗</button>
+      </div>
+    </div>
+
+    <!-- 12: Pressure Transmitter -->
+    <div class="prod-card" data-cat="pressure-temp">
+      <div class="prod-card__img-wrap" data-inspect="pressure transmitter.png" title="Click to Inspect">
+        <img src="pressure transmitter.png" alt="Smart Pressure Transmitter" class="prod-card__img"/>
+        <div class="prod-card__zoom-hint"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><circle cx="11" cy="11" r="8"/><line x1="21" y1="21" x2="16.65" y2="16.65"/></svg></div>
+      </div>
+      <div>
+        <span class="prod-card__tag">Pressure &amp; Temperature</span>
+        <h3 class="prod-card__title">Smart Industrial Pressure Transmitter</h3>
+        <p class="prod-card__desc">Microprocessor-controlled pressure sensor for gauge, absolute, and differential measurements with local backlit LCD readout.</p>
+        <div class="prod-card__specs">
+          <div class="prod-spec-row"><span>Accuracy:</span><strong>±0.075% Calibrated Span</strong></div>
+          <div class="prod-spec-row"><span>Output:</span><strong>4-20mA DC with HART</strong></div>
+        </div>
+      </div>
+      <div class="prod-card__actions">
+        <button class="btn-inquire" data-open-modal data-product="Smart Pressure Transmitter">Inquire / Quote →</button>
+        <button class="btn-inspect" data-inspect="pressure transmitter.png">Inspect ↗</button>
+      </div>
+    </div>
+
+    <!-- 13: Pressure Gauge -->
+    <div class="prod-card" data-cat="pressure-temp">
+      <div class="prod-card__img-wrap" data-inspect="pressure gauge.png" title="Click to Inspect">
+        <img src="pressure gauge.png" alt="Bourdon Tube Pressure Gauge" class="prod-card__img"/>
+        <div class="prod-card__zoom-hint"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><circle cx="11" cy="11" r="8"/><line x1="21" y1="21" x2="16.65" y2="16.65"/></svg></div>
+      </div>
+      <div>
+        <span class="prod-card__tag">Pressure &amp; Temperature</span>
+        <h3 class="prod-card__title">Heavy-Duty Bourdon Tube Pressure Gauge</h3>
+        <p class="prod-card__desc">Glycerin-filled stainless steel industrial dial gauge designed for heavy pulsation, pump discharge lines, and harsh ambient atmospheres.</p>
+        <div class="prod-card__specs">
+          <div class="prod-spec-row"><span>Dial Size:</span><strong>63mm, 100mm &amp; 150mm</strong></div>
+          <div class="prod-spec-row"><span>Case MOC:</span><strong>SS304 Case &amp; SS316 Wetted</strong></div>
+        </div>
+      </div>
+      <div class="prod-card__actions">
+        <button class="btn-inquire" data-open-modal data-product="Bourdon Tube Pressure Gauge">Inquire / Quote →</button>
+        <button class="btn-inspect" data-inspect="pressure gauge.png">Inspect ↗</button>
+      </div>
+    </div>
+
+    <!-- 14: Temperature Controller -->
+    <div class="prod-card" data-cat="pressure-temp">
+      <div class="prod-card__img-wrap" data-inspect="temp. controller.png" title="Click to Inspect">
+        <img src="temp. controller.png" alt="Digital PID Temperature Controller" class="prod-card__img"/>
+        <div class="prod-card__zoom-hint"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><circle cx="11" cy="11" r="8"/><line x1="21" y1="21" x2="16.65" y2="16.65"/></svg></div>
+      </div>
+      <div>
+        <span class="prod-card__tag">Pressure &amp; Temperature</span>
+        <h3 class="prod-card__title">Digital PID Temperature Controller</h3>
+        <p class="prod-card__desc">Precision multi-input thermal controller featuring auto-tuning PID algorithms, relay/SSR drive outputs, and dual process displays.</p>
+        <div class="prod-card__specs">
+          <div class="prod-spec-row"><span>Universal Input:</span><strong>RTD (PT100) &amp; Thermocouple</strong></div>
+          <div class="prod-spec-row"><span>Comm Link:</span><strong>RS-485 Modbus Serial Link</strong></div>
+        </div>
+      </div>
+      <div class="prod-card__actions">
+        <button class="btn-inquire" data-open-modal data-product="Digital PID Temperature Controller">Inquire / Quote →</button>
+        <button class="btn-inspect" data-inspect="temp. controller.png">Inspect ↗</button>
+      </div>
+    </div>
+
+    <!-- 15: Temperature Gauge -->
+    <div class="prod-card" data-cat="pressure-temp">
+      <div class="prod-card__img-wrap" data-inspect="temp. gauge.png" title="Click to Inspect">
+        <img src="temp. gauge.png" alt="Bimetallic Temperature Gauge" class="prod-card__img"/>
+        <div class="prod-card__zoom-hint"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><circle cx="11" cy="11" r="8"/><line x1="21" y1="21" x2="16.65" y2="16.65"/></svg></div>
+      </div>
+      <div>
+        <span class="prod-card__tag">Pressure &amp; Temperature</span>
+        <h3 class="prod-card__title">Bimetallic &amp; Capillary Temperature Gauge</h3>
+        <p class="prod-card__desc">Rigid stem or remote capillary dial thermometer built for direct pipeline thermowell insertion in thermal utilities.</p>
+        <div class="prod-card__specs">
+          <div class="prod-spec-row"><span>Range:</span><strong>-50°C to +600°C Scale</strong></div>
+          <div class="prod-spec-row"><span>Thermowell:</span><strong>SS316 Barstock Flanged</strong></div>
+        </div>
+      </div>
+      <div class="prod-card__actions">
+        <button class="btn-inquire" data-open-modal data-product="Bimetallic Temperature Gauge">Inquire / Quote →</button>
+        <button class="btn-inspect" data-inspect="temp. gauge.png">Inspect ↗</button>
+      </div>
+    </div>
+
+    <!-- 16: RTD & Thermocouple -->
+    <div class="prod-card" data-cat="pressure-temp">
+      <div class="prod-card__img-wrap" data-inspect="rtdthermocouple.png" title="Click to Inspect">
+        <img src="rtdthermocouple.png" alt="RTD and Thermocouple Sensors" class="prod-card__img"/>
+        <div class="prod-card__zoom-hint"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><circle cx="11" cy="11" r="8"/><line x1="21" y1="21" x2="16.65" y2="16.65"/></svg></div>
+      </div>
+      <div>
+        <span class="prod-card__tag">Pressure &amp; Temperature</span>
+        <h3 class="prod-card__title">Industrial RTD &amp; Thermocouple Sensors</h3>
+        <p class="prod-card__desc">Mineral insulated (MI) temperature sensing probes with weatherproof aluminum connection heads calibrated to Class A tolerances.</p>
+        <div class="prod-card__specs">
+          <div class="prod-spec-row"><span>Sensor Types:</span><strong>PT100 Simplex &amp; Type K/J/R/S</strong></div>
+          <div class="prod-spec-row"><span>Head Ingress:</span><strong>IP67 Die-Cast Weatherproof Head</strong></div>
+        </div>
+      </div>
+      <div class="prod-card__actions">
+        <button class="btn-inquire" data-open-modal data-product="Industrial RTD and Thermocouple Sensors">Inquire / Quote →</button>
+        <button class="btn-inspect" data-inspect="rtdthermocouple.png">Inspect ↗</button>
+      </div>
+    </div>
+
+    <!-- 17: Variable Frequency Drive -->
+    <div class="prod-card" data-cat="power">
+      <div class="prod-card__img-wrap" data-inspect="variable frequency drive.png" title="Click to Inspect">
+        <img src="variable frequency drive.png" alt="Variable Frequency Drive (VFD)" class="prod-card__img"/>
+        <div class="prod-card__zoom-hint"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><circle cx="11" cy="11" r="8"/><line x1="21" y1="21" x2="16.65" y2="16.65"/></svg></div>
+      </div>
+      <div>
+        <span class="prod-card__tag">Power &amp; Drives</span>
+        <h3 class="prod-card__title">Variable Frequency Drive (VFD / AC Inverter)</h3>
+        <p class="prod-card__desc">Intelligent motor speed controller providing high starting torque, dynamic braking, energy optimization, and sensorless vector control.</p>
+        <div class="prod-card__specs">
+          <div class="prod-spec-row"><span>Power Rating:</span><strong>0.75 kW to 350+ kW Heavy Duty</strong></div>
+          <div class="prod-spec-row"><span>Control Mode:</span><strong>Sensorless Vector &amp; V/F Control</strong></div>
+        </div>
+      </div>
+      <div class="prod-card__actions">
+        <button class="btn-inquire" data-open-modal data-product="Variable Frequency Drive (VFD)">Inquire / Quote →</button>
+        <button class="btn-inspect" data-inspect="variable frequency drive.png">Inspect ↗</button>
+      </div>
+    </div>
+
+    <!-- 18: VFD Panel -->
+    <div class="prod-card" data-cat="power">
+      <div class="prod-card__img-wrap" data-inspect="vfd pannel.png" title="Click to Inspect">
+        <img src="vfd pannel.png" alt="VFD Automation Panel" class="prod-card__img"/>
+        <div class="prod-card__zoom-hint"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><circle cx="11" cy="11" r="8"/><line x1="21" y1="21" x2="16.65" y2="16.65"/></svg></div>
+      </div>
+      <div>
+        <span class="prod-card__tag">Power &amp; Drives</span>
+        <h3 class="prod-card__title">Multi-Drive VFD Control Panel</h3>
+        <p class="prod-card__desc">Complete drive automation cabinet with line reactors, harmonic filters, bypass contactors, cooling fans, and digital metering displays.</p>
+        <div class="prod-card__specs">
+          <div class="prod-spec-row"><span>Enclosure:</span><strong>IP54 Sheet Steel with Forced Air</strong></div>
+          <div class="prod-spec-row"><span>Bypass:</span><strong>Auto / Manual DOL Bypass System</strong></div>
+        </div>
+      </div>
+      <div class="prod-card__actions">
+        <button class="btn-inquire" data-open-modal data-product="Multi-Drive VFD Control Panel">Inquire / Quote →</button>
+        <button class="btn-inspect" data-inspect="vfd pannel.png">Inspect ↗</button>
+      </div>
+    </div>
+
+    <!-- 19: Industrial Electric Motor -->
+    <div class="prod-card" data-cat="power">
+      <div class="prod-card__img-wrap" data-inspect="motor.png" title="Click to Inspect">
+        <img src="motor.png" alt="Industrial Induction Electric Motor" class="prod-card__img"/>
+        <div class="prod-card__zoom-hint"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><circle cx="11" cy="11" r="8"/><line x1="21" y1="21" x2="16.65" y2="16.65"/></svg></div>
+      </div>
+      <div>
+        <span class="prod-card__tag">Power &amp; Drives</span>
+        <h3 class="prod-card__title">High-Efficiency Industrial Induction Motor</h3>
+        <p class="prod-card__desc">Three-phase squirrel-cage induction motor built for continuous heavy plant duty in pumps, fans, compressors, and material handling.</p>
+        <div class="prod-card__specs">
+          <div class="prod-spec-row"><span>Efficiency:</span><strong>IE2 / IE3 Premium Class</strong></div>
+          <div class="prod-spec-row"><span>Ingress:</span><strong>IP55 Rigid Cast Iron Frame</strong></div>
+        </div>
+      </div>
+      <div class="prod-card__actions">
+        <button class="btn-inquire" data-open-modal data-product="Industrial Electric Motor">Inquire / Quote →</button>
+        <button class="btn-inspect" data-inspect="motor.png">Inspect ↗</button>
+      </div>
+    </div>
+
+    <!-- 20: Servo Motor & Drive -->
+    <div class="prod-card" data-cat="power">
+      <div class="prod-card__img-wrap" data-inspect="servo motor.png" title="Click to Inspect">
+        <img src="servo motor.png" alt="Precision Servo Motor" class="prod-card__img"/>
+        <div class="prod-card__zoom-hint"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><circle cx="11" cy="11" r="8"/><line x1="21" y1="21" x2="16.65" y2="16.65"/></svg></div>
+      </div>
+      <div>
+        <span class="prod-card__tag">Power &amp; Drives</span>
+        <h3 class="prod-card__title">Precision AC Servo Motor &amp; Drive System</h3>
+        <p class="prod-card__desc">Sub-millimeter motion positioning system with ultra-low rotor inertia and optical encoder feedback for rapid packaging and robotics.</p>
+        <div class="prod-card__specs">
+          <div class="prod-spec-row"><span>Feedback:</span><strong>23-Bit Absolute Encoder</strong></div>
+          <div class="prod-spec-row"><span>Speed Range:</span><strong>Up to 6000 RPM Rated</strong></div>
+        </div>
+      </div>
+      <div class="prod-card__actions">
+        <button class="btn-inquire" data-open-modal data-product="Precision Servo Motor & Drive">Inquire / Quote →</button>
+        <button class="btn-inspect" data-inspect="servo motor.png">Inspect ↗</button>
+      </div>
+    </div>
+
+    <!-- 21: Industrial SMPS -->
+    <div class="prod-card" data-cat="power">
+      <div class="prod-card__img-wrap" data-inspect="smps.png" title="Click to Inspect">
+        <img src="smps.png" alt="Industrial DIN-Rail SMPS" class="prod-card__img"/>
+        <div class="prod-card__zoom-hint"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><circle cx="11" cy="11" r="8"/><line x1="21" y1="21" x2="16.65" y2="16.65"/></svg></div>
+      </div>
+      <div>
+        <span class="prod-card__tag">Power &amp; Drives</span>
+        <h3 class="prod-card__title">Industrial DIN-Rail SMPS Power Supply</h3>
+        <p class="prod-card__desc">Regulated, low-noise 24V DC power source protecting sensitive instrumentation, field transmitters, and PLCs from voltage spikes.</p>
+        <div class="prod-card__specs">
+          <div class="prod-spec-row"><span>Output:</span><strong>24V DC Regulated (5A to 40A)</strong></div>
+          <div class="prod-spec-row"><span>Efficiency:</span><strong>&gt;92% Energy Efficient Design</strong></div>
+        </div>
+      </div>
+      <div class="prod-card__actions">
+        <button class="btn-inquire" data-open-modal data-product="Industrial DIN-Rail SMPS">Inquire / Quote →</button>
+        <button class="btn-inspect" data-inspect="smps.png">Inspect ↗</button>
+      </div>
+    </div>
+
+    <!-- 22: Online UPS -->
+    <div class="prod-card" data-cat="power">
+      <div class="prod-card__img-wrap" data-inspect="ups.png" title="Click to Inspect">
+        <img src="ups.png" alt="Industrial Online UPS" class="prod-card__img"/>
+        <div class="prod-card__zoom-hint"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><circle cx="11" cy="11" r="8"/><line x1="21" y1="21" x2="16.65" y2="16.65"/></svg></div>
+      </div>
+      <div>
+        <span class="prod-card__tag">Power &amp; Drives</span>
+        <h3 class="prod-card__title">Industrial Online Double-Conversion UPS</h3>
+        <p class="prod-card__desc">True online power protection delivering zero transfer time and pure sine-wave backup power to plant automation and SCADA servers.</p>
+        <div class="prod-card__specs">
+          <div class="prod-spec-row"><span>Topology:</span><strong>Online Double-Conversion Pure Sine</strong></div>
+          <div class="prod-spec-row"><span>Capacity:</span><strong>1 kVA to 50 kVA Heavy Duty</strong></div>
+        </div>
+      </div>
+      <div class="prod-card__actions">
+        <button class="btn-inquire" data-open-modal data-product="Industrial Online UPS">Inquire / Quote →</button>
+        <button class="btn-inspect" data-inspect="ups.png">Inspect ↗</button>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- ═══ INTERACTIVE MULTI-WINDOW PLANT CONSOLE ═══ -->
+<section class="console-section reveal-up" id="console">
+  <div class="console-header">
+    <div>
+      <div class="console-eyebrow">Interactive Plant Viewport</div>
+      <h2 class="console-title">Live Engineering Systems Console</h2>
+    </div>
+    <p class="console-desc">
+      Inspect our turnkey field installations, switchgear lineups, and process telemetry skids. Click any subsystem icon below to toggle telemetry data and inspect high-resolution hardware parameters.
+    </p>
+  </div>
+
+  <div class="console-container">
+    <div class="console-dock" id="consoleDock">
+      <button class="dock-btn active" data-system="0">
+        <span class="dock-icon">
+          <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><rect x="4" y="4" width="16" height="16" rx="2"/><rect x="9" y="9" width="6" height="6"/><line x1="9" y1="1" x2="9" y2="4"/><line x1="15" y1="1" x2="15" y2="4"/></svg>
+        </span>
+        <div class="dock-meta">
+          <strong>Process Automation (PLC)</strong>
+          <span>DIN-Rail I/O &amp; Fieldbus Modules</span>
+        </div>
+      </button>
+
+      <button class="dock-btn" data-system="1">
+        <span class="dock-icon">
+          <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><rect x="3" y="3" width="18" height="18" rx="2"/><line x1="9" y1="3" x2="9" y2="21"/><line x1="15" y1="3" x2="15" y2="21"/></svg>
+        </span>
+        <div class="dock-meta">
+          <strong>MCC &amp; Electrical Switchgear</strong>
+          <span>Heavy Power Distribution Lineups</span>
+        </div>
+      </button>
+
+      <button class="dock-btn" data-system="2">
+        <span class="dock-icon">
+          <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M14.7 6.3a1 1 0 0 0 0 1.4l1.6 1.6a1 1 0 0 0 1.4 0l3.77-3.77a6 6 0 0 1-7.94 7.94l-6.91 6.91a2.12 2.12 0 0 1-3-3l6.91-6.91a6 6 0 0 1 7.94-7.94l-3.76 3.76z"/></svg>
+        </span>
+        <div class="dock-meta">
+          <strong>Diagnostics &amp; Calibration</strong>
+          <span>Field Instrument Loop Testing</span>
+        </div>
+      </button>
+
+      <button class="dock-btn" data-system="3">
+        <span class="dock-icon">
+          <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><circle cx="12" cy="12" r="9"/><path d="M12 3v6l3-3"/></svg>
+        </span>
+        <div class="dock-meta">
+          <strong>Fluid &amp; Pump Utilities</strong>
+          <span>High-Capacity Transfer Mechanics</span>
+        </div>
+      </button>
+
+      <button class="dock-btn" data-system="4">
+        <span class="dock-icon">
+          <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><rect x="2" y="3" width="20" height="14" rx="2"/><line x1="8" y1="21" x2="16" y2="21"/></svg>
+        </span>
+        <div class="dock-meta">
+          <strong>Central SCADA Telemetry</strong>
+          <span>Real-time Process Visualization</span>
+        </div>
+      </button>
+    </div>
+
+    <div class="console-viewport">
+      <div class="viewport-window">
+        <div class="viewport-media" id="viewportMedia" title="Click to inspect subsystem">
+          <img src="assets/gallery-plc-controllers.jpg" alt="Process Automation PLC Modules" id="viewportImg"/>
+          <div class="viewport-expand-pill">
+            <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><polyline points="15 3 21 3 21 9"/><polyline points="9 21 3 21 3 15"/></svg>
+            <span>Click Photo to Inspect Subsystem</span>
+          </div>
+        </div>
+
+        <div class="viewport-hud">
+          <div>
+            <div class="hud-status">
+              <span class="status-pulse"></span>
+              <span id="hudStatusText">Live System Telemetry Active</span>
+            </div>
+            <h3 id="hudTitle" class="hud-title">Modular DIN-Rail PLC &amp; Fieldbus Controllers</h3>
+            <p id="hudDesc" class="hud-desc">Configured with high-speed RS-485 serial communication, multi-channel analog inputs, and solid-state output staging for automated sequencing in continuous process lines.</p>
+            <div class="hud-specs" id="hudSpecs">
+              <div class="hud-spec-pill"><strong>Bus:</strong> RS-485 / Modbus RTU</div>
+              <div class="hud-spec-pill"><strong>Mounting:</strong> 35mm Standard DIN</div>
+              <div class="hud-spec-pill"><strong>Application:</strong> Continuous Process Control</div>
+            </div>
+          </div>
+          <div class="hud-actions">
+            <button class="btn-inquire" id="hudInquireBtn" data-open-modal data-product="Process Automation (PLC & SCADA)">Inquire About This Setup →</button>
+            <a href="RESOLINE CATALOGUE.pdf" download class="btn-inspect">Technical PDF ↓</a>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- ═══ TURNKEY WATER & WASTEWATER ENGINEERING ═══ -->
+<section class="water-section reveal-up" id="water-solutions">
+  <div class="water-header">
+    <div>
+      <div class="water-eyebrow">Water &amp; Environment Division</div>
+      <h2 class="water-title">Turnkey Water &amp; Wastewater Treatment</h2>
+    </div>
+    <p class="water-desc">
+      Comprehensive industrial water management solutions engineered for high uptime. From raw water treatment to Zero Liquid Discharge (ZLD), we ensure compliance and maximum water reuse.
+    </p>
+  </div>
+
+  <div class="water-grid">
+    <div class="water-card">
+      <div>
+        <span class="water-card__badge">High-Recovery Water</span>
+        <h3 class="water-card__title">Industrial Reverse Osmosis (RO) &amp; Ultrafiltration</h3>
+        <p class="water-card__desc">Multi-stage reverse osmosis systems coupled with UF membrane pre-treatment for high-pressure boiler feed, cooling towers, and pure process water.</p>
+        <div class="water-card__specs">
+          <div class="water-card__spec-item"><span>Capacity Range:</span><strong>5 m³/hr to 250+ m³/hr</strong></div>
+          <div class="water-card__spec-item"><span>Automation:</span><strong>Fully PLC / SCADA Controlled</strong></div>
+        </div>
+      </div>
+      <button class="btn-inquire" data-open-modal data-product="Water Treatment Plants (RO & UF)">Request Engineering Specs →</button>
+    </div>
+
+    <div class="water-card">
+      <div>
+        <span class="water-card__badge">High Purity Deionizers</span>
+        <h3 class="water-card__title">Demineralisation (DM) &amp; Softening Plants</h3>
+        <p class="water-card__desc">Two-bed and mixed-bed demineralisation (DM) deionizers removing dissolved minerals, silica, and heavy hardness down to &lt;0.1 µS/cm conductivity.</p>
+        <div class="water-card__specs">
+          <div class="water-card__spec-item"><span>Outlet Conductivity:</span><strong>&lt; 0.1 µS/cm (Mixed Bed)</strong></div>
+          <div class="water-card__spec-item"><span>Regeneration:</span><strong>Auto Multi-port Sequence</strong></div>
+        </div>
+      </div>
+      <button class="btn-inquire" data-open-modal data-product="Demineralisation (DM) & Softening Plants">Request Engineering Specs →</button>
+    </div>
+
+    <div class="water-card">
+      <div>
+        <span class="water-card__badge">Zero Liquid Discharge</span>
+        <h3 class="water-card__title">Effluent Treatment (ETP) &amp; ZLD Systems</h3>
+        <p class="water-card__desc">Turnkey ETP, STP, and MBR plants meeting state pollution control board norms, integrated with multi-effect evaporators (MEE) for complete water recovery.</p>
+        <div class="water-card__specs">
+          <div class="water-card__spec-item"><span>Water Recovery:</span><strong>Up to 98% Recycle &amp; Reuse</strong></div>
+          <div class="water-card__spec-item"><span>Compliance:</span><strong>CPCB &amp; SPCB Zero Discharge</strong></div>
+        </div>
+      </div>
+      <button class="btn-inquire" data-open-modal data-product="Wastewater & Zero Liquid Discharge">Request Engineering Specs →</button>
+    </div>
+  </div>
+</section>
+
+<!-- ═══ SOLUTIONS / SERVICES ═══ -->
+<section class="services" id="solutions">
+  <div class="services__eyebrow reveal-up">Turnkey Engineering</div>
+  <div class="services__title reveal-up">Built For<br/>Every Industry</div>
+
+  <div class="service-row reveal-up" data-open-modal data-product="PLC Automation & Control Panels">
+    <span class="service-row__num">01</span>
+    <span class="service-row__name">Process Automation, DCS &amp; Redundant Logic</span>
+    <span class="service-row__desc">End-to-end PLC, SCADA, and DCS architectures for seamless plant automation and fail-safe operation.</span>
+    <span class="service-row__arrow"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><line x1="5" y1="12" x2="19" y2="12"/><polyline points="12 5 19 12 12 19"/></svg></span>
+  </div>
+
+  <div class="service-row reveal-up" data-open-modal data-product="Pressure & Temperature Instruments">
+    <span class="service-row__num">02</span>
+    <span class="service-row__name">Industrial Instrumentation &amp; NABL Calibration</span>
+    <span class="service-row__desc">Precision measurement, calibration, and loop testing for flow, level, pressure, and temperature.</span>
+    <span class="service-row__arrow"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><line x1="5" y1="12" x2="19" y2="12"/><polyline points="12 5 19 12 12 19"/></svg></span>
+  </div>
+
+  <div class="service-row reveal-up" data-open-modal data-product="Water Treatment Plants (RO & UF)">
+    <span class="service-row__num">03</span>
+    <span class="service-row__name">Turnkey Water &amp; Wastewater Treatment</span>
+    <span class="service-row__desc">Design, installation, commissioning, and operational management for RO, DM, ETP, and ZLD setups.</span>
+    <span class="service-row__arrow"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><line x1="5" y1="12" x2="19" y2="12"/><polyline points="12 5 19 12 12 19"/></svg></span>
+  </div>
+
+  <div class="service-row reveal-up" data-open-modal data-product="Flow Measurement Instruments">
+    <span class="service-row__num">04</span>
+    <span class="service-row__name">Air Pollution Monitoring (CEMS) &amp; Cloud Telemetry</span>
+    <span class="service-row__desc">Continuous Emission Monitoring Systems with direct server telemetry links to pollution control boards.</span>
+    <span class="service-row__arrow"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><line x1="5" y1="12" x2="19" y2="12"/><polyline points="12 5 19 12 12 19"/></svg></span>
+  </div>
+
+  <div class="service-row reveal-up" data-open-modal data-product="Motor Control Centers (MCC) & Switchgear">
+    <span class="service-row__num">05</span>
+    <span class="service-row__name">Power Distribution, VFD Drives &amp; Switchgear Fabrication</span>
+    <span class="service-row__desc">Custom-built Motor Control Centers (MCC), VFD panels, and heavy-duty industrial switchgear lineups.</span>
+    <span class="service-row__arrow"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><line x1="5" y1="12" x2="19" y2="12"/><polyline points="12 5 19 12 12 19"/></svg></span>
+  </div>
+</section>
+
+<!-- ═══ INDUSTRIES ═══ -->
+<section class="industries" id="industries">
+  <div class="industries__intro reveal-up">
+    <img class="industries__thumb" src="assets/gallery-pcb-calibration.jpg" alt="Field calibration and electronics diagnostics"/>
+    <div class="industries__title">Proven Across<br/>Heavy Industry</div>
+    <p class="industries__body">From steel mills and power plants to chemical processing and food &amp; pharma, Resoline Techbis delivers engineered reliability and regulatory compliance.</p>
+  </div>
+  <div class="industries__cards">
+    <div class="industry-card industry-card--clay reveal-up">
+      <img src="assets/gallery-mcc-switchgear.jpg" alt="Steel & Power Electrical Switchgear Utilities"/>
+      <div class="industry-card__overlay"></div>
+      <div class="industry-card__glass">
+        <h3>Steel Mills &amp; Power Utilities</h3>
+        <p>Motor Control Centers (MCC), blast furnace automation, high-pressure utility pumping, and closed-loop water treatment.</p>
+      </div>
+    </div>
+    <div class="industry-card industry-card--blue reveal-up">
+      <img src="assets/gallery-fluid-pumps.jpg" alt="Process & Fluid Pumping Utilities"/>
+      <div class="industry-card__overlay"></div>
+      <div class="industry-card__glass">
+        <h3>Chemical, Pharma &amp; Food Processing</h3>
+        <p>Pure water generation, Coriolis mass batching, acid-resistant pumping skids, and continuous emission monitoring.</p>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- ═══ STATS ═══ -->
+<section class="stats-section">
+  <div class="stats-section__eyebrow reveal-up">By the numbers</div>
+  <div class="stats-section__title reveal-up">Results That<br/>Speak Volumes</div>
+  <div class="stats-grid">
+    <div class="stat-cell reveal-up">
+      <div class="stat-cell__num">50+</div>
+      <div class="stat-cell__label">Certified Engineers</div>
+    </div>
+    <div class="stat-cell reveal-up">
+      <div class="stat-cell__num">15+</div>
+      <div class="stat-cell__label">Industries Served</div>
+    </div>
+    <div class="stat-cell reveal-up">
+      <div class="stat-cell__num">500+</div>
+      <div class="stat-cell__label">Projects Commissioned</div>
+    </div>
+    <div class="stat-cell reveal-up">
+      <div class="stat-cell__num">7+</div>
+      <div class="stat-cell__label">Years of Excellence</div>
+    </div>
+  </div>
+</section>
+
+<!-- ═══ FOOTER ═══ -->
+<footer class="footer" id="contact">
+  <div class="footer__cta">
+    <div class="footer__cta-eye">Get started</div>
+    <div class="footer__cta-title">Ready to<br/>Automate &amp; Optimize?</div>
+    <button class="pill-btn" data-open-modal>Get an Engineering Quote →</button>
+  </div>
+
+  <div class="footer__cols">
+    <div>
+      <div class="footer__col-title">Resoline Techbis</div>
+      <p style="font-size:.8rem;opacity:.65;line-height:1.6">Partnering for Success. Helping industrial clients reduce emissions and operational costs with innovative, energy-efficient engineering solutions since 2018.</p>
+    </div>
+    <div>
+      <div class="footer__col-title">Operational Divisions</div>
+      <ul class="footer__links">
+        <li><a href="#divisions">Process Automation &amp; Panels</a></li>
+        <li><a href="#divisions">Industrial Instrumentation</a></li>
+        <li><a href="#divisions">Power Transmission &amp; Drives</a></li>
+        <li><a href="#water-solutions">Water &amp; Wastewater Treatment</a></li>
+        <li><a href="#console">Interactive Systems Console</a></li>
+      </ul>
+    </div>
+    <div>
+      <div class="footer__col-title">Hardware Portfolio</div>
+      <ul class="footer__links">
+        <li><a href="#equipment" data-nav-filter="automation">PLC, HMI &amp; SCADA Panels</a></li>
+        <li><a href="#equipment" data-nav-filter="flow">Flow Measurement Instruments</a></li>
+        <li><a href="#equipment" data-nav-filter="level">Level Sensing Transmitters</a></li>
+        <li><a href="#equipment" data-nav-filter="pressure-temp">Pressure &amp; Temp Gauges</a></li>
+        <li><a href="#equipment" data-nav-filter="power">VFD Panels &amp; Motors</a></li>
+      </ul>
+    </div>
+    <div>
+      <div class="footer__col-title">Downloads &amp; Links</div>
+      <ul class="footer__links">
+        <li><a href="RESOLINE CATALOGUE.pdf" download>Resoline Catalogue (PDF) ↓</a></li>
+        <li><a href="#industries">Industries Served</a></li>
+        <li><a href="#clients">Client Cases</a></li>
+        <li><a href="#" data-open-modal>Request Plant Audit</a></li>
+      </ul>
+    </div>
+    <div>
+      <div class="footer__col-title">Contact Information</div>
+      <div class="footer__contact">
+        <p><a href="mailto:info@resoline.in">info@resoline.in</a></p>
+        <p><a href="mailto:enquiry@resoline.in">enquiry@resoline.in</a></p>
+        <p><a href="tel:+91637053100">+91 637053100</a></p>
+        <p><a href="tel:+91637053105">+91 637053105</a></p>
+        <p style="margin-top:.5rem">1582, Bhaktamadu Nagar,<br/>Gandamunda, Bhubaneswar,<br/>Odisha – 751030</p>
+      </div>
+    </div>
+  </div>
+
+  <div class="footer__bottom">
+    <div class="footer__copy">© 2026 Resoline Techbis. All rights reserved. Partnering for Success.</div>
+    <div class="fs-menu__socials">
+      <a href="https://linkedin.com" target="_blank" rel="noopener">LinkedIn</a>
+      <a href="https://wa.me/91637053100" target="_blank" rel="noopener">WhatsApp</a>
+      <a href="mailto:info@resoline.in">Email</a>
+      <a href="#hero">Back to Top ↑</a>
+    </div>
+  </div>
+</footer>
+</main>
+
+<!-- FLOATING WHATSAPP BUTTON -->
+<a href="https://wa.me/91637053100?text=Hello%20Resoline%20Techbis,%20I%20am%20interested%20in%20your%20industrial%20solutions." target="_blank" rel="noopener noreferrer" class="whatsapp-float" aria-label="Chat with Resoline on WhatsApp">
+  <svg viewBox="0 0 24 24"><path d="M12.04 2c-5.46 0-9.91 4.45-9.91 9.91 0 1.75.46 3.45 1.32 4.95L2.05 22l5.25-1.38c1.45.79 3.08 1.21 4.74 1.21 5.46 0 9.91-4.45 9.91-9.91 0-2.65-1.03-5.14-2.9-7.01A9.816 9.816 0 0 0 12.04 2zm.01 18.25c-1.49 0-2.95-.4-4.22-1.15l-.3-.18-3.13.82.84-3.05-.2-.31c-.83-1.32-1.27-2.85-1.27-4.43 0-4.57 3.72-8.29 8.29-8.29 2.21 0 4.29.86 5.86 2.42 1.56 1.56 2.42 3.64 2.42 5.86.01 4.58-3.71 8.31-8.28 8.31zm4.55-6.21c-.25-.13-1.48-.73-1.71-.81-.23-.08-.39-.13-.56.13-.17.25-.64.81-.79.98-.14.17-.29.19-.54.06-.25-.13-1.06-.39-2.01-1.24-.74-.66-1.24-1.48-1.39-1.73-.14-.25-.02-.38.11-.51.11-.11.25-.29.37-.43.13-.15.17-.25.25-.42.08-.17.04-.32-.02-.45-.06-.13-.56-1.34-.76-1.84-.2-.48-.4-.42-.56-.43h-.48c-.17 0-.44.06-.67.31-.23.25-.88.86-.88 2.1 0 1.24.9 2.44 1.03 2.61.13.17 1.77 2.7 4.29 3.79.6.26 1.07.41 1.44.53.61.19 1.16.17 1.6.1.49-.07 1.48-.6 1.69-1.19.21-.58.21-1.08.15-1.19-.06-.12-.23-.19-.48-.31z"/></svg>
+  <span>WhatsApp Chat</span>
+</a>
+
+<!-- ═══ FULLSCREEN MENU OVERLAY (SPLIT-COLUMN SPEC WITH SPRING ANIMATION) ═══ -->
+<div class="fs-menu" id="fsMenu">
+  <div class="fs-menu__backdrop" id="fsBackdrop"></div>
+  <div class="fs-menu__panel" id="fsPanel">
+    <div class="fs-menu__top">
+      <a href="#" class="fs-menu__brand" aria-label="Resoline Techbis">
+        <span class="brand-pill">
+          <img src="assets/logo-resoline.png" alt="Resoline Techbis" class="brand-logo-img"/>
+        </span>
+      </a>
+      <button class="fs-menu__close" id="fsClose" aria-label="Close Menu">
+        <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round"><line x1="18" y1="6" x2="6" y2="18"/><line x1="6" y1="6" x2="18" y2="18"/></svg>
+      </button>
+    </div>
+
+    <div class="fs-menu__split">
+      <!-- Left Side: Large Vertical Links with Green Arrow -->
+      <nav class="fs-menu__nav">
+        <a href="#divisions" class="fs-menu__link"><span>What We Do</span><span class="menu-arrow">→</span></a>
+        <a href="#equipment" class="fs-menu__link"><span>Products &amp; Drives</span><span class="menu-arrow">→</span></a>
+        <a href="#industries" class="fs-menu__link"><span>Industries</span><span class="menu-arrow">→</span></a>
+        <a href="#console" class="fs-menu__link"><span>Utility Systems</span><span class="menu-arrow">→</span></a>
+        <a href="#water-solutions" class="fs-menu__link"><span>Environmental</span><span class="menu-arrow">→</span></a>
+        <a href="#contact" class="fs-menu__link"><span>Consultation Desk</span><span class="menu-arrow">→</span></a>
+      </nav>
+
+      <!-- Right Side: Split Contextual Panel -->
+      <div class="fs-menu__context">
+        <div class="menu-feat">
+          <div class="menu-feat-badge">ENGINEERING HEADQUARTERS</div>
+          <div class="menu-feat-title">Resoline Techbis Private Limited</div>
+          <div class="menu-feat-desc">Full-lifecycle turnkey industrial automation, process instrumentation, electrical systems, and industrial environmental engineering based in Bhubaneswar, Odisha.</div>
+        </div>
+
+        <div class="menu-contact-info">
+          <div><strong>Engineering HQ:</strong> Plot No 122/A, Rasulgarh Industrial Estate, Bhubaneswar, Odisha</div>
+          <div><strong>Direct Hotline:</strong> <a href="tel:+91637053100">+91 637053100</a></div>
+          <div><strong>Support Desk:</strong> <a href="mailto:info@resoline.in">info@resoline.in</a></div>
+          <div><strong>Technical Response:</strong> 24/7 Field Support &amp; Turnkey AMC</div>
+        </div>
+
+        <button class="fs-menu__cta-quote" id="fsCta" data-open-modal>Request Engineering Quote →</button>
+      </div>
+    </div>
+
+    <div class="fs-menu__bottom">
+      <div style="font-size:0.75rem;color:rgba(255,255,255,0.6)">© 2026 Resoline Techbis. Bhubaneswar, Odisha. All rights reserved.</div>
+      <div class="fs-menu__socials">
+        <a href="https://linkedin.com" target="_blank" rel="noopener">LinkedIn</a>
+        <a href="https://wa.me/91637053100" target="_blank" rel="noopener">WhatsApp</a>
+        <a href="mailto:info@resoline.in">Email Desk</a>
+      </div>
+    </div>
+  </div>
+</div>
+
+<!-- ═══ INQUIRY / QUOTE MODAL ═══ -->
+<div class="modal" id="modal">
+  <div class="modal__backdrop" id="modalBackdrop"></div>
+  <div class="modal__panel">
+    <button class="modal__close" id="modalClose">✕</button>
+    <div id="modalContent">
+      <div class="modal__eyebrow">Engineering Consultation &amp; Quote</div>
+      <div class="modal__title">Let's Build Together</div>
+      <form class="modal__form" id="quoteForm">
+        <div class="modal__field"><label>Full Name</label><input type="text" required placeholder="e.g. Arun Mishra"/></div>
+        <div class="modal__field"><label>Work Email Address</label><input type="email" required placeholder="you@company.com"/></div>
+        <div class="modal__field"><label>Phone Number</label><input type="tel" required placeholder="+91 98765 43210"/></div>
+        <div class="modal__field">
+          <label>Equipment / Solution Required</label>
+          <select id="modalProductSelect">
+            <option value="PLC Automation & Control Panels">PLC Automation &amp; Control Panels</option>
+            <option value="HMI Touchscreen Consoles">HMI Touchscreen Consoles</option>
+            <option value="Variable Frequency Drive (VFD)">Variable Frequency Drive (VFD &amp; Panels)</option>
+            <option value="SCADA Telemetry System">SCADA &amp; Central Telemetry Systems</option>
+            <option value="Servo Motors & Motion Control">Servo Motors &amp; Motion Control Drives</option>
+            <option value="Coriolis Mass Flow Meter">Coriolis Mass Flow Meter</option>
+            <option value="Electromagnetic Flow Meter">Electromagnetic Flow Meter (Magmeter)</option>
+            <option value="Non-Contact Ultrasonic Level Transmitter">Ultrasonic Level Transmitter</option>
+            <option value="Smart Pressure Transmitter">Smart Pressure Transmitter &amp; Gauges</option>
+            <option value="Industrial Electric Motor">Industrial Electric Motors</option>
+            <option value="Water Treatment Plants (RO & UF)">Industrial RO, UF &amp; DM Plants</option>
+            <option value="Wastewater & Zero Liquid Discharge">Wastewater Treatment &amp; ZLD (ETP, STP, MEE)</option>
+            <option value="Comprehensive Plant Engineering Audit">Comprehensive Plant Engineering Audit</option>
+          </select>
+        </div>
+        <div class="modal__field"><label>Project Scope &amp; Technical Specs</label><textarea rows="3" placeholder="Specify flow rate, pipe size, capacity or operational scope..." id="modalScope"></textarea></div>
+        <button type="submit" class="modal__submit" id="modalSubmitBtn">Send Request →</button>
+      </form>
+    </div>
+    <div id="modalSuccess" class="modal__success" style="display:none">
+      <h3 style="font-size:1.4rem;font-weight:700;color:var(--brand-green);margin-bottom:.5rem">Inquiry Received!</h3>
+      <p style="font-size:.85rem;color:var(--ink-soft);margin-bottom:1.5rem">Thank you. Our engineering desk will review your technical specifications and contact you within 24 hours.</p>
+      <button class="modal__submit" style="align-self:center" id="modalSuccessClose">Done</button>
+    </div>
+  </div>
+</div>
+
+<!-- ═══ INSPECTION LIGHTBOX MODAL ═══ -->
+<div class="inspect-modal" id="inspectModal">
+  <div class="modal__backdrop" id="inspectBackdrop"></div>
+  <div class="inspect-panel">
+    <button class="modal__close" id="inspectClose">✕</button>
+    <div class="inspect-body">
+      <div class="inspect-view">
+        <img src="" alt="Inspected System" id="inspectImg"/>
+      </div>
+      <div class="inspect-details">
+        <div>
+          <span class="inspect-tag" id="inspectTag">Hardware Inspection</span>
+          <h3 id="inspectTitle">System Details</h3>
+          <p id="inspectDesc">Comprehensive engineering overview and technical specification parameters.</p>
+          <div class="inspect-specs" id="inspectSpecs"></div>
+        </div>
+        <div class="inspect-actions">
+          <button class="btn-inquire" id="inspectInquireBtn" data-open-modal style="width:100%;text-align:center;padding:.8rem">Request Technical Datasheet / Quote →</button>
+        </div>
+      </div>
+    </div>
+  </div>
+</div>
+
+<!-- ═══ AUTOMATION HARDWARE SHOWCASE POPUP MODAL ═══ -->
+<div class="auto-modal" id="autoModal" role="dialog" aria-modal="true" aria-labelledby="autoModalTitle">
+  <div class="auto-modal__backdrop" id="autoModalBackdrop"></div>
+  <div class="auto-modal__container">
+    <div class="auto-modal__panel">
+      <!-- Modal Header -->
+      <div class="auto-modal__header">
+        <div class="auto-modal__head-left">
+          <span class="auto-modal__eyebrow" id="autoModalTag">Division 01 • Turnkey Control</span>
+          <h2 class="auto-modal__title" id="autoModalTitle">PLC — Programmable Logic Controller &amp; Control Panels</h2>
+        </div>
+        <button class="auto-modal__close" id="autoModalClose" aria-label="Close Showcase Modal">
+          <svg viewBox="0 0 24 24" width="20" height="20" stroke="currentColor" stroke-width="2.2" fill="none"><line x1="18" y1="6" x2="6" y2="18"/><line x1="6" y1="6" x2="18" y2="18"/></svg>
+        </button>
+      </div>
+
+      <!-- Machine Selector Tabs Bar -->
+      <div class="auto-modal__nav-bar">
+        <span class="auto-nav-label">Select Machine:</span>
+        <div class="auto-modal__tabs" id="autoModalTabs" role="tablist">
+          <button type="button" class="auto-tab-btn active" data-machine="plc" role="tab" aria-selected="true">
+            <span class="tab-icon">⚡</span>
+            <span class="tab-name">PLC</span>
+          </button>
+          <button type="button" class="auto-tab-btn" data-machine="hmi" role="tab" aria-selected="false">
+            <span class="tab-icon">🖥️</span>
+            <span class="tab-name">HMI</span>
+          </button>
+          <button type="button" class="auto-tab-btn" data-machine="vfd" role="tab" aria-selected="false">
+            <span class="tab-icon">⚙️</span>
+            <span class="tab-name">VFD</span>
+          </button>
+          <button type="button" class="auto-tab-btn" data-machine="scada" role="tab" aria-selected="false">
+            <span class="tab-icon">📊</span>
+            <span class="tab-name">SCADA</span>
+          </button>
+          <button type="button" class="auto-tab-btn" data-machine="servo" role="tab" aria-selected="false">
+            <span class="tab-icon">🎯</span>
+            <span class="tab-name">SERVO METER</span>
+          </button>
+        </div>
+      </div>
+
+      <!-- Modal Body (Split Image Showcase + Technical Specs) -->
+      <div class="auto-modal__body">
+        <!-- Left: Image Showcase Stage -->
+        <div class="auto-modal__view">
+          <div class="auto-img-frame">
+            <img src="assets/plc.png?v=2" alt="PLC Hardware" id="autoModalImg" class="auto-main-image"/>
+            <span class="auto-img-badge" id="autoModalImgBadge">PLC Controller Unit</span>
+          </div>
+          <!-- Thumbnail Switcher for machines with multiple views -->
+          <div class="auto-thumbs" id="autoModalThumbs"></div>
+        </div>
+
+        <!-- Right: Technical Details -->
+        <div class="auto-modal__details">
+          <div class="auto-badge-pill" id="autoModalBadge">Industrial Automation Core</div>
+          <p class="auto-desc" id="autoModalDesc">
+            Engineered modular PLC platforms and custom wired control panels providing mission-critical sequencing and real-time process interlocking across heavy industry.
+          </p>
+
+          <div class="auto-specs-box">
+            <h4 class="auto-box-heading">Technical Specifications</h4>
+            <div class="auto-specs-grid" id="autoModalSpecs"></div>
+          </div>
+
+          <div class="auto-features-box">
+            <h4 class="auto-box-heading">Engineering Highlights</h4>
+            <ul class="auto-features-list" id="autoModalFeatures"></ul>
+          </div>
+
+          <div class="auto-app-box">
+            <span class="app-label">Typical Industrial Applications:</span>
+            <span class="app-text" id="autoModalApps">Water &amp; wastewater treatment plants, continuous chemical batching, MCC switchgear sequencing, material handling conveyors, and heavy pump stations.</span>
+          </div>
+        </div>
+      </div>
+
+      <!-- Enquiry Button & Actions Bar Below Pop-up -->
+      <div class="auto-modal__footer">
+        <div class="auto-footer__left">
+          <span class="auto-footer__status">● Certified Engineering Facility — Bhubaneswar, Odisha</span>
+          <span class="auto-footer__sub">Turnkey Design, Fabrication, Programming &amp; 24/7 Field Commissioning</span>
+        </div>
+        <div class="auto-footer__actions">
+          <a href="RESOLINE CATALOGUE.pdf" download class="btn-auto-cat" title="Download Product Catalogue">
+            <svg viewBox="0 0 24 24" width="16" height="16" stroke="currentColor" stroke-width="2" fill="none"><path d="M21 15v4a2 2 0 0 1-2 2H5a2 2 0 0 1-2-2v-4"/><polyline points="7 10 12 15 17 10"/><line x1="12" y1="15" x2="12" y2="3"/></svg>
+            <span>Datasheet / Catalog</span>
+          </a>
+          <a href="https://wa.me/91637053100" class="btn-auto-wa" id="autoModalWaBtn" target="_blank" rel="noopener">
+            <svg viewBox="0 0 24 24" width="16" height="16" fill="currentColor"><path d="M12.04 2c-5.46 0-9.91 4.45-9.91 9.91 0 1.75.46 3.45 1.32 4.95L2.05 22l5.25-1.38c1.45.79 3.08 1.21 4.74 1.21 5.46 0 9.91-4.45 9.91-9.91 0-2.65-1.03-5.14-2.9-7.01A9.82 9.82 0 0 0 12.04 2z"/></svg>
+            <span>WhatsApp Enquiry</span>
+          </a>
+          <button type="button" class="btn-auto-enquire" id="autoModalEnquireBtn">
+            <span>Enquire For This Machine →</span>
+          </button>
+        </div>
+      </div>
+    </div>
+  </div>
+</div>
+
+<script type="module">
+import Lenis from 'lenis';
+
+/* ── SPRING HELPER ── */
+function springStep(x,v,target,tension,friction,dt){
+  const acc=-tension*(x-target)-friction*v;
+  v+=acc*dt; x+=v*dt;
+  return[x,v];
+}
+
+/* ── ADAPTIVE REM SCALE-UP ── */
+function updateFontSize(){
+  const FONT_BASE=16,BASE_W=1920,COEF=0.6666;
+  if(innerWidth>1920){
+    const reduction=((BASE_W-innerWidth)/BASE_W)*100*COEF;
+    const size=FONT_BASE-(FONT_BASE*reduction)/100;
+    if(size>FONT_BASE) document.documentElement.style.fontSize=size+'px';
+    else document.documentElement.style.removeProperty('font-size');
+  }
+}
+updateFontSize();
+window.addEventListener('resize',updateFontSize);
+
+/* ── LENIS SMOOTH SCROLL ── */
+let lenis=null;
+function initLenis(){
+  lenis=new Lenis({smoothWheel:true});
+  function raf(time){lenis.raf(time);requestAnimationFrame(raf)}
+  requestAnimationFrame(raf);
+}
+
+/* ── GSAP 3-SECOND EXACT TIMELINE ANIMATION ── */
+function runPreloaderAnimation() {
+  const preloader = document.getElementById('preloader');
+  if (!preloader) {
+    try { initLenis(); } catch(e){}
+    try { revealHero(); } catch(e){}
+    return;
+  }
+
+  const baseline = document.getElementById('baseline');
+  const cyanBlock = document.getElementById('cyanBlock');
+  const greySquares = [document.getElementById('sqR'), document.getElementById('sqE'), document.getElementById('sqS'), document.getElementById('sqO')];
+  const cyanLetters = [document.getElementById('letL'), document.getElementById('letI'), document.getElementById('letN'), document.getElementById('letE')];
+  const greyRect = document.getElementById('greyRect');
+  const taglineWrap = document.getElementById('taglineWrap');
+
+  if (window.gsap) {
+    const tl = gsap.timeline({
+      onComplete: () => {
+        try { initLenis(); } catch(e){}
+        try { revealHero(); } catch(e){}
+        setTimeout(() => {
+          if (preloader.parentNode) preloader.remove();
+        }, 300);
+      }
+    });
+
+    // 1. 0.0s - 0.6s (Baseline & Cyan Block)
+    tl.to(baseline, {
+      scaleX: 1,
+      duration: 0.55,
+      ease: 'power2.out'
+    }, 0.0);
+
+    tl.fromTo(cyanBlock, {
+      scale: 0,
+      opacity: 0,
+      y: -30
+    }, {
+      scale: 1,
+      opacity: 1,
+      y: 0,
+      duration: 0.6,
+      ease: 'back.out(2.2)'
+    }, 0.1);
+
+    // 2. 0.6s - 1.4s (Top & Bottom Rows)
+    tl.fromTo(greySquares, {
+      y: '100%',
+      opacity: 0
+    }, {
+      y: '0%',
+      opacity: 1,
+      duration: 0.5,
+      stagger: 0.08,
+      ease: 'power3.out'
+    }, 0.6);
+
+    tl.fromTo(cyanLetters, {
+      opacity: 0,
+      y: 10
+    }, {
+      opacity: 1,
+      y: 0,
+      duration: 0.45,
+      stagger: 0.06,
+      ease: 'power2.out'
+    }, 0.85);
+
+    tl.fromTo(greyRect, {
+      clipPath: 'inset(0 100% 0 0)'
+    }, {
+      clipPath: 'inset(0 0% 0 0)',
+      duration: 0.75,
+      ease: 'power3.inOut'
+    }, 0.65);
+
+    // 3. 1.4s - 2.0s (Cursive Tagline)
+    tl.fromTo(taglineWrap, {
+      clipPath: 'inset(0 100% 0 0)'
+    }, {
+      clipPath: 'inset(0 0% 0 0)',
+      duration: 0.6,
+      ease: 'power2.out'
+    }, 1.4);
+
+    // 4. 2.0s - 2.8s (Hold 0.3s, then Slide Up Preloader)
+    tl.to(preloader, {
+      y: '-100%',
+      duration: 0.75,
+      ease: 'expo.inOut',
+      delay: 0.3
+    }, 2.0);
+
+  } else {
+    // Pure CSS Fallback if offline
+    setTimeout(() => {
+      preloader.style.transition = 'transform 0.75s cubic-bezier(0.77, 0, 0.175, 1)';
+      preloader.style.transform = 'translateY(-100%)';
+      try { initLenis(); } catch(e){}
+      try { revealHero(); } catch(e){}
+      setTimeout(() => { if (preloader.parentNode) preloader.remove(); }, 800);
+    }, 2000);
+  }
+
+  // Hard failsafe
+  setTimeout(() => {
+    const p = document.getElementById('preloader');
+    if (p && p.parentNode) {
+      p.remove();
+      try { revealHero(); } catch(e){}
+    }
+  }, 3500);
+}
+
+// Start preloader immediately
+if (document.readyState === 'loading') {
+  document.addEventListener('DOMContentLoaded', runPreloaderAnimation);
+} else {
+  runPreloaderAnimation();
+}
+
+/* ── HERO TITLE WORD REVEAL ── */
+function revealHero(){
+  const title=document.getElementById('heroTitle');
+  const text=title.textContent.trim();
+  title.innerHTML='';
+  const words=text.split(/\s+/);
+  words.forEach((w,i)=>{
+    const wrap=document.createElement('span');
+    wrap.className='word-wrap';
+    const inner=document.createElement('span');
+    inner.className='word-inner';
+    inner.textContent=w;
+    wrap.appendChild(inner);
+    title.appendChild(wrap);
+    if(i<words.length-1) title.appendChild(document.createTextNode(' '));
+    setTimeout(()=>{
+      inner.style.transition=`transform 1100ms cubic-bezier(.16,1,.3,1), opacity 1100ms cubic-bezier(.16,1,.3,1)`;
+      inner.style.transform='translateY(0)';
+      inner.style.opacity='1';
+    },i*140);
+  });
+
+  const lines=document.querySelectorAll('.hero__tagline .line-inner');
+  lines.forEach((l,i)=>{
+    setTimeout(()=>{
+      l.style.transition=`transform 900ms cubic-bezier(.16,1,.3,1), opacity 900ms cubic-bezier(.16,1,.3,1)`;
+      l.style.transform='translateY(0)';
+      l.style.opacity='1';
+    },350+i*110);
+  });
+}
+
+/* ── CINEMATIC SLOW HERO BACKGROUND SLIDESHOW CONTROLLER ── */
+(function initHeroSlideshow() {
+  const slides = document.querySelectorAll('.hero__slide');
+  const dots = document.querySelectorAll('.slide-dot');
+  const captionEl = document.getElementById('heroSlideCaption');
+  const container = document.getElementById('heroSlides');
+  if (!slides.length) return;
+
+  let currentIndex = 0;
+  let slideInterval = null;
+  const SLIDE_DURATION = 7000; // 7 seconds per slide for a slow, majestic transition
+
+  function showSlide(index) {
+    slides.forEach((s, i) => {
+      s.classList.toggle('active', i === index);
+    });
+    dots.forEach((d, i) => {
+      d.classList.toggle('active', i === index);
+    });
+    if (captionEl && slides[index]) {
+      captionEl.innerHTML = slides[index].getAttribute('data-caption') || '';
+    }
+    currentIndex = index;
+  }
+
+  function nextSlide() {
+    const next = (currentIndex + 1) % slides.length;
+    showSlide(next);
+  }
+
+  function startAutoplay() {
+    if (slideInterval) clearInterval(slideInterval);
+    slideInterval = setInterval(nextSlide, SLIDE_DURATION);
+  }
+
+  function stopAutoplay() {
+    if (slideInterval) clearInterval(slideInterval);
+  }
+
+  // Click on dots
+  dots.forEach((dot) => {
+    dot.addEventListener('click', (e) => {
+      e.stopPropagation();
+      const targetIndex = parseInt(dot.getAttribute('data-slide'), 10);
+      if (!isNaN(targetIndex)) {
+        showSlide(targetIndex);
+        startAutoplay();
+      }
+    });
+  });
+
+  // Pause when hovered over controls or container
+  if (container) {
+    container.addEventListener('mouseenter', stopAutoplay);
+    container.addEventListener('mouseleave', startAutoplay);
+  }
+  const controls = document.getElementById('heroSlideControls');
+  if (controls) {
+    controls.addEventListener('mouseenter', stopAutoplay);
+    controls.addEventListener('mouseleave', startAutoplay);
+  }
+
+  startAutoplay();
+})();
+
+/* ── HERO PARALLAX ── */
+(function(){
+  const parallax=document.getElementById('heroParallax');
+  const hero=document.getElementById('hero');
+  function updateParallax(){
+    if(!hero)return;
+    const rect=hero.getBoundingClientRect();
+    const progress=Math.max(0,Math.min(1,-rect.top/(rect.height)));
+    parallax.style.transform=`translateY(${progress*12}%)`;
+  }
+  window.addEventListener('scroll',()=>requestAnimationFrame(updateParallax),{passive:true});
+})();
+
+/* ── WHAT WE DO VERTICAL COLUMN ACCORDION ── */
+(function(){
+  const wwdItems=document.querySelectorAll('.wwd-item');
+  if(!wwdItems.length)return;
+  wwdItems.forEach(item=>{
+    const trigger=item.querySelector('.wwd-trigger');
+    if(!trigger)return;
+    trigger.addEventListener('click',(e)=>{
+      e.stopPropagation();
+      const wasActive=item.classList.contains('active');
+      wwdItems.forEach(i=>{
+        i.classList.remove('active');
+        const btn=i.querySelector('.wwd-trigger');
+        if(btn) btn.setAttribute('aria-expanded','false');
+      });
+      if(!wasActive){
+        item.classList.add('active');
+        trigger.setAttribute('aria-expanded','true');
+      }
+    });
+  });
+})();
+
+/* ── MEGA DROPDOWN INTERACTION ── */
+(function(){
+  const navMegaGroup=document.getElementById('navMegaGroup');
+  const megaDropdown=document.getElementById('megaDropdown');
+  const navBtns=document.querySelectorAll('.nav-mega-btn');
+  if(!navMegaGroup||!megaDropdown)return;
+
+  navBtns.forEach(btn=>{
+    btn.addEventListener('click',(e)=>{
+      e.stopPropagation();
+      megaDropdown.classList.toggle('active');
+    });
+  });
+
+  document.addEventListener('click',(e)=>{
+    if(!navMegaGroup.contains(e.target)){
+      megaDropdown.classList.remove('active');
+    }
+  });
+
+  megaDropdown.querySelectorAll('a').forEach(link=>{
+    link.addEventListener('click',()=>{
+      megaDropdown.classList.remove('active');
+    });
+  });
+})();
+
+/* ── FULLSCREEN MENU PRESET SPRING ENGINE ── */
+(function(){
+  const burger=document.getElementById('burgerBtn');
+  const menu=document.getElementById('fsMenu');
+  const backdrop=document.getElementById('fsBackdrop');
+  const panel=document.getElementById('fsPanel');
+  const close=document.getElementById('fsClose');
+  const links=document.querySelectorAll('.fs-menu__link');
+  const cta=document.getElementById('fsCta');
+
+  let isOpen=false;
+  let animId=null;
+
+  // Spring variables
+  let backdropOp=0, backdropV=0;
+  let panelY=-24, panelYV=0;
+  let panelOp=0, panelOpV=0;
+
+  const linkStates=Array.from(links).map(()=>({
+    y:28, yV:0,
+    op:0, opV:0,
+    startTime:0,
+    active:false
+  }));
+
+  function openMenu(){
+    if(isOpen)return;
+    isOpen=true;
+    if(lenis) lenis.stop();
+    document.documentElement.style.position='relative';
+    document.documentElement.style.overflow='hidden';
+    document.documentElement.style.height='100%';
+    document.body.style.overflow='hidden';
+
+    menu.classList.add('open');
+
+    backdropOp=0; backdropV=0;
+    panelY=-24; panelYV=0;
+    panelOp=0; panelOpV=0;
+
+    const now=performance.now();
+    linkStates.forEach((st,i)=>{
+      st.y=28; st.yV=0;
+      st.op=0; st.opV=0;
+      st.startTime=now+120+(i*70);
+      st.active=false;
+      links[i].style.transform=`translateY(28px)`;
+      links[i].style.opacity='0';
+    });
+
+    cancelAnimationFrame(animId);
+    let lastTime=performance.now();
+
+    function loop(time){
+      const dt=Math.min((time-lastTime)/1000, 0.033);
+      lastTime=time;
+
+      // Backdrop: target 1, tension 260, friction 30
+      [backdropOp, backdropV]=springStep(backdropOp, backdropV, 1, 260, 30, dt);
+      backdrop.style.opacity=Math.max(0, Math.min(1, backdropOp));
+
+      // Panel: target y 0, tension 220, friction 28
+      [panelY, panelYV]=springStep(panelY, panelYV, 0, 220, 28, dt);
+      [panelOp, panelOpV]=springStep(panelOp, panelOpV, 1, 220, 28, dt);
+      panel.style.transform=`translateY(${panelY}px)`;
+      panel.style.opacity=Math.max(0, Math.min(1, panelOp));
+
+      // Links: target y 0, opacity 1, tension 200, friction 26, staggered
+      let allSettled=true;
+      if(Math.abs(panelY)>0.05 || Math.abs(1-panelOp)>0.05) allSettled=false;
+
+      linkStates.forEach((st,i)=>{
+        if(time>=st.startTime){
+          st.active=true;
+        }
+        if(st.active){
+          [st.y, st.yV]=springStep(st.y, st.yV, 0, 200, 26, dt);
+          [st.op, st.opV]=springStep(st.op, st.opV, 1, 200, 26, dt);
+          links[i].style.transform=`translateY(${st.y}px)`;
+          links[i].style.opacity=Math.max(0, Math.min(1, st.op));
+          if(Math.abs(st.y)>0.05 || Math.abs(1-st.op)>0.05) allSettled=false;
+        } else {
+          allSettled=false;
+        }
+      });
+
+      if(!allSettled && isOpen){
+        animId=requestAnimationFrame(loop);
+      }
+    }
+
+    animId=requestAnimationFrame(loop);
+  }
+
+  function closeMenu(){
+    if(!isOpen)return;
+    isOpen=false;
+    cancelAnimationFrame(animId);
+
+    backdrop.style.transition='opacity 300ms ease';
+    panel.style.transition='opacity 300ms ease, transform 300ms ease';
+    backdrop.style.opacity='0';
+    panel.style.opacity='0';
+    panel.style.transform='translateY(-20px)';
+
+    setTimeout(()=>{
+      menu.classList.remove('open');
+      backdrop.style.transition='';
+      panel.style.transition='';
+      document.documentElement.style.removeProperty('position');
+      document.documentElement.style.removeProperty('overflow');
+      document.documentElement.style.removeProperty('height');
+      document.body.style.removeProperty('overflow');
+      if(lenis) lenis.start();
+    }, 320);
+  }
+
+  burger.addEventListener('click', openMenu);
+  close.addEventListener('click', closeMenu);
+  backdrop.addEventListener('click', closeMenu);
+  document.addEventListener('keydown', e=>{if(e.key==='Escape') closeMenu()});
+
+  links.forEach(l=>{
+    l.addEventListener('click', ()=>{
+      const targetId=l.getAttribute('href');
+      closeMenu();
+      if(targetId && targetId.startsWith('#')){
+        const target=document.querySelector(targetId);
+        if(target){
+          setTimeout(()=>{
+            if(lenis) lenis.scrollTo(target, {offset:-30});
+            else target.scrollIntoView({behavior:'smooth'});
+          }, 350);
+        }
+      }
+    });
+  });
+
+  if(cta){
+    cta.addEventListener('click', ()=>{
+      closeMenu();
+      setTimeout(()=>{
+        const modal=document.getElementById('modal');
+        if(modal) modal.classList.add('open');
+      }, 350);
+    });
+  }
+})();
+
+/* ── KINETIC TYPOGRAPHY CYCLING (EXPERT INDUSTRY LEADING SOLUTIONS) ── */
+(function(){
+  const ghostEl = document.getElementById('trustGhost');
+  if(!ghostEl) return;
+  let idx = 0;
+  const ghostSets = [
+    [{t:'Expert',ink:false},{t:'Industry',ink:false},{t:'Leading',ink:true},{t:'Solutions',ink:false}],
+    [{t:'Trusted',ink:false},{t:'Quality',ink:false},{t:'Driven',ink:true},{t:'Service',ink:false}],
+    [{t:'Smart',ink:false},{t:'Efficient',ink:false},{t:'Scalable',ink:true},{t:'Systems',ink:false}]
+  ];
+
+  function renderGhost(i){
+    ghostEl.innerHTML = '';
+    const row1 = document.createElement('div');
+    row1.className = 'trust__ghost-row';
+    const row2 = document.createElement('div');
+    row2.className = 'trust__ghost-row';
+    const set = ghostSets[i];
+    [set[0],set[1]].forEach(w=>{
+      const s = document.createElement('span');
+      s.className = 'trust__ghost-word' + (w.ink ? ' ink' : '');
+      s.textContent = w.t;
+      s.style.opacity = '0';
+      row1.appendChild(s);
+      requestAnimationFrame(() => { s.style.opacity = '1'; });
+    });
+    [set[2],set[3]].forEach(w=>{
+      const s = document.createElement('span');
+      s.className = 'trust__ghost-word' + (w.ink ? ' ink' : '');
+      s.textContent = w.t;
+      s.style.opacity = '0';
+      row2.appendChild(s);
+      requestAnimationFrame(() => { s.style.opacity = '1'; });
+    });
+    ghostEl.appendChild(row1);
+    ghostEl.appendChild(row2);
+  }
+
+  // Smooth automatic cycling every 3.8 seconds
+  setInterval(() => {
+    idx = (idx + 1) % ghostSets.length;
+    renderGhost(idx);
+  }, 3800);
+})();
+
+/* ── MULTI-WINDOW PLANT CONSOLE DATA ── */
+const plantSystems = [
+  {
+    tag: "Process Automation (PLC)",
+    title: "Modular DIN-Rail PLC & Fieldbus Automation",
+    desc: "Engineered with RS-485 serial fieldbus communication, high-density I/O arrays, and LED telemetry indicators. Ideal for automated machine sequencing, plant batching, and remote SCADA interfacing.",
+    img: "assets/gallery-plc-controllers.jpg",
+    productKey: "Process Automation (PLC & SCADA)",
+    specs: [
+      { label: "Communication", val: "RS-485 / Modbus RTU / Ethernet" },
+      { label: "Mounting", val: "Standard 35mm Industrial DIN-Rail" },
+      { label: "Execution", val: "High-Speed Deterministic Logic" },
+      { label: "Application", val: "Chemical Batching & Continuous Pumping" }
+    ]
+  },
+  {
+    tag: "MCC & Electrical Switchgear",
+    title: "Heavy-Duty Motor Control Centers (MCC)",
+    desc: "Custom multi-compartment electrical switchgear lineups featuring heavy busbar ratings, air circuit breakers (ACB), motor starters, and intelligent power monitoring meters for high-demand plant substations.",
+    img: "assets/gallery-mcc-switchgear.jpg",
+    productKey: "Motor Control Centers (MCC) & Switchgear",
+    specs: [
+      { label: "Voltage Class", val: "415V / 690V Low Voltage Power" },
+      { label: "Enclosure", val: "IP54 Heavy Sheet Steel Powder-Coated" },
+      { label: "Switchgear", val: "Fully Type-Tested ACB & Contactor Lineups" },
+      { label: "Application", val: "Steel Mills, Sponge Iron & Power Sub-Stations" }
+    ]
+  },
+  {
+    tag: "Field Calibration & Diagnostics",
+    title: "Field Instrumentation Diagnostics & Circuit Calibration",
+    desc: "On-site and bench calibration of industrial transmitters, micro-controller boards, and sensor interfaces. Includes precision waveform testing, loop circuit verification, and sensor calibration.",
+    img: "assets/gallery-pcb-calibration.jpg",
+    productKey: "Industrial Instrumentation & NABL Calibration",
+    specs: [
+      { label: "Traceability", val: "NABL Traceable Test Standards" },
+      { label: "Signal Types", val: "4-20mA, 0-10V, HART, PT100 RTD" },
+      { label: "Service Scope", val: "Breakdown Diagnostics & Preventive AMC" },
+      { label: "Application", val: "Refineries, Food Plants & Thermal Utilities" }
+    ]
+  },
+  {
+    tag: "Fluid Pumping & Mechanical Utilities",
+    title: "High-Pressure Utility Pump & Fluid Transfer Assemblies",
+    desc: "Heavy-duty industrial centrifugal and positive displacement pumping skids with high-pressure discharge couplings, flexible reinforced hoses, and vibration-damped mechanical bases.",
+    img: "assets/gallery-fluid-pumps.jpg",
+    productKey: "Fluid Pumping & Mechanical Utilities",
+    specs: [
+      { label: "Fluid Types", val: "Treated Effluent, RO Feed, Sludge & Raw Water" },
+      { label: "Casing Material", val: "Cast Iron / SS316 Acid Resistant" },
+      { label: "Drive System", val: "Coupled Induction Motor / High-Torque VFD" },
+      { label: "Application", val: "ETP/STP Water Systems & High-Head Lifting" }
+    ]
+  },
+  {
+    tag: "Central SCADA & Process Telemetry",
+    title: "Central SCADA Control Desks & Process Telemetry",
+    desc: "Unified supervisory control architecture with illuminated operator consoles, real-time plant mimcs, trend analytics, alarm logging, and secure cloud SPCB pollution server transmission.",
+    img: "assets/gallery-scada-control.jpg",
+    productKey: "Central SCADA Telemetry",
+    specs: [
+      { label: "Software Engine", val: "SCADA / DCS Client-Server Suite" },
+      { label: "Telemetry Link", val: "Real-time CPCB / SPCB Cloud Telemetry" },
+      { label: "HMI Interface", val: "Multi-Screen Graphic Synoptic Consoles" },
+      { label: "Application", val: "Plant-Wide Monitoring & Centralized Dispatch" }
+    ]
+  }
+];
+
+const dockBtns = document.querySelectorAll('#consoleDock .dock-btn');
+const viewportImg = document.getElementById('viewportImg');
+const hudTitle = document.getElementById('hudTitle');
+const hudDesc = document.getElementById('hudDesc');
+const hudSpecs = document.getElementById('hudSpecs');
+const hudInquireBtn = document.getElementById('hudInquireBtn');
+const viewportMedia = document.getElementById('viewportMedia');
+let currentSystemIdx = 0;
+
+function switchSystem(idx) {
+  currentSystemIdx = idx;
+  dockBtns.forEach(b => b.classList.remove('active'));
+  if (dockBtns[idx]) dockBtns[idx].classList.add('active');
+
+  const data = plantSystems[idx];
+  if (!data) return;
+
+  viewportImg.style.opacity = '0';
+  setTimeout(() => {
+    viewportImg.src = data.img;
+    viewportImg.alt = data.title;
+    viewportImg.style.opacity = '1';
+  }, 180);
+
+  hudTitle.textContent = data.title;
+  hudDesc.textContent = data.desc;
+  hudInquireBtn.setAttribute('data-product', data.productKey);
+
+  hudSpecs.innerHTML = '';
+  data.specs.slice(0, 3).forEach(s => {
+    const pill = document.createElement('div');
+    pill.className = 'hud-spec-pill';
+    pill.innerHTML = `<strong>${s.label}:</strong> ${s.val}`;
+    hudSpecs.appendChild(pill);
+  });
+}
+
+dockBtns.forEach((btn, i) => {
+  btn.addEventListener('click', () => switchSystem(i));
+});
+
+/* ── INSPECT LIGHTBOX MODAL ── */
+const inspectModal = document.getElementById('inspectModal');
+const inspectBackdrop = document.getElementById('inspectBackdrop');
+const inspectClose = document.getElementById('inspectClose');
+const inspectImg = document.getElementById('inspectImg');
+const inspectTag = document.getElementById('inspectTag');
+const inspectTitle = document.getElementById('inspectTitle');
+const inspectDesc = document.getElementById('inspectDesc');
+const inspectSpecs = document.getElementById('inspectSpecs');
+const inspectInquireBtn = document.getElementById('inspectInquireBtn');
+
+function openInspectModal(imgSrc, title, tag, desc, specs, productKey) {
+  inspectImg.src = imgSrc;
+  inspectImg.alt = title;
+  inspectTag.textContent = tag || 'Hardware Inspection';
+  inspectTitle.textContent = title;
+  inspectDesc.textContent = desc;
+  inspectInquireBtn.setAttribute('data-product', productKey || title);
+
+  inspectSpecs.innerHTML = '';
+  if (specs && specs.length) {
+    specs.forEach(s => {
+      const row = document.createElement('div');
+      row.className = 'inspect-spec-row';
+      row.innerHTML = `<span>${s.label}</span><strong>${s.val}</strong>`;
+      inspectSpecs.appendChild(row);
+    });
+  }
+
+  inspectModal.classList.add('open');
+  document.body.style.overflow = 'hidden';
+}
+
+function closeInspectModal() {
+  inspectModal.classList.remove('open');
+  document.body.style.overflow = '';
+}
+
+inspectBackdrop.addEventListener('click', closeInspectModal);
+inspectClose.addEventListener('click', closeInspectModal);
+if (viewportMedia) {
+  viewportMedia.addEventListener('click', () => {
+    const s = plantSystems[currentSystemIdx];
+    openInspectModal(s.img, s.title, s.tag, s.desc, s.specs, s.productKey);
+  });
+}
+
+// Product card inspect clicks
+document.querySelectorAll('.prod-card [data-inspect]').forEach(el => {
+  el.addEventListener('click', e => {
+    e.stopPropagation();
+    const card = el.closest('.prod-card');
+    const imgSrc = el.getAttribute('data-inspect') || card.querySelector('img').getAttribute('src');
+    const title = card.querySelector('.prod-card__title').textContent;
+    const tag = card.querySelector('.prod-card__tag').textContent;
+    const desc = card.querySelector('.prod-card__desc').textContent;
+    const specRows = card.querySelectorAll('.prod-spec-row');
+    const specs = [];
+    specRows.forEach(sr => {
+      const label = sr.querySelector('span').textContent.replace(':', '');
+      const val = sr.querySelector('strong').textContent;
+      specs.push({ label, val });
+    });
+    openInspectModal(imgSrc, title, tag, desc, specs, title);
+  });
+});
+
+/* ── CATALOG TABS FILTERING ── */
+const tabs = document.querySelectorAll('#catalogTabs .cat-tab');
+const cards = document.querySelectorAll('#catalogGrid .prod-card');
+
+function filterCatalog(category) {
+  tabs.forEach(t => {
+    if (t.getAttribute('data-cat') === category) t.classList.add('active');
+    else t.classList.remove('active');
+  });
+  cards.forEach(card => {
+    if (category === 'all' || card.getAttribute('data-cat') === category) {
+      card.style.display = '';
+    } else {
+      card.style.display = 'none';
+    }
+  });
+}
+
+tabs.forEach(tab => {
+  tab.addEventListener('click', () => {
+    filterCatalog(tab.getAttribute('data-cat'));
+  });
+});
+
+document.querySelectorAll('[data-nav-filter]').forEach(link => {
+  link.addEventListener('click', e => {
+    const filter = link.getAttribute('data-nav-filter');
+    filterCatalog(filter);
+    const target = document.getElementById('equipment');
+    if (target) {
+      if (lenis) lenis.scrollTo(target, { offset: -60 });
+      else target.scrollIntoView({ behavior: 'smooth' });
+    }
+  });
+});
+
+document.querySelectorAll('[data-target-filter]').forEach(divCard => {
+  divCard.addEventListener('click', () => {
+    const filter = divCard.getAttribute('data-target-filter');
+    filterCatalog(filter);
+    const target = document.getElementById('equipment');
+    if (target) {
+      if (lenis) lenis.scrollTo(target, { offset: -60 });
+      else target.scrollIntoView({ behavior: 'smooth' });
+    }
+  });
+});
+
+document.querySelectorAll('[data-scroll-to]').forEach(el => {
+  el.addEventListener('click', () => {
+    const targetId = el.getAttribute('data-scroll-to');
+    const target = document.getElementById(targetId);
+    if (target) {
+      if (lenis) lenis.scrollTo(target, { offset: -60 });
+      else target.scrollIntoView({ behavior: 'smooth' });
+    }
+  });
+});
+
+/* ── INVIEW REVEAL ── */
+(function(){
+  const obs=new IntersectionObserver((entries)=>{
+    entries.forEach(e=>{
+      if(e.isIntersecting){
+        e.target.classList.add('revealed');
+        obs.unobserve(e.target);
+      }
+    });
+  },{threshold:0.12});
+  document.querySelectorAll('.reveal-up').forEach(el=>obs.observe(el));
+})();
+
+/* ── QUOTE MODAL LOGIC ── */
+const modal = document.getElementById('modal');
+const modalBackdrop = document.getElementById('modalBackdrop');
+const modalClose = document.getElementById('modalClose');
+const quoteForm = document.getElementById('quoteForm');
+const modalContent = document.getElementById('modalContent');
+const modalSuccess = document.getElementById('modalSuccess');
+const modalSubmitBtn = document.getElementById('modalSubmitBtn');
+const productSelect = document.getElementById('modalProductSelect');
+const modalSuccessClose = document.getElementById('modalSuccessClose');
+
+function openQuoteModal(productName) {
+  modal.classList.add('open');
+  document.body.style.overflow = 'hidden';
+  modalContent.style.display = '';
+  modalSuccess.style.display = 'none';
+  if (modalSubmitBtn) { modalSubmitBtn.textContent = 'Send Request →'; modalSubmitBtn.disabled = false; }
+  if (productName && productSelect) {
+    for (let i = 0; i < productSelect.options.length; i++) {
+      if (productSelect.options[i].text.toLowerCase().includes(productName.toLowerCase()) ||
+          productSelect.options[i].value.toLowerCase().includes(productName.toLowerCase())) {
+        productSelect.selectedIndex = i;
+        break;
+      }
+    }
+  }
+}
+
+function closeQuoteModal() {
+  modal.classList.remove('open');
+  document.body.style.overflow = '';
+}
+
+document.querySelectorAll('[data-open-modal]').forEach(b => {
+  b.addEventListener('click', e => {
+    e.preventDefault();
+    const prod = b.getAttribute('data-product') || '';
+    closeInspectModal();
+    openQuoteModal(prod);
+  });
+});
+
+modalBackdrop.addEventListener('click', closeQuoteModal);
+modalClose.addEventListener('click', closeQuoteModal);
+if (modalSuccessClose) modalSuccessClose.addEventListener('click', closeQuoteModal);
+document.addEventListener('keydown', e => {
+  if (e.key === 'Escape') {
+    closeQuoteModal();
+    closeInspectModal();
+    closeAutoModal();
+  }
+});
+
+quoteForm.addEventListener('submit', e => {
+  e.preventDefault();
+  modalSubmitBtn.textContent = 'Sending...';
+  modalSubmitBtn.disabled = true;
+  setTimeout(() => {
+    modalContent.style.display = 'none';
+    modalSuccess.style.display = '';
+  }, 800);
+});
+
+/* ══════════════════════════════════════════════════════════
+   AUTOMATION HARDWARE DATA & SHOWCASE MODAL LOGIC
+   ══════════════════════════════════════════════════════════ */
+const automationMachines = {
+  plc: {
+    id: "plc",
+    name: "Programmable Logic Controller (PLC) & Automation Panels",
+    shortName: "PLC",
+    tag: "Division 01 • Turnkey Control",
+    badge: "Industrial Automation Core",
+    desc: "Engineered modular PLC platforms and custom wired control panels providing mission-critical sequencing, continuous closed-loop feedback, and failsafe interlocks across heavy manufacturing and water utilities.",
+    images: [
+      { src: "assets/plc.png?v=2", label: "PLC Controller CPU Rack & Modular I/O" },
+      { src: "assets/plc-panel.png?v=2", label: "Custom IP65 Control Panel Enclosure" }
+    ],
+    specs: [
+      { k: "Architecture", v: "Modular Hot-Swappable Rack" },
+      { k: "I/O Points", v: "Up to 2,048 Digital / 512 Analog" },
+      { k: "Processing", v: "< 0.05 ms / 1K Instructions" },
+      { k: "Fieldbus Bus", v: "Modbus TCP/IP, Profinet, EtherNet/IP" },
+      { k: "Enclosure", v: "IP54 / IP55 / IP65 Sheet Steel" },
+      { k: "Power Supply", v: "24V DC Failsafe Dual Redundant" }
+    ],
+    features: [
+      "Custom wiring with ferruled high-grade copper cables and terminal numbering",
+      "Integrated emergency stop circuitry and SIL-rated safety interlocks",
+      "Remote programming, diagnostics, and over-the-air firmware maintenance",
+      "NABL-traceable factory acceptance testing (FAT) before site handover"
+    ],
+    apps: "Water & wastewater treatment plants, continuous chemical batching, automotive assembly lines, conveyor sorting skids, and boiler automation.",
+    quoteKey: "PLC Automation & Control Panels"
+  },
+  hmi: {
+    id: "hmi",
+    name: "Human Machine Interface (HMI) Touchscreens",
+    shortName: "HMI",
+    tag: "Division 01 • Operator Interface",
+    badge: "Process Visualization",
+    desc: "Industrial-grade capacitive and resistive touchscreen operator consoles delivering crystal-clear real-time process visualization, animated graphic mimics, dynamic alarm annunciators, and recipe management.",
+    images: [
+      { src: "assets/hmi.png?v=2", label: "Industrial Touchscreen HMI Operator Panel" }
+    ],
+    specs: [
+      { k: "Display Sizes", v: "7.0\", 10.1\", 12.0\", 15.6\" High-Luminance TFT" },
+      { k: "Resolution", v: "Up to 1920 × 1080 Full HD with LED Backlight" },
+      { k: "Touch Type", v: "Resistive Industrial / Multitouch Capacitive" },
+      { k: "Connectivity", v: "Dual RJ45 Ethernet, RS-232, RS-485, USB" },
+      { k: "Front Protection", v: "IP65 / NEMA 4X Oil & Dustproof Bezel" },
+      { k: "Memory", v: "Flash ROM 1GB+ / SD Expansion Logging" }
+    ],
+    features: [
+      "Custom graphic GUI screens tailored to client plant layout and piping mimics",
+      "Multi-level password security and FDA 21 CFR Part 11 compliant audit trail",
+      "Real-time dynamic trend curves and historical CSV data export to USB",
+      "Supports 300+ industrial protocols including all major PLC brands"
+    ],
+    apps: "Machine-level operator panels, pump skid control kiosks, batch dosing stations, and packaging machines.",
+    quoteKey: "HMI Touchscreen Consoles"
+  },
+  vfd: {
+    id: "vfd",
+    name: "Variable Frequency Drives (VFD) & VFD Panel Lineups",
+    shortName: "VFD",
+    tag: "Division 01 • Drive Systems",
+    badge: "Energy Conservation & Speed Control",
+    desc: "Heavy-duty AC variable frequency drives engineered for precision motor speed regulation, dynamic torque compensation, and soft-starting, cutting mechanical stress and delivering up to 40% energy savings on centrifugal loads.",
+    images: [
+      { src: "assets/variable-frequency-drive.png?v=2", label: "Variable Frequency Drive (VFD) Module" },
+      { src: "assets/vfd-panel.png?v=2", label: "Floor-Standing VFD Motor Control Panel" }
+    ],
+    specs: [
+      { k: "Power Range", v: "0.75 kW to 630 kW+ (Low & Medium Voltage)" },
+      { k: "Supply Voltage", v: "3-Phase 380V – 480V / 690V AC ±10%" },
+      { k: "Control Mode", v: "Sensorless Vector Control (SVC), V/f, FOC" },
+      { k: "Overload", v: "150% for 60s Heavy Duty / 120% Normal" },
+      { k: "Harmonics", v: "Built-in DC Choke & Grade C2/C3 EMC Filter" },
+      { k: "Protection", v: "Phase loss, thermal overload, ground fault" }
+    ],
+    features: [
+      "Bypass contactor synchronization for seamless line-to-drive transfer",
+      "Integrated PID loops for constant pressure water pumping and fan draft",
+      "Conformal coated PCB boards (IEC 60721-3-3 Class 3C2 / 3C3)",
+      "Complete panel build with forced ventilation, switchgear, and digital metering"
+    ],
+    apps: "High-pressure multi-pump boosting, cooling towers, industrial fans, screw compressors, crushers, and material handling.",
+    quoteKey: "Variable Frequency Drive (VFD)"
+  },
+  scada: {
+    id: "scada",
+    name: "Supervisory Control & Data Acquisition (SCADA)",
+    shortName: "SCADA",
+    tag: "Division 01 • Plant Telemetry",
+    badge: "Centralized Supervision",
+    desc: "Centralized server-client SCADA and distributed telemetry suites providing plant-wide data acquisition, interactive P&ID mimic diagrams, automated compliance reporting, and real-time remote diagnostics.",
+    images: [
+      { src: "assets/scada.png?v=2", label: "Central SCADA Control Center Workstation" }
+    ],
+    specs: [
+      { k: "Architecture", v: "Client-Server Redundant Telemetry Network" },
+      { k: "Logging Rate", v: "Sub-second real-time historical logging (SQL)" },
+      { k: "Protocols", v: "OPC-UA, OPC-DA, Modbus TCP, MQTT" },
+      { k: "Client Access", v: "Multi-seat desktop, Web HTML5, Mobile" },
+      { k: "Escalations", v: "SMS, Voice Call, Email & Push Alert triggers" },
+      { k: "Redundancy", v: "Hot-standby server failover zero packet loss" }
+    ],
+    features: [
+      "Dynamic interactive plant overview with live equipment run/trip status",
+      "Automated daily, weekly, and monthly regulatory production reports",
+      "Comprehensive energy consumption analytics and specific power KPI metrics",
+      "Encrypted secure VPN tunneling for remote troubleshooting and OEM diagnostics"
+    ],
+    apps: "Municipal water supply networks, industrial ETP/STP monitoring, power distribution substations, and multi-line factories.",
+    quoteKey: "SCADA Telemetry System"
+  },
+  servo: {
+    id: "servo",
+    name: "Servo Motors & High-Precision Motion Drives",
+    shortName: "SERVO METER",
+    tag: "Division 01 • Motion & Precision",
+    badge: "High-Dynamic Motion Control",
+    desc: "High-dynamic AC brushless servo motors paired with digital multi-axis motion drives, providing micron-level positioning repeatability, instantaneous acceleration/deceleration, and closed-loop feedback for demanding precision machinery.",
+    images: [
+      { src: "assets/servo-motor.png?v=2", label: "High-Precision AC Brushless Servo Motor" },
+      { src: "assets/motor.png?v=2", label: "Industrial Auxiliary Induction Drive Motor" }
+    ],
+    specs: [
+      { k: "Rated Torque", v: "0.32 Nm to 120 Nm+ (Peak up to 350%)" },
+      { k: "Rated Speed", v: "1,000 to 6,000 RPM continuous" },
+      { k: "Feedback", v: "23-bit Optical / Magnetic Absolute Encoder" },
+      { k: "Motion Bus", v: "EtherCAT, CANopen, Mechatrolink-III" },
+      { k: "Ingress Rating", v: "IP67 Body with Shaft Oil Seal" },
+      { k: "Rotor Inertia", v: "Ultra-low to medium inertia rotor variants" }
+    ],
+    features: [
+      "Microsecond current loop response for zero-vibration dynamic settling",
+      "Electronic camming (E-CAM), rotary knife, and electronic gearing functions",
+      "Built-in dynamic holding brake for vertical axis anti-drop safety",
+      "Rugged military-grade circular connectors for feedback and power"
+    ],
+    apps: "High-speed packaging, rotary labeling, pick-and-place robotics, CNC machinery, carton forming, and precision metering pumps.",
+    quoteKey: "Servo Motors & Motion Control"
+  }
+};
+
+let activeMachineKey = 'plc';
+
+const autoModal = document.getElementById('autoModal');
+const autoModalBackdrop = document.getElementById('autoModalBackdrop');
+const autoModalClose = document.getElementById('autoModalClose');
+const autoModalTag = document.getElementById('autoModalTag');
+const autoModalTitle = document.getElementById('autoModalTitle');
+const autoModalBadge = document.getElementById('autoModalBadge');
+const autoModalDesc = document.getElementById('autoModalDesc');
+const autoModalImg = document.getElementById('autoModalImg');
+const autoModalImgBadge = document.getElementById('autoModalImgBadge');
+const autoModalThumbs = document.getElementById('autoModalThumbs');
+const autoModalSpecs = document.getElementById('autoModalSpecs');
+const autoModalFeatures = document.getElementById('autoModalFeatures');
+const autoModalApps = document.getElementById('autoModalApps');
+const autoModalEnquireBtn = document.getElementById('autoModalEnquireBtn');
+const autoModalWaBtn = document.getElementById('autoModalWaBtn');
+const autoTabBtns = document.querySelectorAll('.auto-tab-btn');
+
+function renderMachineShowcase(key) {
+  const m = automationMachines[key] || automationMachines.plc;
+  activeMachineKey = key;
+
+  if (autoModalTag) autoModalTag.textContent = m.tag;
+  if (autoModalTitle) autoModalTitle.textContent = m.name;
+  if (autoModalBadge) autoModalBadge.textContent = m.badge;
+  if (autoModalDesc) autoModalDesc.textContent = m.desc;
+  if (autoModalApps) autoModalApps.textContent = m.apps;
+
+  const firstImg = m.images[0];
+  if (autoModalImg) {
+    autoModalImg.src = firstImg.src;
+    autoModalImg.alt = firstImg.label;
+  }
+  if (autoModalImgBadge) autoModalImgBadge.textContent = firstImg.label;
+
+  if (autoModalThumbs) {
+    autoModalThumbs.innerHTML = '';
+    if (m.images.length > 1) {
+      m.images.forEach((imgObj, idx) => {
+        const btn = document.createElement('button');
+        btn.type = 'button';
+        btn.className = 'auto-thumb-btn' + (idx === 0 ? ' active' : '');
+        btn.innerHTML = `<img src="${imgObj.src}" alt="${imgObj.label}"/> <span>${imgObj.label.split(' ')[0]} View</span>`;
+        btn.addEventListener('click', () => {
+          autoModalImg.src = imgObj.src;
+          autoModalImg.alt = imgObj.label;
+          autoModalImgBadge.textContent = imgObj.label;
+          autoModalThumbs.querySelectorAll('.auto-thumb-btn').forEach(b => b.classList.remove('active'));
+          btn.classList.add('active');
+        });
+        autoModalThumbs.appendChild(btn);
+      });
+    }
+  }
+
+  if (autoModalSpecs) {
+    autoModalSpecs.innerHTML = '';
+    m.specs.forEach(s => {
+      const item = document.createElement('div');
+      item.className = 'auto-spec-item';
+      item.innerHTML = `<span class="auto-spec-k">${s.k}</span><span class="auto-spec-v">${s.v}</span>`;
+      autoModalSpecs.appendChild(item);
+    });
+  }
+
+  if (autoModalFeatures) {
+    autoModalFeatures.innerHTML = '';
+    m.features.forEach(f => {
+      const li = document.createElement('li');
+      li.className = 'auto-feature-li';
+      li.textContent = f;
+      autoModalFeatures.appendChild(li);
+    });
+  }
+
+  if (autoModalWaBtn) {
+    const waText = encodeURIComponent(`Hello Resoline Techbis team, I would like to inquire about ${m.name}. Please share technical specifications, availability, and quotation.`);
+    autoModalWaBtn.href = `https://wa.me/91637053100?text=${waText}`;
+  }
+
+  autoTabBtns.forEach(t => {
+    if (t.getAttribute('data-machine') === key) {
+      t.classList.add('active');
+      t.setAttribute('aria-selected', 'true');
+    } else {
+      t.classList.remove('active');
+      t.setAttribute('aria-selected', 'false');
+    }
+  });
+}
+
+function openAutoModal(machineKey) {
+  closeQuoteModal();
+  closeInspectModal();
+  renderMachineShowcase(machineKey || 'plc');
+  if (autoModal) {
+    autoModal.classList.add('open');
+    document.body.style.overflow = 'hidden';
+  }
+}
+
+function closeAutoModal() {
+  if (autoModal) {
+    autoModal.classList.remove('open');
+    document.body.style.overflow = '';
+  }
+}
+
+if (autoModalClose) autoModalClose.addEventListener('click', closeAutoModal);
+if (autoModalBackdrop) autoModalBackdrop.addEventListener('click', closeAutoModal);
+
+autoTabBtns.forEach(btn => {
+  btn.addEventListener('click', () => {
+    const key = btn.getAttribute('data-machine');
+    renderMachineShowcase(key);
+  });
+});
+
+document.querySelectorAll('[data-open-auto]').forEach(btn => {
+  btn.addEventListener('click', e => {
+    e.preventDefault();
+    const key = btn.getAttribute('data-open-auto') || 'plc';
+    openAutoModal(key);
+    if (typeof closeMenu === 'function') closeMenu();
+  });
+});
+
+const navAutoDropdownBtn = document.getElementById('navAutoDropdownBtn');
+const navAutoDropdown = document.getElementById('navAutoDropdown');
+if (navAutoDropdownBtn && navAutoDropdown) {
+  navAutoDropdownBtn.addEventListener('click', (e) => {
+    e.stopPropagation();
+    navAutoDropdown.classList.toggle('open');
+  });
+  document.addEventListener('click', (e) => {
+    if (!navAutoDropdown.contains(e.target) && e.target !== navAutoDropdownBtn) {
+      navAutoDropdown.classList.remove('open');
+    }
+  });
+}
+
+if (autoModalEnquireBtn) {
+  autoModalEnquireBtn.addEventListener('click', () => {
+    const m = automationMachines[activeMachineKey] || automationMachines.plc;
+    closeAutoModal();
+    openQuoteModal(m.quoteKey);
+    const scopeArea = document.getElementById('modalScope');
+    if (scopeArea) {
+      scopeArea.value = `Technical inquiry regarding: ${m.name}.\n\nPlease provide operational datasheet, sizing consultation, and price quotation for project deployment.`;
+    }
+  });
+}
+
+/* ── SERVICE ROW HOVER SPRING ── */
+(function(){
+  if(window.matchMedia('(max-width:768px)').matches)return;
+  document.querySelectorAll('.service-row').forEach(row=>{
+    const arrow=row.querySelector('.service-row__arrow');
+    if(!arrow)return;
+    let x=0,v=0,target=0,running=false;
+    function tick(){
+      [x,v]=springStep(x,v,target,210,24,1/60);
+      arrow.style.transform=`translateX(${x}rem) rotate(-45deg)`;
+      if(Math.abs(x-target)<.001&&Math.abs(v)<.001){running=false;return}
+      requestAnimationFrame(tick);
+    }
+    row.addEventListener('pointerenter',()=>{target=.3;if(!running){running=true;tick()}});
+    row.addEventListener('pointerleave',()=>{target=0;if(!running){running=true;tick()}});
+  });
+})();
+</script>
+</body>
+</html>

@@ -1,0 +1,13 @@
+# Backup of original watermarked images (not needed in production)
+assets/original_with_watermark/
+
+# Scratch & test scripts
+scratch/
+preloader-preview.html
+
+# OS and editor files
+.DS_Store
+Thumbs.db
+*.tmp
+.vscode/
+.idea/
