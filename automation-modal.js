@@ -1,4 +1,4 @@
-/**
+﻿/**
  * Resoline Techbis - Automation Division Showcase Pop-up & Dropdown Logic
  * Provides interactive modal showcasing PLC, HMI, VFD, SCADA, and SERVO METER
  * with high-resolution image views, specs, and direct engineering enquiry.
@@ -13,8 +13,8 @@ const automationMachines = {
     badge: "Industrial Automation Core",
     desc: "Engineered modular PLC platforms and custom wired control panels providing mission-critical sequencing, continuous closed-loop feedback, and failsafe interlocks across heavy manufacturing and water utilities.",
     images: [
-      { src: "assets/plc.png?v=2", label: "PLC Controller CPU Rack & Modular I/O" },
-      { src: "assets/plc-panel.png?v=2", label: "Custom IP65 Control Panel Enclosure" }
+      { src: "assets/plc.jpg?v=2", label: "PLC Controller CPU Rack & Modular I/O" },
+      { src: "assets/plc-panel.jpg?v=2", label: "Custom IP65 Control Panel Enclosure" }
     ],
     specs: [
       { k: "Architecture", v: "Modular Hot-Swappable Rack" },
@@ -41,7 +41,7 @@ const automationMachines = {
     badge: "Process Visualization",
     desc: "Industrial-grade capacitive and resistive touchscreen operator consoles delivering crystal-clear real-time process visualization, animated graphic mimics, dynamic alarm annunciators, and recipe management.",
     images: [
-      { src: "assets/hmi.png?v=2", label: "Industrial Touchscreen HMI Operator Panel" }
+      { src: "assets/hmi.jpg?v=2", label: "Industrial Touchscreen HMI Operator Panel" }
     ],
     specs: [
       { k: "Display Sizes", v: "7.0\", 10.1\", 12.0\", 15.6\" High-Luminance TFT" },
@@ -68,8 +68,8 @@ const automationMachines = {
     badge: "Energy Conservation & Speed Control",
     desc: "Heavy-duty AC variable frequency drives engineered for precision motor speed regulation, dynamic torque compensation, and soft-starting, cutting mechanical stress and delivering up to 40% energy savings on centrifugal loads.",
     images: [
-      { src: "assets/variable-frequency-drive.png?v=2", label: "Variable Frequency Drive (VFD) Module" },
-      { src: "assets/vfd-panel.png?v=2", label: "Floor-Standing VFD Motor Control Panel" }
+      { src: "assets/variable-frequency-drive.jpg?v=2", label: "Variable Frequency Drive (VFD) Module" },
+      { src: "assets/vfd-panel.jpg?v=2", label: "Floor-Standing VFD Motor Control Panel" }
     ],
     specs: [
       { k: "Power Range", v: "0.75 kW to 630 kW+ (Low & Medium Voltage)" },
@@ -96,7 +96,7 @@ const automationMachines = {
     badge: "Centralized Supervision",
     desc: "Centralized server-client SCADA and distributed telemetry suites providing plant-wide data acquisition, interactive P&ID mimic diagrams, automated compliance reporting, and real-time remote diagnostics.",
     images: [
-      { src: "assets/scada.png?v=2", label: "Central SCADA Control Center Workstation" }
+      { src: "assets/scada.jpg?v=2", label: "Central SCADA Control Center Workstation" }
     ],
     specs: [
       { k: "Architecture", v: "Client-Server Redundant Telemetry Network" },
@@ -123,8 +123,8 @@ const automationMachines = {
     badge: "High-Dynamic Motion Control",
     desc: "High-dynamic AC brushless servo motors paired with digital multi-axis motion drives, providing micron-level positioning repeatability, instantaneous acceleration/deceleration, and closed-loop feedback for demanding precision machinery.",
     images: [
-      { src: "assets/servo-motor.png?v=2", label: "High-Precision AC Brushless Servo Motor" },
-      { src: "assets/motor.png?v=2", label: "Industrial Auxiliary Induction Drive Motor" }
+      { src: "assets/servo-motor.jpg?v=2", label: "High-Precision AC Brushless Servo Motor" },
+      { src: "assets/motor.jpg?v=2", label: "Industrial Auxiliary Induction Drive Motor" }
     ],
     specs: [
       { k: "Rated Torque", v: "0.32 Nm to 120 Nm+ (Peak up to 350%)" },
@@ -179,7 +179,7 @@ function ensureAutoModalInDOM() {
         <div class="auto-modal__body">
           <div class="auto-modal__view">
             <div class="auto-img-frame">
-              <img src="assets/plc.png?v=2" alt="PLC Hardware" id="autoModalImg" class="auto-main-image"/>
+              <img src="assets/plc.jpg?v=2" alt="PLC Hardware" id="autoModalImg" class="auto-main-image"/>
               <span class="auto-img-badge" id="autoModalImgBadge">PLC Controller Unit</span>
             </div>
             <div class="auto-thumbs" id="autoModalThumbs"></div>
