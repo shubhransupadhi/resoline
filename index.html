@@ -468,29 +468,54 @@ main{padding:0;width:100%;overflow-x:clip}
 .burger__inner{display:flex;flex-direction:column;justify-content:space-between;width:1.05rem;height:7px}
 .burger__bar{width:1.05rem;height:1.8px;background:#ffffff;border-radius:1px;transition:transform .3s ease}
 
-/* ── HERO CONTENT (LOWER-ALIGNED & SPACIOUS) ── */
+/* ── BALANCED HERO LAYOUT (SPACIOUS 2-COLUMN BRAND & ACCORDION) ── */
 .hero__grid {
   position: relative;
   z-index: 5;
   flex: 1;
-  display: flex;
-  flex-direction: column;
-  justify-content: flex-end;
-  align-items: flex-start;
+  display: grid;
+  grid-template-columns: minmax(0, 1.28fr) minmax(0, 0.92fr);
+  gap: 2.5rem;
+  align-items: flex-end;
   width: 100%;
-  max-width: 84rem;
+  max-width: 86rem;
   margin: 0 auto;
-  padding: 10rem 2.8rem 3.4rem;
+  padding: 5.5rem 2.8rem 3.2rem;
 }
-@media (max-width: 1024px) {
+@media (max-width: 1080px) {
   .hero__grid {
-    padding: 7rem 2rem 3rem;
+    grid-template-columns: 1fr;
+    gap: 2.2rem;
+    padding: 4.5rem 2rem 2.8rem;
   }
 }
 @media (max-width: 640px) {
   .hero__grid {
-    padding: 5rem 1.4rem 3.2rem;
+    padding: 3.5rem 1.25rem 2.4rem;
   }
+}
+.hero__col-work {
+  display: flex;
+  flex-direction: column;
+  justify-content: flex-end;
+}
+.what-we-do-card {
+  position: relative;
+  background: rgba(7, 20, 46, 0.65);
+  border: 1px solid rgba(255, 255, 255, 0.16);
+  border-radius: 22px;
+  backdrop-filter: blur(12px);
+  -webkit-backdrop-filter: blur(12px);
+  box-shadow: 0 20px 45px rgba(0, 0, 0, 0.35);
+  padding: 1.25rem 1.35rem;
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+  overflow: hidden;
+  transition: transform 0.3s cubic-bezier(.22,1,.36,1), border-color 0.3s;
+}
+.what-we-do-card:hover {
+  border-color: rgba(255, 255, 255, 0.28);
 }
 
 .fs-menu__top{display:flex;align-items:center;justify-content:space-between;flex-shrink:0;margin-bottom:1.5rem}
@@ -943,7 +968,7 @@ main{padding:0;width:100%;overflow-x:clip}
               <div class="mega-col__title">What We Do</div>
               <div class="mega-col__list">
                 <a href="#divisions" class="mega-col__link" data-open-auto="plc">1. Automation (PLC, HMI, VFD, SCADA, Servo)</a>
-                <a href="#divisions" class="mega-col__link" data-target-filter="flow">2. Instrumentation</a>
+                <a href="#divisions" class="mega-col__link" data-open-inst="coriolis">2. Instrumentation (Flow, Level &amp; Pressure)</a>
                 <a href="#divisions" class="mega-col__link" data-target-filter="power">3. Electrical and Utilities</a>
                 <a href="#divisions" class="mega-col__link" data-scroll-to="console">4. Utility System</a>
                 <a href="#divisions" class="mega-col__link" data-scroll-to="water-solutions">5. Environmental Solution</a>
@@ -1097,7 +1122,7 @@ main{padding:0;width:100%;overflow-x:clip}
         <h3 class="seg-card__heading">Instrumentation</h3>
         <p class="seg-card__body">Electromagnetic &amp; Coriolis mass flow meters, ultrasonic level probes, smart pressure transmitters, and digital PID temperature loops.</p>
       </div>
-      <span class="seg-card__link">Explore Instrumentation Range →</span>
+      <div style="display:flex;gap:1rem;flex-wrap:wrap;align-items:center;margin-top:0.8rem"><span class="seg-card__link" style="margin-top:0">Explore Instrumentation Range →</span><button type="button" class="btn-auto-launch" data-open-inst="coriolis" style="padding:0.4rem 0.85rem;font-size:0.75rem"><span>🌊 Hardware Pop-up</span></button></div>
     </div>
 
     <!-- 03: Electrical and Utilities -->
@@ -1381,7 +1406,7 @@ main{padding:0;width:100%;overflow-x:clip}
 
     <!-- 5: Coriolis Mass Flow Meter -->
     <div class="prod-card" data-cat="flow">
-      <div class="prod-card__img-wrap" data-inspect="coriolis mass flow meter.jpg" title="Click to Inspect">
+      <div class="prod-card__img-wrap" data-open-inst="coriolis" style="cursor:pointer" title="Click to View Showcase">
         <img src="coriolis mass flow meter.jpg" loading="lazy" decoding="async" alt="Coriolis Mass Flow Meter" class="prod-card__img"/>
         <div class="prod-card__zoom-hint"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><circle cx="11" cy="11" r="8"/><line x1="21" y1="21" x2="16.65" y2="16.65"/></svg></div>
       </div>
@@ -1396,13 +1421,13 @@ main{padding:0;width:100%;overflow-x:clip}
       </div>
       <div class="prod-card__actions">
         <button class="btn-inquire" data-open-modal data-product="Coriolis Mass Flow Meter">Inquire / Quote →</button>
-        <button class="btn-inspect" data-inspect="coriolis mass flow meter.jpg">Inspect ↗</button>
+        <button class="btn-inspect" data-open-inst="coriolis">Showcase 🔬</button>
       </div>
     </div>
 
     <!-- 6: Electromagnetic Flow Meter -->
     <div class="prod-card" data-cat="flow">
-      <div class="prod-card__img-wrap" data-inspect="e.m flow meter.jpg" title="Click to Inspect">
+      <div class="prod-card__img-wrap" data-open-inst="emflow" style="cursor:pointer" title="Click to View Showcase">
         <img src="e.m flow meter.jpg" loading="lazy" decoding="async" alt="Electromagnetic Flow Meter" class="prod-card__img"/>
         <div class="prod-card__zoom-hint"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><circle cx="11" cy="11" r="8"/><line x1="21" y1="21" x2="16.65" y2="16.65"/></svg></div>
       </div>
@@ -1417,13 +1442,13 @@ main{padding:0;width:100%;overflow-x:clip}
       </div>
       <div class="prod-card__actions">
         <button class="btn-inquire" data-open-modal data-product="Electromagnetic Flow Meter">Inquire / Quote →</button>
-        <button class="btn-inspect" data-inspect="e.m flow meter.jpg">Inspect ↗</button>
+        <button class="btn-inspect" data-open-inst="emflow">Showcase 🔬</button>
       </div>
     </div>
 
     <!-- 7: Ultrasonic Flow Meter -->
     <div class="prod-card" data-cat="flow">
-      <div class="prod-card__img-wrap" data-inspect="ultra sonic flow meter.jpg" title="Click to Inspect">
+      <div class="prod-card__img-wrap" data-open-inst="ultraflow" style="cursor:pointer" title="Click to View Showcase">
         <img src="ultra sonic flow meter.jpg" loading="lazy" decoding="async" alt="Non-Invasive Ultrasonic Flow Meter" class="prod-card__img"/>
         <div class="prod-card__zoom-hint"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><circle cx="11" cy="11" r="8"/><line x1="21" y1="21" x2="16.65" y2="16.65"/></svg></div>
       </div>
@@ -1438,13 +1463,13 @@ main{padding:0;width:100%;overflow-x:clip}
       </div>
       <div class="prod-card__actions">
         <button class="btn-inquire" data-open-modal data-product="Non-Invasive Ultrasonic Flow Meter">Inquire / Quote →</button>
-        <button class="btn-inspect" data-inspect="ultra sonic flow meter.jpg">Inspect ↗</button>
+        <button class="btn-inspect" data-open-inst="ultraflow">Showcase 🔬</button>
       </div>
     </div>
 
     <!-- 8: Vortex Flow Meter -->
     <div class="prod-card" data-cat="flow">
-      <div class="prod-card__img-wrap" data-inspect="vertex flow meter.jpg" title="Click to Inspect">
+      <div class="prod-card__img-wrap" data-open-inst="vortex" style="cursor:pointer" title="Click to View Showcase">
         <img src="vertex flow meter.jpg" loading="lazy" decoding="async" alt="Vortex Shedding Flow Meter" class="prod-card__img"/>
         <div class="prod-card__zoom-hint"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><circle cx="11" cy="11" r="8"/><line x1="21" y1="21" x2="16.65" y2="16.65"/></svg></div>
       </div>
@@ -1459,13 +1484,13 @@ main{padding:0;width:100%;overflow-x:clip}
       </div>
       <div class="prod-card__actions">
         <button class="btn-inquire" data-open-modal data-product="Vortex Shedding Flow Meter">Inquire / Quote →</button>
-        <button class="btn-inspect" data-inspect="vertex flow meter.jpg">Inspect ↗</button>
+        <button class="btn-inspect" data-open-inst="vortex">Showcase 🔬</button>
       </div>
     </div>
 
     <!-- 9: Ultrasonic Level Transmitter -->
     <div class="prod-card" data-cat="level">
-      <div class="prod-card__img-wrap" data-inspect="ultrasonic level transmitter.jpg" title="Click to Inspect">
+      <div class="prod-card__img-wrap" data-open-inst="ultralevel" style="cursor:pointer" title="Click to View Showcase">
         <img src="ultrasonic level transmitter.jpg" loading="lazy" decoding="async" alt="Ultrasonic Level Transmitter" class="prod-card__img"/>
         <div class="prod-card__zoom-hint"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><circle cx="11" cy="11" r="8"/><line x1="21" y1="21" x2="16.65" y2="16.65"/></svg></div>
       </div>
@@ -1480,7 +1505,7 @@ main{padding:0;width:100%;overflow-x:clip}
       </div>
       <div class="prod-card__actions">
         <button class="btn-inquire" data-open-modal data-product="Non-Contact Ultrasonic Level Transmitter">Inquire / Quote →</button>
-        <button class="btn-inspect" data-inspect="ultrasonic level transmitter.jpg">Inspect ↗</button>
+        <button class="btn-inspect" data-open-inst="ultralevel">Showcase 🔬</button>
       </div>
     </div>
 
@@ -2567,6 +2592,29 @@ function revealHero(){
   },{passive:true});
 })()
 
+/* ── WHAT WE DO VERTICAL COLUMN ACCORDION ── */
+(function(){
+  const wwdItems=document.querySelectorAll('.wwd-item');
+  if(!wwdItems.length)return;
+  wwdItems.forEach(item=>{
+    const trigger=item.querySelector('.wwd-trigger');
+    if(!trigger)return;
+    trigger.addEventListener('click',(e)=>{
+      e.stopPropagation();
+      const wasActive=item.classList.contains('active');
+      wwdItems.forEach(i=>{
+        i.classList.remove('active');
+        const btn=i.querySelector('.wwd-trigger');
+        if(btn) btn.setAttribute('aria-expanded','false');
+      });
+      if(!wasActive){
+        item.classList.add('active');
+        trigger.setAttribute('aria-expanded','true');
+      }
+    });
+  });
+})();
+
 /* ── MEGA DROPDOWN INTERACTION ── */
 (function(){
   const navMegaGroup=document.getElementById('navMegaGroup');
@@ -3412,5 +3460,6 @@ if (autoModalEnquireBtn) {
   });
 })();
 </script>
+<script src="instrumentation-modal.js"></script>
 </body>
 </html>
