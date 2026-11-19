@@ -1,0 +1,21 @@
+{
+  "name": "resoline-techbis-web",
+  "version": "2.0.0",
+  "description": "Resoline Techbis Private Limited — Enterprise Industrial Automation & Water Engineering Web Portal",
+  "private": true,
+  "scripts": {
+    "start": "powershell -ExecutionPolicy Bypass -File ./server.ps1 -Port 8080",
+    "security:audit": "npm audit",
+    "test": "echo \"Ready for Phase 3 Playwright tests\" && exit 0"
+  },
+  "keywords": [
+    "industrial-automation",
+    "instrumentation",
+    "vfd-panels",
+    "water-treatment",
+    "bhubaneswar",
+    "odisha"
+  ],
+  "author": "Resoline Techbis Private Limited",
+  "license": "UNLICENSED"
+}

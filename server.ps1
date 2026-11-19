@@ -6,6 +6,8 @@ $listener.Prefixes.Add("http://127.0.0.1:$Port/")
 $listener.Start()
 Write-Host "Server running at http://localhost:$Port/ serving $Path"
 
+$serverStartTime = Get-Date
+
 $mimeTypes = @{
     ".html" = "text/html; charset=utf-8"
     ".htm"  = "text/html; charset=utf-8"
@@ -23,13 +25,41 @@ $mimeTypes = @{
 try {
     while ($listener.IsListening) {
         $context = $listener.GetContext()
+        $reqTimer = [System.Diagnostics.Stopwatch]::StartNew()
+        $reqId = "req_" + [System.Guid]::NewGuid().ToString("N").Substring(0, 8)
+
         try {
             $request = $context.Request
             $response = $context.Response
 
+            # Structured Request ID Header
+            $response.AddHeader("X-Request-Id", $reqId)
+
+            # Production security headers
+            $response.AddHeader("X-Content-Type-Options", "nosniff")
+            $response.AddHeader("X-Frame-Options", "SAMEORIGIN")
+            $response.AddHeader("Referrer-Policy", "strict-origin-when-cross-origin")
+            $response.AddHeader("Permissions-Policy", "camera=(), microphone=(), geolocation=()")
+
             $urlPath = $request.Url.LocalPath.TrimStart('/')
             if ([string]::IsNullOrWhiteSpace($urlPath)) { $urlPath = "index.html" }
             $urlPath = [System.Uri]::UnescapeDataString($urlPath)
+
+            # Health check endpoint
+            if ($urlPath -eq "api/health" -or $urlPath -eq "health") {
+                $uptimeSec = [int]((Get-Date) - $serverStartTime).TotalSeconds
+                $healthData = '{"status":"ok","uptime_seconds":' + $uptimeSec + ',"service":"resoline-web","request_id":"' + $reqId + '"}'
+                $bytes = [System.Text.Encoding]::UTF8.GetBytes($healthData)
+                $response.ContentType = "application/json; charset=utf-8"
+                $response.ContentLength64 = $bytes.Length
+                $response.StatusCode = 200
+                $response.OutputStream.Write($bytes, 0, $bytes.Length)
+                $response.Close()
+
+                $reqTimer.Stop()
+                Write-Host "[$((Get-Date).ToString('yyyy-MM-dd HH:mm:ss.fff'))] [$reqId] $($request.HttpMethod) /$urlPath -> 200 ($($reqTimer.ElapsedMilliseconds)ms)"
+                continue
+            }
 
             $filePath = Join-Path $Path $urlPath
             if (Test-Path $filePath -PathType Leaf) {
@@ -51,6 +81,9 @@ try {
                     $response.OutputStream.Write($errBytes, 0, $errBytes.Length)
                 }
             }
+
+            $reqTimer.Stop()
+            Write-Host "[$((Get-Date).ToString('yyyy-MM-dd HH:mm:ss.fff'))] [$reqId] $($request.HttpMethod) /$urlPath -> $($response.StatusCode) ($($reqTimer.ElapsedMilliseconds)ms)"
         } catch {
             # Catch individual request socket / pipe errors and keep running
         } finally {
