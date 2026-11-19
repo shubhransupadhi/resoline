@@ -1,0 +1,14 @@
+.git
+.github
+.env
+.env.*
+node_modules
+scratch
+docs
+tests
+test-results
+playwright-report
+*.tmp
+*.ps1
+Thumbs.db
+.DS_Store

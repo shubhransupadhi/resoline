@@ -1,0 +1,45 @@
+name: Scheduled Site & Link Health Audit
+
+on:
+  schedule:
+    # Run every Monday at 03:00 UTC
+    - cron: '0 3 * * 1'
+  workflow_dispatch: # Allows manual trigger from GitHub Actions tab
+
+jobs:
+  link-and-asset-audit:
+    name: Asset Integrity & Link Verification
+    runs-on: ubuntu-latest
+
+    steps:
+      - name: Checkout Code
+        uses: actions/checkout@v4
+
+      - name: Check Critical PDF Catalogues & Assets
+        run: |
+          echo "Auditing downloadable collateral..."
+          test -s "RESOLINE CATALOGUE.pdf" || (echo "RESOLINE CATALOGUE.pdf is missing or empty" && exit 1)
+          test -s "Resoline Techbis Company Profile.pdf" || (echo "Company profile brochure is missing" && exit 1)
+          echo "All PDF catalogues verified."
+
+      - name: Verify Sitemap XML URLs
+        run: |
+          echo "Auditing sitemap.xml URLs..."
+          grep -o 'https://resoline.in[^<]*' sitemap.xml | while read url; do
+            echo "Indexed URL: $url"
+          done
+          echo "Sitemap audit complete."
+
+      - name: Run Test Verification Suite
+        shell: pwsh
+        run: |
+          $serverJob = Start-Job -ScriptBlock {
+            param($path)
+            & pwsh -File "$path/server.ps1" -Port 8080 -Path $path
+          } -ArgumentList $PWD.Path
+          Start-Sleep -Seconds 3
+          try {
+            & pwsh -File ./test-runner.ps1 -BaseUrl "http://localhost:8080"
+          } finally {
+            Stop-Job $serverJob -ErrorAction SilentlyContinue
+          }

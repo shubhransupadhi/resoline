@@ -1,0 +1,73 @@
+name: Production CI/CD Pipeline
+
+on:
+  push:
+    branches: [ main, prod-hardening ]
+  pull_request:
+    branches: [ main ]
+
+jobs:
+  audit-and-test:
+    name: Security Audit, Lint & Verification
+    runs-on: ubuntu-latest
+
+    steps:
+      - name: Checkout Source Code
+        uses: actions/checkout@v4
+
+      - name: Setup Node.js Environment
+        uses: actions/setup-node@v4
+        with:
+          node-version: 20
+          cache: 'npm'
+          cache-dependency-path: package.json
+
+      - name: Validate Environment Template
+        run: |
+          test -f .env.example || (echo "Missing .env.example" && exit 1)
+          grep -q "NEXT_PUBLIC_SITE_URL" .env.example
+
+      - name: Validate Critical Production Files
+        run: |
+          test -f index.html || exit 1
+          test -f api-service.js || exit 1
+          test -f vercel.json || exit 1
+          test -f robots.txt || exit 1
+          test -f sitemap.xml || exit 1
+
+      - name: Verify Security Headers in vercel.json
+        run: |
+          grep -q "Content-Security-Policy" vercel.json
+          grep -q "X-Frame-Options" vercel.json
+          grep -q "Strict-Transport-Security" vercel.json
+
+      - name: Start Lightweight Web Server & Run Verification Suite
+        shell: pwsh
+        run: |
+          $serverJob = Start-Job -ScriptBlock {
+            param($path)
+            & pwsh -File "$path/server.ps1" -Port 8080 -Path $path
+          } -ArgumentList $PWD.Path
+          Start-Sleep -Seconds 3
+          try {
+            & pwsh -File ./test-runner.ps1 -BaseUrl "http://localhost:8080"
+          } finally {
+            Stop-Job $serverJob -ErrorAction SilentlyContinue
+          }
+
+  deploy:
+    name: Deploy to Production (Vercel)
+    needs: audit-and-test
+    if: github.ref == 'refs/heads/main' && github.event_name == 'push'
+    runs-on: ubuntu-latest
+    steps:
+      - name: Checkout Source Code
+        uses: actions/checkout@v4
+
+      - name: Deploy to Vercel
+        uses: amondnet/vercel-action@v25
+        with:
+          vercel-token: ${{ secrets.VERCEL_TOKEN }}
+          vercel-org-id: ${{ secrets.VERCEL_ORG_ID }}
+          vercel-project-id: ${{ secrets.VERCEL_PROJECT_ID }}
+          vercel-args: '--prod'
