@@ -1,108 +1,16 @@
-﻿<!DOCTYPE html>
+<!DOCTYPE html>
 <html lang="en">
 <head>
 <meta charset="UTF-8"/>
 <meta name="viewport" content="width=device-width,initial-scale=1"/>
 <title>Resoline Techbis — Precision In Every Solution | Industrial Automation, VFD Drives &amp; Water Engineering</title>
 <meta name="description" content="Resoline Techbis — Partnering for Success. High-performance industrial engineering for Variable Frequency Drives (VFD), Process Automation Panels, Flow &amp; Level Instrumentation, and Turnkey Water &amp; Wastewater Treatment in Bhubaneswar, Odisha."/>
-<link rel="canonical" href="https://resoline.in/"/>
-<meta name="robots" content="index, follow, max-image-preview:large, max-snippet:-1, max-video-preview:-1"/>
-<meta name="theme-color" content="#071124"/>
-
-<!-- Open Graph / Facebook -->
-<meta property="og:type" content="website"/>
-<meta property="og:url" content="https://resoline.in/"/>
-<meta property="og:title" content="Resoline Techbis — Precision In Every Solution | Automation, VFD &amp; Instrumentation"/>
-<meta property="og:description" content="Precision engineering in industrial automation (PLC/SCADA), VFD drives, flow &amp; level instrumentation, and turnkey water treatment solutions."/>
-<meta property="og:image" content="https://resoline.in/assets/hero-aerial-plant.jpg"/>
-<meta property="og:site_name" content="Resoline Techbis"/>
-
-<!-- Twitter -->
-<meta name="twitter:card" content="summary_large_image"/>
-<meta name="twitter:url" content="https://resoline.in/"/>
-<meta name="twitter:title" content="Resoline Techbis — Precision In Every Solution"/>
-<meta name="twitter:description" content="Precision engineering in industrial automation, VFD drives, flow &amp; level instrumentation, and turnkey water treatment solutions."/>
-<meta name="twitter:image" content="https://resoline.in/assets/hero-aerial-plant.jpg"/>
-
-<!-- Structured Data: Organization, WebSite & Breadcrumbs -->
-<script type="application/ld+json">
-{
-  "@context": "https://schema.org",
-  "@graph": [
-    {
-      "@type": "Organization",
-      "@id": "https://resoline.in/#organization",
-      "name": "Resoline Techbis Private Limited",
-      "url": "https://resoline.in",
-      "logo": {
-        "@type": "ImageObject",
-        "url": "https://resoline.in/assets/logo-resoline.png"
-      },
-      "description": "High-performance industrial engineering for Variable Frequency Drives (VFD), Process Automation Panels, Flow & Level Instrumentation, and Turnkey Water & Wastewater Treatment in Bhubaneswar, Odisha.",
-      "address": {
-        "@type": "PostalAddress",
-        "streetAddress": "Plot No 122/A, Rasulgarh Industrial Estate",
-        "addressLocality": "Bhubaneswar",
-        "addressRegion": "Odisha",
-        "postalCode": "751010",
-        "addressCountry": "IN"
-      },
-      "contactPoint": {
-        "@type": "ContactPoint",
-        "telephone": "+91-637053100",
-        "contactType": "sales",
-        "email": "info@resoline.in",
-        "areaServed": "IN"
-      }
-    },
-    {
-      "@type": "WebSite",
-      "@id": "https://resoline.in/#website",
-      "url": "https://resoline.in/",
-      "name": "Resoline Techbis",
-      "publisher": {
-        "@id": "https://resoline.in/#organization"
-      }
-    },
-    {
-      "@type": "BreadcrumbList",
-      "@id": "https://resoline.in/#breadcrumb",
-      "itemListElement": [
-        {
-          "@type": "ListItem",
-          "position": 1,
-          "name": "Home",
-          "item": "https://resoline.in/"
-        },
-        {
-          "@type": "ListItem",
-          "position": 2,
-          "name": "Core Divisions",
-          "item": "https://resoline.in/#divisions"
-        },
-        {
-          "@type": "ListItem",
-          "position": 3,
-          "name": "Hardware Equipment",
-          "item": "https://resoline.in/#equipment"
-        },
-        {
-          "@type": "ListItem",
-          "position": 4,
-          "name": "Contact",
-          "item": "https://resoline.in/contact"
-        }
-      ]
-    }
-  ]
-}
-</script>
 <link rel="preconnect" href="https://fonts.googleapis.com"/>
 <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin/>
 <link href="https://fonts.googleapis.com/css2?family=Caveat:wght@600;700&family=Onest:wght@400;500;600;700;800&display=swap" rel="stylesheet"/>
 <link rel="stylesheet" href="styles.css"/>
 <script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/3.12.5/gsap.min.js"></script>
-
+<script type="importmap">{"imports":{"lenis":"https://cdn.jsdelivr.net/npm/lenis@1.1.18/+esm"}}</script>
 <style>
 /* ── PRELOADER FULL-SCREEN OVERLAY ── */
 .preloader {
@@ -468,30 +376,30 @@ main{padding:0;width:100%;overflow-x:clip}
 .burger__inner{display:flex;flex-direction:column;justify-content:space-between;width:1.05rem;height:7px}
 .burger__bar{width:1.05rem;height:1.8px;background:#ffffff;border-radius:1px;transition:transform .3s ease}
 
-/* ── BALANCED HERO LAYOUT (SPACIOUS 2-COLUMN BRAND & ACCORDION) ── */
+/* ── BALANCED HERO LAYOUT (2-COLUMN BRAND + VERTICAL WHAT WE DO CARD) ── */
 .hero__grid {
   position: relative;
   z-index: 5;
   flex: 1;
   display: grid;
-  grid-template-columns: minmax(0, 1.28fr) minmax(0, 0.92fr);
+  grid-template-columns: minmax(0, 1.25fr) minmax(0, 0.95fr);
   gap: 2.5rem;
   align-items: flex-end;
   width: 100%;
-  max-width: 86rem;
+  max-width: 84rem;
   margin: 0 auto;
-  padding: 5.5rem 2.8rem 3.2rem;
+  padding: 2rem 2.4rem 3.2rem;
 }
-@media (max-width: 1080px) {
+@media(max-width: 1024px) {
   .hero__grid {
     grid-template-columns: 1fr;
-    gap: 2.2rem;
-    padding: 4.5rem 2rem 2.8rem;
+    gap: 2rem;
+    max-width: 58rem;
   }
 }
-@media (max-width: 640px) {
+@media(max-width: 640px) {
   .hero__grid {
-    padding: 3.5rem 1.25rem 2.4rem;
+    padding: 1.6rem 1.6rem 2.5rem;
   }
 }
 .hero__col-work {
@@ -499,24 +407,31 @@ main{padding:0;width:100%;overflow-x:clip}
   flex-direction: column;
   justify-content: flex-end;
 }
-.what-we-do-card {
-  position: relative;
-  background: rgba(7, 20, 46, 0.65);
-  border: 1px solid rgba(255, 255, 255, 0.16);
-  border-radius: 22px;
-  backdrop-filter: blur(12px);
-  -webkit-backdrop-filter: blur(12px);
-  box-shadow: 0 20px 45px rgba(0, 0, 0, 0.35);
-  padding: 1.25rem 1.35rem;
-  display: flex;
-  flex-direction: column;
-  justify-content: space-between;
-  overflow: hidden;
-  transition: transform 0.3s cubic-bezier(.22,1,.36,1), border-color 0.3s;
-}
-.what-we-do-card:hover {
-  border-color: rgba(255, 255, 255, 0.28);
-}
+
+/* Hero Brand Statement */
+.hero__col-brand{display:flex;flex-direction:column;justify-content:flex-end}
+.hero__eyebrow-chip{display:inline-flex;align-items:center;gap:.5rem;font-size:.72rem;font-weight:700;text-transform:uppercase;letter-spacing:.12em;color:var(--brand-light);background:rgba(255,255,255,.08);padding:.35rem .85rem;border-radius:var(--radius-pill);border:1px solid rgba(255,255,255,.16);backdrop-filter:blur(8px);-webkit-backdrop-filter:blur(8px);margin-bottom:1.2rem;align-self:flex-start}
+.hero__eyebrow-chip .dot-live{width:6px;height:6px;border-radius:50%;background:var(--brand-green);box-shadow:0 0 8px var(--brand-green)}
+.hero__title{font-size:clamp(2.8rem,5vw,4.8rem);font-weight:700;text-transform:uppercase;line-height:1.05;letter-spacing:-.02em;margin-bottom:1.1rem;max-width:16ch}
+.hero__title .word-wrap{display:inline-block;overflow:hidden;vertical-align:top}
+.hero__title .word-inner{display:inline-block;transform:translateY(115%);opacity:0}
+.hero__tagline{font-size:clamp(1.8rem,2.5vw,2.4rem);font-weight:400;line-height:1.15;color:rgba(255,255,255,.9);margin-bottom:1rem}
+.hero__tagline .line-wrap{display:block;overflow:hidden}
+.hero__tagline .line-inner{display:block;transform:translateY(115%);opacity:0}
+.hero__lead{font-size:.95rem;color:rgba(255,255,255,.84);line-height:1.65;max-width:34rem;margin-top:.4rem}
+.hero__actions{display:flex;gap:1rem;margin-top:1.6rem;flex-wrap:wrap;align-items:center}
+.btn-auto-launch{display:inline-flex;align-items:center;gap:.55rem;padding:.85rem 1.6rem;border-radius:var(--radius-pill);background:rgba(118,184,42,0.22);border:1px solid var(--brand-green);color:#ffffff;font-size:.84rem;font-weight:700;cursor:pointer;backdrop-filter:blur(8px);-webkit-backdrop-filter:blur(8px);transition:all .25s ease}
+.btn-auto-launch:hover{background:var(--brand-green);transform:translateY(-2px);box-shadow:0 8px 22px rgba(118,184,42,0.45)}
+.hero__trust-strip{display:flex;align-items:center;gap:1.2rem;margin-top:2rem;padding-top:1.4rem;border-top:1px solid rgba(255,255,255,.12);font-size:.8rem;color:rgba(255,255,255,.8);flex-wrap:wrap}
+.trust-item strong{color:#ffffff;font-weight:700;margin-right:.3rem}
+.trust-sep{color:var(--brand-green);opacity:.8}
+
+/* ── FULLSCREEN MENU OVERLAY (SPLIT-COLUMN SPEC WITH SPRING ANIMATIONS) ── */
+.fs-menu{position:fixed;inset:0;z-index:180;display:flex;flex-direction:column;pointer-events:none;visibility:hidden}
+.fs-menu.open{pointer-events:auto;visibility:visible}
+.fs-menu__backdrop{position:absolute;inset:0;background:rgba(8,26,60,0.97);backdrop-filter:blur(22px);-webkit-backdrop-filter:blur(22px);opacity:0;will-change:opacity}
+.fs-menu__panel{position:relative;z-index:2;display:flex;flex-direction:column;justify-content:space-between;width:100%;height:100%;padding:1.5rem 1.8rem;opacity:0;transform:translateY(-24px);will-change:transform,opacity;overflow-y:auto}
+@media(min-width:640px){.fs-menu__panel{padding:2rem 2.8rem}}
 
 .fs-menu__top{display:flex;align-items:center;justify-content:space-between;flex-shrink:0;margin-bottom:1.5rem}
 .fs-menu__close{width:2.8rem;height:2.8rem;border-radius:var(--radius-pill);background:rgba(255,255,255,.14);border:1px solid rgba(255,255,255,.22);backdrop-filter:blur(8px);-webkit-backdrop-filter:blur(8px);display:flex;align-items:center;justify-content:center;color:#ffffff;transition:background .25s,transform .3s cubic-bezier(.22,1,.36,1);cursor:pointer}
@@ -857,27 +772,27 @@ main{padding:0;width:100%;overflow-x:clip}
     <div class="hero__slides" id="heroSlides">
       <!-- Slide 0: The Green Image — Wastewater Treatment & Clarifiers -->
       <div class="hero__slide active" data-index="0" data-caption="01 / 06 • Water &amp; Wastewater Treatment Plant">
-        <img src="assets/hero-aerial-plant.jpg" alt="Aerial view of industrial wastewater treatment and environmental engineering plant" class="hero__slide-img" fetchpriority="high"/>
+        <img src="assets/hero-aerial-plant.jpg" alt="Aerial view of industrial wastewater treatment and environmental engineering plant" class="hero__slide-img"/>
       </div>
       <!-- Slide 1: Industrial PLC Automation Control Panels -->
       <div class="hero__slide" data-index="1" data-caption="02 / 06 • Turnkey Modular PLC Automation &amp; Panels">
-        <img src="assets/gallery-plc-controllers.jpg" alt="Industrial modular PLC control panels, relays and wiring" class="hero__slide-img" loading="lazy" decoding="async"/>
+        <img src="assets/gallery-plc-controllers.jpg" alt="Industrial modular PLC control panels, relays and wiring" class="hero__slide-img"/>
       </div>
       <!-- Slide 2: Central SCADA Telemetry & Control Center -->
       <div class="hero__slide" data-index="2" data-caption="03 / 06 • Central SCADA Telemetry &amp; Command Center">
-        <img src="assets/gallery-scada-control.jpg" alt="Supervisory SCADA telemetry workstation and control room" class="hero__slide-img" loading="lazy" decoding="async"/>
+        <img src="assets/gallery-scada-control.jpg" alt="Supervisory SCADA telemetry workstation and control room" class="hero__slide-img"/>
       </div>
       <!-- Slide 3: Heavy-Duty Electrical MCC Switchgear & Drives -->
       <div class="hero__slide" data-index="3" data-caption="04 / 06 • Heavy-Duty MCC Switchgear &amp; VFD Lineups">
-        <img src="assets/gallery-mcc-switchgear.jpg" alt="Motor Control Centers (MCC), switchgear lineup and VFD drives" class="hero__slide-img" loading="lazy" decoding="async"/>
+        <img src="assets/gallery-mcc-switchgear.jpg" alt="Motor Control Centers (MCC), switchgear lineup and VFD drives" class="hero__slide-img"/>
       </div>
       <!-- Slide 4: High-Capacity Fluid Booster Pumps & Utilities -->
       <div class="hero__slide" data-index="4" data-caption="05 / 06 • Industrial High-Head Pumping &amp; Utilities">
-        <img src="assets/gallery-fluid-pumps.jpg" alt="Industrial high-head fluid booster pumps and water utility infrastructure" class="hero__slide-img" loading="lazy" decoding="async"/>
+        <img src="assets/gallery-fluid-pumps.jpg" alt="Industrial high-head fluid booster pumps and water utility infrastructure" class="hero__slide-img"/>
       </div>
       <!-- Slide 5: Precision Process Instrumentation & Calibration Lab -->
       <div class="hero__slide" data-index="5" data-caption="06 / 06 • Process Instrumentation &amp; Calibration Lab">
-        <img src="assets/gallery-pcb-calibration.jpg" alt="Electronic calibration and precision process instrumentation laboratory" class="hero__slide-img" loading="lazy" decoding="async"/>
+        <img src="assets/gallery-pcb-calibration.jpg" alt="Electronic calibration and precision process instrumentation laboratory" class="hero__slide-img"/>
       </div>
     </div>
     <div class="hero__overlay"></div>
@@ -968,7 +883,7 @@ main{padding:0;width:100%;overflow-x:clip}
               <div class="mega-col__title">What We Do</div>
               <div class="mega-col__list">
                 <a href="#divisions" class="mega-col__link" data-open-auto="plc">1. Automation (PLC, HMI, VFD, SCADA, Servo)</a>
-                <a href="#divisions" class="mega-col__link" data-open-inst="coriolis">2. Instrumentation (Flow, Level &amp; Pressure)</a>
+                <a href="#divisions" class="mega-col__link" data-target-filter="flow">2. Instrumentation</a>
                 <a href="#divisions" class="mega-col__link" data-target-filter="power">3. Electrical and Utilities</a>
                 <a href="#divisions" class="mega-col__link" data-scroll-to="console">4. Utility System</a>
                 <a href="#divisions" class="mega-col__link" data-scroll-to="water-solutions">5. Environmental Solution</a>
@@ -1071,8 +986,103 @@ main{padding:0;width:100%;overflow-x:clip}
       </div>
     </div>
 
+    <!-- Column 2 (Right): Vertical "What We Do" Accordion Card -->
+    <div class="hero__col-work">
+      <div class="what-we-do-card">
+        <div class="wwd-header">
+          <div class="wwd-eyebrow">WHAT WE DO</div>
+          <span class="wwd-badge">5 CORE DIVISIONS</span>
+        </div>
+
+        <div class="wwd-list" id="wwdList">
+          <!-- 01: Automation -->
+          <div class="wwd-item active" data-wwd="automation">
+            <button class="wwd-trigger" type="button" aria-expanded="true">
+              <div class="wwd-trigger-left">
+                <span class="wwd-num">01</span>
+                <span class="wwd-name">Automation</span>
+              </div>
+              <span class="wwd-caret">▾</span>
+            </button>
+            <div class="wwd-drawer">
+              <p class="wwd-drawer-desc">Modular PLC units, touchscreen HMIs, SCADA telemetry suites &amp; custom-wired automation control panels.</p>
+              <a href="#divisions" class="wwd-drawer-link" data-open-auto="plc">Explore Automation Hardware →</a>
+            </div>
+          </div>
+
+          <!-- 02: Instrumentation -->
+          <div class="wwd-item" data-wwd="instrumentation">
+            <button class="wwd-trigger" type="button" aria-expanded="false">
+              <div class="wwd-trigger-left">
+                <span class="wwd-num">02</span>
+                <span class="wwd-name">Instrumentation</span>
+              </div>
+              <span class="wwd-caret">▾</span>
+            </button>
+            <div class="wwd-drawer">
+              <p class="wwd-drawer-desc">Electromagnetic &amp; Coriolis mass flow meters, ultrasonic level sensors &amp; smart pressure transmitters.</p>
+              <a href="#divisions" class="wwd-drawer-link" data-target-filter="flow">Explore Process Instruments →</a>
+            </div>
+          </div>
+
+          <!-- 03: Electrical and Utilities -->
+          <div class="wwd-item" data-wwd="electrical">
+            <button class="wwd-trigger" type="button" aria-expanded="false">
+              <div class="wwd-trigger-left">
+                <span class="wwd-num">03</span>
+                <span class="wwd-name">Electrical and Utilities</span>
+              </div>
+              <span class="wwd-caret">▾</span>
+            </button>
+            <div class="wwd-drawer">
+              <p class="wwd-drawer-desc">Variable Frequency Drives (VFDs), MCC panel switchgear lineups, and heavy-duty motor control centers.</p>
+              <a href="#divisions" class="wwd-drawer-link" data-target-filter="power">Explore Drives &amp; Panels →</a>
+            </div>
+          </div>
+
+          <!-- 04: Utility System -->
+          <div class="wwd-item" data-wwd="utilities">
+            <button class="wwd-trigger" type="button" aria-expanded="false">
+              <div class="wwd-trigger-left">
+                <span class="wwd-num">04</span>
+                <span class="wwd-name">Utility System</span>
+              </div>
+              <span class="wwd-caret">▾</span>
+            </button>
+            <div class="wwd-drawer">
+              <p class="wwd-drawer-desc">High-head fluid booster pumps, compressed air manifolds &amp; plant utility infrastructure.</p>
+              <a href="#console" class="wwd-drawer-link">Explore Utility Systems →</a>
+            </div>
+          </div>
+
+          <!-- 05: Environmental Solution -->
+          <div class="wwd-item" data-wwd="environmental">
+            <button class="wwd-trigger" type="button" aria-expanded="false">
+              <div class="wwd-trigger-left">
+                <span class="wwd-num">05</span>
+                <span class="wwd-name">Environmental Solution</span>
+              </div>
+              <span class="wwd-caret">▾</span>
+            </button>
+            <div class="wwd-drawer">
+              <p class="wwd-drawer-desc">Turnkey industrial Reverse Osmosis (RO), DM plants, ETP, STP, and Zero Liquid Discharge (ZLD) plants.</p>
+              <a href="#water-solutions" class="wwd-drawer-link">Explore Water Engineering →</a>
+            </div>
+          </div>
+        </div>
+
+        <div class="wwd-footer">
+          <div class="wwd-metrics-pill">
+            <strong>500+</strong> Delivered Projects
+          </div>
+          <a href="#consultation-part" class="wwd-consult-link">Part 02: Consultation &amp; AMC ↓</a>
+        </div>
+      </div>
+    </div>
+    </div>
   </div>
 </section>
+
 <!-- ═══ WHAT WE DO: 5-PILLAR CORE DIVISIONS + CONSULTATION PART 02 ═══ -->
 <section class="home-segregation reveal-up" id="divisions">
   <div class="home-segregation__header">
@@ -1122,7 +1132,7 @@ main{padding:0;width:100%;overflow-x:clip}
         <h3 class="seg-card__heading">Instrumentation</h3>
         <p class="seg-card__body">Electromagnetic &amp; Coriolis mass flow meters, ultrasonic level probes, smart pressure transmitters, and digital PID temperature loops.</p>
       </div>
-      <div style="display:flex;gap:1rem;flex-wrap:wrap;align-items:center;margin-top:0.8rem"><span class="seg-card__link" style="margin-top:0">Explore Instrumentation Range →</span><button type="button" class="btn-auto-launch" data-open-inst="coriolis" style="padding:0.4rem 0.85rem;font-size:0.75rem"><span>🌊 Hardware Pop-up</span></button></div>
+      <span class="seg-card__link">Explore Instrumentation Range →</span>
     </div>
 
     <!-- 03: Electrical and Utilities -->
@@ -1322,8 +1332,8 @@ main{padding:0;width:100%;overflow-x:clip}
   <div class="catalog-grid" id="catalogGrid">
     <!-- 1: PLC -->
     <div class="prod-card" data-cat="automation">
-      <div class="prod-card__img-wrap" data-inspect="plc.jpg" title="Click to Inspect">
-        <img src="plc.jpg" loading="lazy" decoding="async" alt="Programmable Logic Controller (PLC)" class="prod-card__img"/>
+      <div class="prod-card__img-wrap" data-inspect="plc.png" title="Click to Inspect">
+        <img src="plc.png" alt="Programmable Logic Controller (PLC)" class="prod-card__img"/>
         <div class="prod-card__zoom-hint"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><circle cx="11" cy="11" r="8"/><line x1="21" y1="21" x2="16.65" y2="16.65"/></svg></div>
       </div>
       <div>
@@ -1337,14 +1347,14 @@ main{padding:0;width:100%;overflow-x:clip}
       </div>
       <div class="prod-card__actions">
         <button class="btn-inquire" data-open-modal data-product="Programmable Logic Controller (PLC)">Inquire / Quote →</button>
-        <button class="btn-inspect" data-inspect="plc.jpg">Inspect ↗</button>
+        <button class="btn-inspect" data-inspect="plc.png">Inspect ↗</button>
       </div>
     </div>
 
     <!-- 2: PLC Panel -->
     <div class="prod-card" data-cat="automation">
-      <div class="prod-card__img-wrap" data-inspect="plc pannel.jpg" title="Click to Inspect">
-        <img src="plc pannel.jpg" loading="lazy" decoding="async" alt="PLC Automation Control Panel" class="prod-card__img"/>
+      <div class="prod-card__img-wrap" data-inspect="plc pannel.png" title="Click to Inspect">
+        <img src="plc pannel.png" alt="PLC Automation Control Panel" class="prod-card__img"/>
         <div class="prod-card__zoom-hint"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><circle cx="11" cy="11" r="8"/><line x1="21" y1="21" x2="16.65" y2="16.65"/></svg></div>
       </div>
       <div>
@@ -1358,14 +1368,14 @@ main{padding:0;width:100%;overflow-x:clip}
       </div>
       <div class="prod-card__actions">
         <button class="btn-inquire" data-open-modal data-product="Industrial PLC Automation Control Panel">Inquire / Quote →</button>
-        <button class="btn-inspect" data-inspect="plc pannel.jpg">Inspect ↗</button>
+        <button class="btn-inspect" data-inspect="plc pannel.png">Inspect ↗</button>
       </div>
     </div>
 
     <!-- 3: HMI -->
     <div class="prod-card" data-cat="automation">
-      <div class="prod-card__img-wrap" data-inspect="hmi.jpg" title="Click to Inspect">
-        <img src="hmi.jpg" loading="lazy" decoding="async" alt="Touchscreen HMI Console" class="prod-card__img"/>
+      <div class="prod-card__img-wrap" data-inspect="hmi.png" title="Click to Inspect">
+        <img src="hmi.png" alt="Touchscreen HMI Console" class="prod-card__img"/>
         <div class="prod-card__zoom-hint"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><circle cx="11" cy="11" r="8"/><line x1="21" y1="21" x2="16.65" y2="16.65"/></svg></div>
       </div>
       <div>
@@ -1379,14 +1389,14 @@ main{padding:0;width:100%;overflow-x:clip}
       </div>
       <div class="prod-card__actions">
         <button class="btn-inquire" data-open-modal data-product="Touchscreen HMI Console">Inquire / Quote →</button>
-        <button class="btn-inspect" data-inspect="hmi.jpg">Inspect ↗</button>
+        <button class="btn-inspect" data-inspect="hmi.png">Inspect ↗</button>
       </div>
     </div>
 
     <!-- 4: SCADA -->
     <div class="prod-card" data-cat="automation">
-      <div class="prod-card__img-wrap" data-inspect="sccada.jpg" title="Click to Inspect">
-        <img src="sccada.jpg" loading="lazy" decoding="async" alt="SCADA Supervisory Workstation" class="prod-card__img"/>
+      <div class="prod-card__img-wrap" data-inspect="sccada.png" title="Click to Inspect">
+        <img src="sccada.png" alt="SCADA Supervisory Workstation" class="prod-card__img"/>
         <div class="prod-card__zoom-hint"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><circle cx="11" cy="11" r="8"/><line x1="21" y1="21" x2="16.65" y2="16.65"/></svg></div>
       </div>
       <div>
@@ -1400,14 +1410,14 @@ main{padding:0;width:100%;overflow-x:clip}
       </div>
       <div class="prod-card__actions">
         <button class="btn-inquire" data-open-modal data-product="Central SCADA Supervisory Workstation">Inquire / Quote →</button>
-        <button class="btn-inspect" data-inspect="sccada.jpg">Inspect ↗</button>
+        <button class="btn-inspect" data-inspect="sccada.png">Inspect ↗</button>
       </div>
     </div>
 
     <!-- 5: Coriolis Mass Flow Meter -->
     <div class="prod-card" data-cat="flow">
-      <div class="prod-card__img-wrap" data-open-inst="coriolis" style="cursor:pointer" title="Click to View Showcase">
-        <img src="coriolis mass flow meter.jpg" loading="lazy" decoding="async" alt="Coriolis Mass Flow Meter" class="prod-card__img"/>
+      <div class="prod-card__img-wrap" data-inspect="coriolis mass flow meter.png" title="Click to Inspect">
+        <img src="coriolis mass flow meter.png" alt="Coriolis Mass Flow Meter" class="prod-card__img"/>
         <div class="prod-card__zoom-hint"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><circle cx="11" cy="11" r="8"/><line x1="21" y1="21" x2="16.65" y2="16.65"/></svg></div>
       </div>
       <div>
@@ -1421,14 +1431,14 @@ main{padding:0;width:100%;overflow-x:clip}
       </div>
       <div class="prod-card__actions">
         <button class="btn-inquire" data-open-modal data-product="Coriolis Mass Flow Meter">Inquire / Quote →</button>
-        <button class="btn-inspect" data-open-inst="coriolis">Showcase 🔬</button>
+        <button class="btn-inspect" data-inspect="coriolis mass flow meter.png">Inspect ↗</button>
       </div>
     </div>
 
     <!-- 6: Electromagnetic Flow Meter -->
     <div class="prod-card" data-cat="flow">
-      <div class="prod-card__img-wrap" data-open-inst="emflow" style="cursor:pointer" title="Click to View Showcase">
-        <img src="e.m flow meter.jpg" loading="lazy" decoding="async" alt="Electromagnetic Flow Meter" class="prod-card__img"/>
+      <div class="prod-card__img-wrap" data-inspect="e.m flow meter.png" title="Click to Inspect">
+        <img src="e.m flow meter.png" alt="Electromagnetic Flow Meter" class="prod-card__img"/>
         <div class="prod-card__zoom-hint"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><circle cx="11" cy="11" r="8"/><line x1="21" y1="21" x2="16.65" y2="16.65"/></svg></div>
       </div>
       <div>
@@ -1442,14 +1452,14 @@ main{padding:0;width:100%;overflow-x:clip}
       </div>
       <div class="prod-card__actions">
         <button class="btn-inquire" data-open-modal data-product="Electromagnetic Flow Meter">Inquire / Quote →</button>
-        <button class="btn-inspect" data-open-inst="emflow">Showcase 🔬</button>
+        <button class="btn-inspect" data-inspect="e.m flow meter.png">Inspect ↗</button>
       </div>
     </div>
 
     <!-- 7: Ultrasonic Flow Meter -->
     <div class="prod-card" data-cat="flow">
-      <div class="prod-card__img-wrap" data-open-inst="ultraflow" style="cursor:pointer" title="Click to View Showcase">
-        <img src="ultra sonic flow meter.jpg" loading="lazy" decoding="async" alt="Non-Invasive Ultrasonic Flow Meter" class="prod-card__img"/>
+      <div class="prod-card__img-wrap" data-inspect="ultra sonic flow meter.png" title="Click to Inspect">
+        <img src="ultra sonic flow meter.png" alt="Non-Invasive Ultrasonic Flow Meter" class="prod-card__img"/>
         <div class="prod-card__zoom-hint"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><circle cx="11" cy="11" r="8"/><line x1="21" y1="21" x2="16.65" y2="16.65"/></svg></div>
       </div>
       <div>
@@ -1463,14 +1473,14 @@ main{padding:0;width:100%;overflow-x:clip}
       </div>
       <div class="prod-card__actions">
         <button class="btn-inquire" data-open-modal data-product="Non-Invasive Ultrasonic Flow Meter">Inquire / Quote →</button>
-        <button class="btn-inspect" data-open-inst="ultraflow">Showcase 🔬</button>
+        <button class="btn-inspect" data-inspect="ultra sonic flow meter.png">Inspect ↗</button>
       </div>
     </div>
 
     <!-- 8: Vortex Flow Meter -->
     <div class="prod-card" data-cat="flow">
-      <div class="prod-card__img-wrap" data-open-inst="vortex" style="cursor:pointer" title="Click to View Showcase">
-        <img src="vertex flow meter.jpg" loading="lazy" decoding="async" alt="Vortex Shedding Flow Meter" class="prod-card__img"/>
+      <div class="prod-card__img-wrap" data-inspect="vertex flow meter.png" title="Click to Inspect">
+        <img src="vertex flow meter.png" alt="Vortex Shedding Flow Meter" class="prod-card__img"/>
         <div class="prod-card__zoom-hint"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><circle cx="11" cy="11" r="8"/><line x1="21" y1="21" x2="16.65" y2="16.65"/></svg></div>
       </div>
       <div>
@@ -1484,14 +1494,14 @@ main{padding:0;width:100%;overflow-x:clip}
       </div>
       <div class="prod-card__actions">
         <button class="btn-inquire" data-open-modal data-product="Vortex Shedding Flow Meter">Inquire / Quote →</button>
-        <button class="btn-inspect" data-open-inst="vortex">Showcase 🔬</button>
+        <button class="btn-inspect" data-inspect="vertex flow meter.png">Inspect ↗</button>
       </div>
     </div>
 
     <!-- 9: Ultrasonic Level Transmitter -->
     <div class="prod-card" data-cat="level">
-      <div class="prod-card__img-wrap" data-open-inst="ultralevel" style="cursor:pointer" title="Click to View Showcase">
-        <img src="ultrasonic level transmitter.jpg" loading="lazy" decoding="async" alt="Ultrasonic Level Transmitter" class="prod-card__img"/>
+      <div class="prod-card__img-wrap" data-inspect="ultrasonic level transmitter.png" title="Click to Inspect">
+        <img src="ultrasonic level transmitter.png" alt="Ultrasonic Level Transmitter" class="prod-card__img"/>
         <div class="prod-card__zoom-hint"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><circle cx="11" cy="11" r="8"/><line x1="21" y1="21" x2="16.65" y2="16.65"/></svg></div>
       </div>
       <div>
@@ -1505,14 +1515,14 @@ main{padding:0;width:100%;overflow-x:clip}
       </div>
       <div class="prod-card__actions">
         <button class="btn-inquire" data-open-modal data-product="Non-Contact Ultrasonic Level Transmitter">Inquire / Quote →</button>
-        <button class="btn-inspect" data-open-inst="ultralevel">Showcase 🔬</button>
+        <button class="btn-inspect" data-inspect="ultrasonic level transmitter.png">Inspect ↗</button>
       </div>
     </div>
 
     <!-- 10: Capacitance Level Transmitter -->
     <div class="prod-card" data-cat="level">
-      <div class="prod-card__img-wrap" data-inspect="capacitance level transmitter.jpg" title="Click to Inspect">
-        <img src="capacitance level transmitter.jpg" loading="lazy" decoding="async" alt="Capacitance Level Transmitter" class="prod-card__img"/>
+      <div class="prod-card__img-wrap" data-inspect="capacitance level transmitter.png" title="Click to Inspect">
+        <img src="capacitance level transmitter.png" alt="Capacitance Level Transmitter" class="prod-card__img"/>
         <div class="prod-card__zoom-hint"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><circle cx="11" cy="11" r="8"/><line x1="21" y1="21" x2="16.65" y2="16.65"/></svg></div>
       </div>
       <div>
@@ -1526,14 +1536,14 @@ main{padding:0;width:100%;overflow-x:clip}
       </div>
       <div class="prod-card__actions">
         <button class="btn-inquire" data-open-modal data-product="Capacitance Level Transmitter">Inquire / Quote →</button>
-        <button class="btn-inspect" data-inspect="capacitance level transmitter.jpg">Inspect ↗</button>
+        <button class="btn-inspect" data-inspect="capacitance level transmitter.png">Inspect ↗</button>
       </div>
     </div>
 
     <!-- 11: Level Indicator Gauge -->
     <div class="prod-card" data-cat="level">
-      <div class="prod-card__img-wrap" data-inspect="level indicator.jpg" title="Click to Inspect">
-        <img src="level indicator.jpg" loading="lazy" decoding="async" alt="Magnetic Bypass Level Indicator Gauge" class="prod-card__img"/>
+      <div class="prod-card__img-wrap" data-inspect="level indicator.png" title="Click to Inspect">
+        <img src="level indicator.png" alt="Magnetic Bypass Level Indicator Gauge" class="prod-card__img"/>
         <div class="prod-card__zoom-hint"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><circle cx="11" cy="11" r="8"/><line x1="21" y1="21" x2="16.65" y2="16.65"/></svg></div>
       </div>
       <div>
@@ -1547,14 +1557,14 @@ main{padding:0;width:100%;overflow-x:clip}
       </div>
       <div class="prod-card__actions">
         <button class="btn-inquire" data-open-modal data-product="Magnetic Bypass Level Indicator Gauge">Inquire / Quote →</button>
-        <button class="btn-inspect" data-inspect="level indicator.jpg">Inspect ↗</button>
+        <button class="btn-inspect" data-inspect="level indicator.png">Inspect ↗</button>
       </div>
     </div>
 
     <!-- 12: Pressure Transmitter -->
     <div class="prod-card" data-cat="pressure-temp">
-      <div class="prod-card__img-wrap" data-inspect="pressure transmitter.jpg" title="Click to Inspect">
-        <img src="pressure transmitter.jpg" loading="lazy" decoding="async" alt="Smart Pressure Transmitter" class="prod-card__img"/>
+      <div class="prod-card__img-wrap" data-inspect="pressure transmitter.png" title="Click to Inspect">
+        <img src="pressure transmitter.png" alt="Smart Pressure Transmitter" class="prod-card__img"/>
         <div class="prod-card__zoom-hint"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><circle cx="11" cy="11" r="8"/><line x1="21" y1="21" x2="16.65" y2="16.65"/></svg></div>
       </div>
       <div>
@@ -1568,14 +1578,14 @@ main{padding:0;width:100%;overflow-x:clip}
       </div>
       <div class="prod-card__actions">
         <button class="btn-inquire" data-open-modal data-product="Smart Pressure Transmitter">Inquire / Quote →</button>
-        <button class="btn-inspect" data-inspect="pressure transmitter.jpg">Inspect ↗</button>
+        <button class="btn-inspect" data-inspect="pressure transmitter.png">Inspect ↗</button>
       </div>
     </div>
 
     <!-- 13: Pressure Gauge -->
     <div class="prod-card" data-cat="pressure-temp">
-      <div class="prod-card__img-wrap" data-inspect="pressure gauge.jpg" title="Click to Inspect">
-        <img src="pressure gauge.jpg" loading="lazy" decoding="async" alt="Bourdon Tube Pressure Gauge" class="prod-card__img"/>
+      <div class="prod-card__img-wrap" data-inspect="pressure gauge.png" title="Click to Inspect">
+        <img src="pressure gauge.png" alt="Bourdon Tube Pressure Gauge" class="prod-card__img"/>
         <div class="prod-card__zoom-hint"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><circle cx="11" cy="11" r="8"/><line x1="21" y1="21" x2="16.65" y2="16.65"/></svg></div>
       </div>
       <div>
@@ -1589,14 +1599,14 @@ main{padding:0;width:100%;overflow-x:clip}
       </div>
       <div class="prod-card__actions">
         <button class="btn-inquire" data-open-modal data-product="Bourdon Tube Pressure Gauge">Inquire / Quote →</button>
-        <button class="btn-inspect" data-inspect="pressure gauge.jpg">Inspect ↗</button>
+        <button class="btn-inspect" data-inspect="pressure gauge.png">Inspect ↗</button>
       </div>
     </div>
 
     <!-- 14: Temperature Controller -->
     <div class="prod-card" data-cat="pressure-temp">
-      <div class="prod-card__img-wrap" data-inspect="temp. controller.jpg" title="Click to Inspect">
-        <img src="temp. controller.jpg" loading="lazy" decoding="async" alt="Digital PID Temperature Controller" class="prod-card__img"/>
+      <div class="prod-card__img-wrap" data-inspect="temp. controller.png" title="Click to Inspect">
+        <img src="temp. controller.png" alt="Digital PID Temperature Controller" class="prod-card__img"/>
         <div class="prod-card__zoom-hint"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><circle cx="11" cy="11" r="8"/><line x1="21" y1="21" x2="16.65" y2="16.65"/></svg></div>
       </div>
       <div>
@@ -1610,14 +1620,14 @@ main{padding:0;width:100%;overflow-x:clip}
       </div>
       <div class="prod-card__actions">
         <button class="btn-inquire" data-open-modal data-product="Digital PID Temperature Controller">Inquire / Quote →</button>
-        <button class="btn-inspect" data-inspect="temp. controller.jpg">Inspect ↗</button>
+        <button class="btn-inspect" data-inspect="temp. controller.png">Inspect ↗</button>
       </div>
     </div>
 
     <!-- 15: Temperature Gauge -->
     <div class="prod-card" data-cat="pressure-temp">
-      <div class="prod-card__img-wrap" data-inspect="temp. gauge.jpg" title="Click to Inspect">
-        <img src="temp. gauge.jpg" loading="lazy" decoding="async" alt="Bimetallic Temperature Gauge" class="prod-card__img"/>
+      <div class="prod-card__img-wrap" data-inspect="temp. gauge.png" title="Click to Inspect">
+        <img src="temp. gauge.png" alt="Bimetallic Temperature Gauge" class="prod-card__img"/>
         <div class="prod-card__zoom-hint"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><circle cx="11" cy="11" r="8"/><line x1="21" y1="21" x2="16.65" y2="16.65"/></svg></div>
       </div>
       <div>
@@ -1631,14 +1641,14 @@ main{padding:0;width:100%;overflow-x:clip}
       </div>
       <div class="prod-card__actions">
         <button class="btn-inquire" data-open-modal data-product="Bimetallic Temperature Gauge">Inquire / Quote →</button>
-        <button class="btn-inspect" data-inspect="temp. gauge.jpg">Inspect ↗</button>
+        <button class="btn-inspect" data-inspect="temp. gauge.png">Inspect ↗</button>
       </div>
     </div>
 
     <!-- 16: RTD & Thermocouple -->
     <div class="prod-card" data-cat="pressure-temp">
-      <div class="prod-card__img-wrap" data-inspect="rtdthermocouple.jpg" title="Click to Inspect">
-        <img src="rtdthermocouple.jpg" loading="lazy" decoding="async" alt="RTD and Thermocouple Sensors" class="prod-card__img"/>
+      <div class="prod-card__img-wrap" data-inspect="rtdthermocouple.png" title="Click to Inspect">
+        <img src="rtdthermocouple.png" alt="RTD and Thermocouple Sensors" class="prod-card__img"/>
         <div class="prod-card__zoom-hint"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><circle cx="11" cy="11" r="8"/><line x1="21" y1="21" x2="16.65" y2="16.65"/></svg></div>
       </div>
       <div>
@@ -1652,14 +1662,14 @@ main{padding:0;width:100%;overflow-x:clip}
       </div>
       <div class="prod-card__actions">
         <button class="btn-inquire" data-open-modal data-product="Industrial RTD and Thermocouple Sensors">Inquire / Quote →</button>
-        <button class="btn-inspect" data-inspect="rtdthermocouple.jpg">Inspect ↗</button>
+        <button class="btn-inspect" data-inspect="rtdthermocouple.png">Inspect ↗</button>
       </div>
     </div>
 
     <!-- 17: Variable Frequency Drive -->
     <div class="prod-card" data-cat="power">
-      <div class="prod-card__img-wrap" data-inspect="variable frequency drive.jpg" title="Click to Inspect">
-        <img src="variable frequency drive.jpg" loading="lazy" decoding="async" alt="Variable Frequency Drive (VFD)" class="prod-card__img"/>
+      <div class="prod-card__img-wrap" data-inspect="variable frequency drive.png" title="Click to Inspect">
+        <img src="variable frequency drive.png" alt="Variable Frequency Drive (VFD)" class="prod-card__img"/>
         <div class="prod-card__zoom-hint"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><circle cx="11" cy="11" r="8"/><line x1="21" y1="21" x2="16.65" y2="16.65"/></svg></div>
       </div>
       <div>
@@ -1673,14 +1683,14 @@ main{padding:0;width:100%;overflow-x:clip}
       </div>
       <div class="prod-card__actions">
         <button class="btn-inquire" data-open-modal data-product="Variable Frequency Drive (VFD)">Inquire / Quote →</button>
-        <button class="btn-inspect" data-inspect="variable frequency drive.jpg">Inspect ↗</button>
+        <button class="btn-inspect" data-inspect="variable frequency drive.png">Inspect ↗</button>
       </div>
     </div>
 
     <!-- 18: VFD Panel -->
     <div class="prod-card" data-cat="power">
-      <div class="prod-card__img-wrap" data-inspect="vfd pannel.jpg" title="Click to Inspect">
-        <img src="vfd pannel.jpg" loading="lazy" decoding="async" alt="VFD Automation Panel" class="prod-card__img"/>
+      <div class="prod-card__img-wrap" data-inspect="vfd pannel.png" title="Click to Inspect">
+        <img src="vfd pannel.png" alt="VFD Automation Panel" class="prod-card__img"/>
         <div class="prod-card__zoom-hint"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><circle cx="11" cy="11" r="8"/><line x1="21" y1="21" x2="16.65" y2="16.65"/></svg></div>
       </div>
       <div>
@@ -1694,14 +1704,14 @@ main{padding:0;width:100%;overflow-x:clip}
       </div>
       <div class="prod-card__actions">
         <button class="btn-inquire" data-open-modal data-product="Multi-Drive VFD Control Panel">Inquire / Quote →</button>
-        <button class="btn-inspect" data-inspect="vfd pannel.jpg">Inspect ↗</button>
+        <button class="btn-inspect" data-inspect="vfd pannel.png">Inspect ↗</button>
       </div>
     </div>
 
     <!-- 19: Industrial Electric Motor -->
     <div class="prod-card" data-cat="power">
-      <div class="prod-card__img-wrap" data-inspect="motor.jpg" title="Click to Inspect">
-        <img src="motor.jpg" loading="lazy" decoding="async" alt="Industrial Induction Electric Motor" class="prod-card__img"/>
+      <div class="prod-card__img-wrap" data-inspect="motor.png" title="Click to Inspect">
+        <img src="motor.png" alt="Industrial Induction Electric Motor" class="prod-card__img"/>
         <div class="prod-card__zoom-hint"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><circle cx="11" cy="11" r="8"/><line x1="21" y1="21" x2="16.65" y2="16.65"/></svg></div>
       </div>
       <div>
@@ -1715,14 +1725,14 @@ main{padding:0;width:100%;overflow-x:clip}
       </div>
       <div class="prod-card__actions">
         <button class="btn-inquire" data-open-modal data-product="Industrial Electric Motor">Inquire / Quote →</button>
-        <button class="btn-inspect" data-inspect="motor.jpg">Inspect ↗</button>
+        <button class="btn-inspect" data-inspect="motor.png">Inspect ↗</button>
       </div>
     </div>
 
     <!-- 20: Servo Motor & Drive -->
     <div class="prod-card" data-cat="power">
-      <div class="prod-card__img-wrap" data-inspect="servo motor.jpg" title="Click to Inspect">
-        <img src="servo motor.jpg" loading="lazy" decoding="async" alt="Precision Servo Motor" class="prod-card__img"/>
+      <div class="prod-card__img-wrap" data-inspect="servo motor.png" title="Click to Inspect">
+        <img src="servo motor.png" alt="Precision Servo Motor" class="prod-card__img"/>
         <div class="prod-card__zoom-hint"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><circle cx="11" cy="11" r="8"/><line x1="21" y1="21" x2="16.65" y2="16.65"/></svg></div>
       </div>
       <div>
@@ -1736,14 +1746,14 @@ main{padding:0;width:100%;overflow-x:clip}
       </div>
       <div class="prod-card__actions">
         <button class="btn-inquire" data-open-modal data-product="Precision Servo Motor & Drive">Inquire / Quote →</button>
-        <button class="btn-inspect" data-inspect="servo motor.jpg">Inspect ↗</button>
+        <button class="btn-inspect" data-inspect="servo motor.png">Inspect ↗</button>
       </div>
     </div>
 
     <!-- 21: Industrial SMPS -->
     <div class="prod-card" data-cat="power">
-      <div class="prod-card__img-wrap" data-inspect="smps.jpg" title="Click to Inspect">
-        <img src="smps.jpg" loading="lazy" decoding="async" alt="Industrial DIN-Rail SMPS" class="prod-card__img"/>
+      <div class="prod-card__img-wrap" data-inspect="smps.png" title="Click to Inspect">
+        <img src="smps.png" alt="Industrial DIN-Rail SMPS" class="prod-card__img"/>
         <div class="prod-card__zoom-hint"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><circle cx="11" cy="11" r="8"/><line x1="21" y1="21" x2="16.65" y2="16.65"/></svg></div>
       </div>
       <div>
@@ -1757,14 +1767,14 @@ main{padding:0;width:100%;overflow-x:clip}
       </div>
       <div class="prod-card__actions">
         <button class="btn-inquire" data-open-modal data-product="Industrial DIN-Rail SMPS">Inquire / Quote →</button>
-        <button class="btn-inspect" data-inspect="smps.jpg">Inspect ↗</button>
+        <button class="btn-inspect" data-inspect="smps.png">Inspect ↗</button>
       </div>
     </div>
 
     <!-- 22: Online UPS -->
     <div class="prod-card" data-cat="power">
-      <div class="prod-card__img-wrap" data-inspect="ups.jpg" title="Click to Inspect">
-        <img src="ups.jpg" loading="lazy" decoding="async" alt="Industrial Online UPS" class="prod-card__img"/>
+      <div class="prod-card__img-wrap" data-inspect="ups.png" title="Click to Inspect">
+        <img src="ups.png" alt="Industrial Online UPS" class="prod-card__img"/>
         <div class="prod-card__zoom-hint"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><circle cx="11" cy="11" r="8"/><line x1="21" y1="21" x2="16.65" y2="16.65"/></svg></div>
       </div>
       <div>
@@ -1778,7 +1788,7 @@ main{padding:0;width:100%;overflow-x:clip}
       </div>
       <div class="prod-card__actions">
         <button class="btn-inquire" data-open-modal data-product="Industrial Online UPS">Inquire / Quote →</button>
-        <button class="btn-inspect" data-inspect="ups.jpg">Inspect ↗</button>
+        <button class="btn-inspect" data-inspect="ups.png">Inspect ↗</button>
       </div>
     </div>
   </div>
@@ -2271,7 +2281,7 @@ main{padding:0;width:100%;overflow-x:clip}
         <!-- Left: Image Showcase Stage -->
         <div class="auto-modal__view">
           <div class="auto-img-frame">
-            <img src="assets/plc.jpg?v=2" alt="PLC Hardware" id="autoModalImg" class="auto-main-image" loading="lazy" decoding="async"/>
+            <img src="assets/plc.png?v=2" alt="PLC Hardware" id="autoModalImg" class="auto-main-image"/>
             <span class="auto-img-badge" id="autoModalImgBadge">PLC Controller Unit</span>
           </div>
           <!-- Thumbnail Switcher for machines with multiple views -->
@@ -2326,8 +2336,8 @@ main{padding:0;width:100%;overflow-x:clip}
   </div>
 </div>
 
-<script>
-// Native scroll active
+<script type="module">
+import Lenis from 'lenis';
 
 /* ── SPRING HELPER ── */
 function springStep(x,v,target,tension,friction,dt){
@@ -2349,13 +2359,19 @@ function updateFontSize(){
 updateFontSize();
 window.addEventListener('resize',updateFontSize);
 
-/* ── NATIVE SMOOTH SCROLL (LENIS REMOVED) ── */
+/* ── LENIS SMOOTH SCROLL ── */
+let lenis=null;
+function initLenis(){
+  lenis=new Lenis({smoothWheel:true});
+  function raf(time){lenis.raf(time);requestAnimationFrame(raf)}
+  requestAnimationFrame(raf);
+}
 
 /* ── GSAP 3-SECOND EXACT TIMELINE ANIMATION ── */
 function runPreloaderAnimation() {
   const preloader = document.getElementById('preloader');
   if (!preloader) {
-    // Native scroll active
+    try { initLenis(); } catch(e){}
     try { revealHero(); } catch(e){}
     return;
   }
@@ -2370,7 +2386,7 @@ function runPreloaderAnimation() {
   if (window.gsap) {
     const tl = gsap.timeline({
       onComplete: () => {
-        // Native scroll active
+        try { initLenis(); } catch(e){}
         try { revealHero(); } catch(e){}
         setTimeout(() => {
           if (preloader.parentNode) preloader.remove();
@@ -2450,7 +2466,7 @@ function runPreloaderAnimation() {
     setTimeout(() => {
       preloader.style.transition = 'transform 0.75s cubic-bezier(0.77, 0, 0.175, 1)';
       preloader.style.transform = 'translateY(-100%)';
-      // Native scroll active
+      try { initLenis(); } catch(e){}
       try { revealHero(); } catch(e){}
       setTimeout(() => { if (preloader.parentNode) preloader.remove(); }, 800);
     }, 2000);
@@ -2570,27 +2586,18 @@ function revealHero(){
   startAutoplay();
 })();
 
-/* ── HERO PARALLAX (THROTTLED & HARDWARE ACCELERATED) ── */
+/* ── HERO PARALLAX ── */
 (function(){
   const parallax=document.getElementById('heroParallax');
   const hero=document.getElementById('hero');
-  let ticking = false;
   function updateParallax(){
-    if(!hero) return;
+    if(!hero)return;
     const rect=hero.getBoundingClientRect();
-    if(rect.bottom > 0 && rect.top < window.innerHeight) {
-      const progress=Math.max(0,Math.min(1,-rect.top/(rect.height)));
-      parallax.style.transform=`translate3d(0, ${progress*12}%, 0)`;
-    }
-    ticking = false;
+    const progress=Math.max(0,Math.min(1,-rect.top/(rect.height)));
+    parallax.style.transform=`translateY(${progress*12}%)`;
   }
-  window.addEventListener('scroll',()=>{
-    if(!ticking){
-      requestAnimationFrame(updateParallax);
-      ticking = true;
-    }
-  },{passive:true});
-})()
+  window.addEventListener('scroll',()=>requestAnimationFrame(updateParallax),{passive:true});
+})();
 
 /* ── WHAT WE DO VERTICAL COLUMN ACCORDION ── */
 (function(){
@@ -2670,7 +2677,7 @@ function revealHero(){
   function openMenu(){
     if(isOpen)return;
     isOpen=true;
-    // menu open
+    if(lenis) lenis.stop();
     document.documentElement.style.position='relative';
     document.documentElement.style.overflow='hidden';
     document.documentElement.style.height='100%';
@@ -2755,7 +2762,7 @@ function revealHero(){
       document.documentElement.style.removeProperty('overflow');
       document.documentElement.style.removeProperty('height');
       document.body.style.removeProperty('overflow');
-      // menu close
+      if(lenis) lenis.start();
     }, 320);
   }
 
@@ -2772,7 +2779,8 @@ function revealHero(){
         const target=document.querySelector(targetId);
         if(target){
           setTimeout(()=>{
-            target.scrollIntoView({behavior:'smooth'});
+            if(lenis) lenis.scrollTo(target, {offset:-30});
+            else target.scrollIntoView({behavior:'smooth'});
           }, 350);
         }
       }
@@ -3042,7 +3050,8 @@ document.querySelectorAll('[data-nav-filter]').forEach(link => {
     filterCatalog(filter);
     const target = document.getElementById('equipment');
     if (target) {
-      target.scrollIntoView({ behavior: 'smooth' });
+      if (lenis) lenis.scrollTo(target, { offset: -60 });
+      else target.scrollIntoView({ behavior: 'smooth' });
     }
   });
 });
@@ -3053,7 +3062,8 @@ document.querySelectorAll('[data-target-filter]').forEach(divCard => {
     filterCatalog(filter);
     const target = document.getElementById('equipment');
     if (target) {
-      target.scrollIntoView({ behavior: 'smooth' });
+      if (lenis) lenis.scrollTo(target, { offset: -60 });
+      else target.scrollIntoView({ behavior: 'smooth' });
     }
   });
 });
@@ -3063,7 +3073,8 @@ document.querySelectorAll('[data-scroll-to]').forEach(el => {
     const targetId = el.getAttribute('data-scroll-to');
     const target = document.getElementById(targetId);
     if (target) {
-      target.scrollIntoView({ behavior: 'smooth' });
+      if (lenis) lenis.scrollTo(target, { offset: -60 });
+      else target.scrollIntoView({ behavior: 'smooth' });
     }
   });
 });
@@ -3156,8 +3167,8 @@ const automationMachines = {
     badge: "Industrial Automation Core",
     desc: "Engineered modular PLC platforms and custom wired control panels providing mission-critical sequencing, continuous closed-loop feedback, and failsafe interlocks across heavy manufacturing and water utilities.",
     images: [
-      { src: "assets/plc.jpg?v=2", label: "PLC Controller CPU Rack & Modular I/O" },
-      { src: "assets/plc-panel.jpg?v=2", label: "Custom IP65 Control Panel Enclosure" }
+      { src: "assets/plc.png?v=2", label: "PLC Controller CPU Rack & Modular I/O" },
+      { src: "assets/plc-panel.png?v=2", label: "Custom IP65 Control Panel Enclosure" }
     ],
     specs: [
       { k: "Architecture", v: "Modular Hot-Swappable Rack" },
@@ -3184,7 +3195,7 @@ const automationMachines = {
     badge: "Process Visualization",
     desc: "Industrial-grade capacitive and resistive touchscreen operator consoles delivering crystal-clear real-time process visualization, animated graphic mimics, dynamic alarm annunciators, and recipe management.",
     images: [
-      { src: "assets/hmi.jpg?v=2", label: "Industrial Touchscreen HMI Operator Panel" }
+      { src: "assets/hmi.png?v=2", label: "Industrial Touchscreen HMI Operator Panel" }
     ],
     specs: [
       { k: "Display Sizes", v: "7.0\", 10.1\", 12.0\", 15.6\" High-Luminance TFT" },
@@ -3211,8 +3222,8 @@ const automationMachines = {
     badge: "Energy Conservation & Speed Control",
     desc: "Heavy-duty AC variable frequency drives engineered for precision motor speed regulation, dynamic torque compensation, and soft-starting, cutting mechanical stress and delivering up to 40% energy savings on centrifugal loads.",
     images: [
-      { src: "assets/variable-frequency-drive.jpg?v=2", label: "Variable Frequency Drive (VFD) Module" },
-      { src: "assets/vfd-panel.jpg?v=2", label: "Floor-Standing VFD Motor Control Panel" }
+      { src: "assets/variable-frequency-drive.png?v=2", label: "Variable Frequency Drive (VFD) Module" },
+      { src: "assets/vfd-panel.png?v=2", label: "Floor-Standing VFD Motor Control Panel" }
     ],
     specs: [
       { k: "Power Range", v: "0.75 kW to 630 kW+ (Low & Medium Voltage)" },
@@ -3239,7 +3250,7 @@ const automationMachines = {
     badge: "Centralized Supervision",
     desc: "Centralized server-client SCADA and distributed telemetry suites providing plant-wide data acquisition, interactive P&ID mimic diagrams, automated compliance reporting, and real-time remote diagnostics.",
     images: [
-      { src: "assets/scada.jpg?v=2", label: "Central SCADA Control Center Workstation" }
+      { src: "assets/scada.png?v=2", label: "Central SCADA Control Center Workstation" }
     ],
     specs: [
       { k: "Architecture", v: "Client-Server Redundant Telemetry Network" },
@@ -3266,8 +3277,8 @@ const automationMachines = {
     badge: "High-Dynamic Motion Control",
     desc: "High-dynamic AC brushless servo motors paired with digital multi-axis motion drives, providing micron-level positioning repeatability, instantaneous acceleration/deceleration, and closed-loop feedback for demanding precision machinery.",
     images: [
-      { src: "assets/servo-motor.jpg?v=2", label: "High-Precision AC Brushless Servo Motor" },
-      { src: "assets/motor.jpg?v=2", label: "Industrial Auxiliary Induction Drive Motor" }
+      { src: "assets/servo-motor.png?v=2", label: "High-Precision AC Brushless Servo Motor" },
+      { src: "assets/motor.png?v=2", label: "Industrial Auxiliary Induction Drive Motor" }
     ],
     specs: [
       { k: "Rated Torque", v: "0.32 Nm to 120 Nm+ (Peak up to 350%)" },
@@ -3460,6 +3471,5 @@ if (autoModalEnquireBtn) {
   });
 })();
 </script>
-<script src="instrumentation-modal.js"></script>
 </body>
 </html>
