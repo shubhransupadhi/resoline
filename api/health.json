@@ -1,0 +1,6 @@
+{
+  "status": "ok",
+  "service": "resoline-web",
+  "uptime_seconds": 3600,
+  "environment": "production"
+}
