@@ -1,0 +1,63 @@
+{
+  "name": "resoline-industrial-mcp",
+  "version": "1.0.0",
+  "description": "Model Context Protocol (MCP) server for Resoline Techbis Industrial Equipment Catalog & Plant Sizing",
+  "protocolVersion": "2024-11-05",
+  "capabilities": {
+    "tools": [
+      {
+        "name": "query_equipment_catalog",
+        "description": "Search Resoline's certified industrial hardware catalog (PLC, HMI, VFD, Coriolis meters, Magmeters, Level transmitters, RO Plants)",
+        "inputSchema": {
+          "type": "object",
+          "properties": {
+            "category": {
+              "type": "string",
+              "enum": ["all", "automation", "instrumentation", "electrical", "water-treatment"],
+              "description": "Industrial discipline category"
+            },
+            "query": {
+              "type": "string",
+              "description": "Keywords, e.g. 'coriolis', 'slurry magmeter', 'hot standby plc', 'reverse osmosis'"
+            }
+          },
+          "required": ["query"]
+        }
+      },
+      {
+        "name": "get_plant_case_study",
+        "description": "Retrieve verified engineering case studies and project scope for Eastern India industrial giants (TATA, NALCO, Jindal, ITC, IMFA, VISA Steel, Birla Tyres)",
+        "inputSchema": {
+          "type": "object",
+          "properties": {
+            "client_id": {
+              "type": "string",
+              "enum": ["tata", "nalco", "jindal", "itc", "imfa", "ppl", "visa", "birla"],
+              "description": "Company identifier"
+            }
+          },
+          "required": ["client_id"]
+        }
+      },
+      {
+        "name": "calculate_equipment_sizing",
+        "description": "Calculate industrial engineering sizing recommendations for process equipment",
+        "inputSchema": {
+          "type": "object",
+          "properties": {
+            "equipment_type": {
+              "type": "string",
+              "enum": ["coriolis_flow", "vfd_motor", "ro_membrane"],
+              "description": "Equipment type to calculate"
+            },
+            "parameters": {
+              "type": "object",
+              "description": "Technical parameters (e.g. flow_m3h, motor_kw, raw_tds_ppm)"
+            }
+          },
+          "required": ["equipment_type", "parameters"]
+        }
+      }
+    ]
+  }
+}

@@ -1,0 +1,89 @@
+apiVersion: v1
+kind: Service
+metadata:
+  name: resoline-service
+  namespace: default
+  labels:
+    app: resoline-web
+spec:
+  type: ClusterIP
+  ports:
+    - port: 80
+      targetPort: 8080
+      protocol: TCP
+      name: http
+  selector:
+    app: resoline-web
+---
+apiVersion: networking.k8s.io/v1
+kind: Ingress
+metadata:
+  name: resoline-ingress
+  namespace: default
+  annotations:
+    kubernetes.io/ingress.class: "nginx"
+    cert-manager.io/cluster-issuer: "letsencrypt-prod"
+    nginx.ingress.kubernetes.io/ssl-redirect: "true"
+    nginx.ingress.kubernetes.io/proxy-body-size: "10m"
+spec:
+  tls:
+    - hosts:
+        - resoline.in
+        - www.resoline.in
+      secretName: resoline-tls-cert
+  rules:
+    - host: resoline.in
+      http:
+        paths:
+          - path: /
+            pathType: Prefix
+            backend:
+              service:
+                name: resoline-service
+                port:
+                  number: 80
+---
+apiVersion: autoscaling/v2
+kind: HorizontalPodAutoscaler
+metadata:
+  name: resoline-hpa
+  namespace: default
+spec:
+  scaleTargetRef:
+    apiVersion: apps/v1
+    kind: Deployment
+    name: resoline-web
+  minReplicas: 2
+  maxReplicas: 8
+  metrics:
+    - type: Resource
+      resource:
+        name: cpu
+        target:
+          type: Utilization
+          averageUtilization: 75
+    - type: Resource
+      resource:
+        name: memory
+        target:
+          type: Utilization
+          averageUtilization: 80
+---
+apiVersion: v1
+kind: ConfigMap
+metadata:
+  name: resoline-config
+  namespace: default
+data:
+  SITE_URL: "https://resoline.in"
+  SUPPORT_PHONE: "+91637053100"
+---
+apiVersion: v1
+kind: Secret
+metadata:
+  name: resoline-secrets
+  namespace: default
+type: Opaque
+stringData:
+  LEAD_WEBHOOK_URL: ""
+  SENTRY_DSN: ""
