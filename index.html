@@ -972,11 +972,24 @@ main{padding:0;width:100%;overflow-x:clip}
 }
 
 @media (max-width: 768px) {
-  body { padding: 8px !important; }
-  .header { padding: 1rem 1rem 0 !important; }
-  .brand-pill { padding: 6px 12px !important; border-radius: 12px !important; }
-  .brand-logo-img { height: 28px !important; width: auto !important; }
-  .burger { width: 2.4rem !important; height: 2.4rem !important; }
+  body { 
+    padding: 6px !important; 
+    overflow-x: hidden !important;
+  }
+  
+  /* Global typography wrap safety on mobile */
+  h1, h2, h3, h4, 
+  .hero__title, .home-segregation__title, .catalog-title, 
+  .console-title, .water-title, .services__title, 
+  .industries__title, .stats-title {
+    word-break: break-word !important;
+    overflow-wrap: break-word !important;
+  }
+
+  .header { padding: 0.85rem 0.85rem 0 !important; }
+  .brand-pill { padding: 5px 10px !important; border-radius: 12px !important; }
+  .brand-logo-img { height: 26px !important; width: auto !important; }
+  .burger { width: 2.3rem !important; height: 2.3rem !important; }
 
   /* Eliminate scroll animation blank ghosting on mobile devices */
   .reveal-up {
@@ -985,46 +998,256 @@ main{padding:0;width:100%;overflow-x:clip}
     transition: none !important;
   }
 
-  .hero { border-radius: 18px !important; padding-bottom: 1.5rem !important; margin-bottom: 0.75rem !important; }
-  .hero__grid { padding: 1.2rem 1rem 1.8rem !important; gap: 1.6rem !important; }
-  .hero__eyebrow-chip { font-size: 0.65rem !important; padding: 0.3rem 0.65rem !important; margin-bottom: 0.8rem !important; white-space: normal !important; line-height: 1.4 !important; }
-  .hero__title { font-size: clamp(1.85rem, 7.8vw, 2.4rem) !important; line-height: 1.12 !important; margin-bottom: 0.75rem !important; letter-spacing: -0.01em !important; }
-  .hero__tagline { font-size: 1.25rem !important; line-height: 1.25 !important; margin-bottom: 0.8rem !important; }
-  .hero__lead { font-size: 0.84rem !important; line-height: 1.55 !important; }
-  .hero__actions { display: flex !important; flex-direction: row !important; flex-wrap: wrap !important; align-items: center !important; gap: 0.65rem !important; margin-top: 1.2rem !important; }
-  .hero__actions .btn-primary, .hero__actions .btn-auto-launch, .hero__actions .btn-outline { width: auto !important; padding: 0.65rem 1.15rem !important; font-size: 0.8rem !important; min-height: 42px !important; }
-  .hero__trust-strip { font-size: 0.72rem !important; gap: 0.6rem !important; margin-top: 1.2rem !important; padding-top: 1rem !important; line-height: 1.5 !important; }
-  .what-we-do-card { padding: 1rem !important; border-radius: 16px !important; }
-  .fs-menu__panel { padding: 1.2rem 1.2rem !important; overflow-y: auto !important; -webkit-overflow-scrolling: touch !important; }
-  .fs-menu__split { margin: 0 !important; padding: 0.8rem 0 1.2rem !important; gap: 1.5rem !important; }
-  .fs-menu__link { font-size: 1.55rem !important; padding: 0.45rem 0 !important; min-height: 44px !important; }
+  /* --- HERO SECTION --- */
+  .hero { 
+    border-radius: 18px !important; 
+    padding-bottom: 1.25rem !important; 
+    margin-bottom: 0.75rem !important; 
+  }
+  .hero__grid { 
+    padding: 1.1rem 0.9rem 1.4rem !important; 
+    gap: 1.4rem !important; 
+    width: 100% !important;
+    box-sizing: border-box !important;
+  }
+  .hero__eyebrow-chip { 
+    font-size: 0.65rem !important; 
+    padding: 0.3rem 0.6rem !important; 
+    margin-bottom: 0.75rem !important; 
+    white-space: normal !important; 
+    line-height: 1.35 !important; 
+    max-width: 100% !important;
+  }
+  .hero__title { 
+    font-size: clamp(1.75rem, 7.2vw, 2.25rem) !important; 
+    line-height: 1.12 !important; 
+    margin-bottom: 0.65rem !important; 
+    letter-spacing: -0.01em !important; 
+    max-width: 100% !important;
+  }
+  .hero__tagline { 
+    font-size: 1.15rem !important; 
+    line-height: 1.25 !important; 
+    margin-bottom: 0.75rem !important; 
+  }
+  .hero__lead { 
+    font-size: 0.82rem !important; 
+    line-height: 1.55 !important; 
+  }
+  .hero__actions { 
+    display: flex !important; 
+    flex-direction: row !important; 
+    flex-wrap: wrap !important; 
+    align-items: center !important; 
+    gap: 0.55rem !important; 
+    margin-top: 1.1rem !important; 
+  }
+  .hero__actions .btn-primary, 
+  .hero__actions .btn-auto-launch, 
+  .hero__actions .btn-outline { 
+    width: 100% !important; 
+    justify-content: center !important;
+    padding: 0.7rem 1.1rem !important; 
+    font-size: 0.8rem !important; 
+    min-height: 42px !important; 
+    box-sizing: border-box !important;
+  }
+  .hero__trust-strip { 
+    font-size: 0.7rem !important; 
+    gap: 0.5rem !important; 
+    margin-top: 1.1rem !important; 
+    padding-top: 0.9rem !important; 
+    line-height: 1.45 !important; 
+    flex-wrap: wrap !important;
+  }
+
+  /* Slide Controls Bar in Hero */
+  .hero__slide-controls {
+    position: relative !important;
+    bottom: auto !important;
+    right: auto !important;
+    left: auto !important;
+    margin: 1.1rem auto 0.4rem !important;
+    width: 100% !important;
+    max-width: calc(100% - 1rem) !important;
+    flex-direction: column !important;
+    gap: 0.5rem !important;
+    padding: 0.6rem 0.85rem !important;
+    border-radius: 14px !important;
+    box-sizing: border-box !important;
+  }
+  .hero__slide-badge {
+    white-space: normal !important;
+    text-align: center !important;
+    font-size: 0.7rem !important;
+    line-height: 1.35 !important;
+    justify-content: center !important;
+  }
+
+  .what-we-do-card { 
+    padding: 1rem 0.9rem !important; 
+    border-radius: 16px !important; 
+  }
+  .wwd-trigger {
+    padding: 0.75rem 0.4rem !important;
+  }
+  .wwd-name {
+    font-size: 0.88rem !important;
+  }
+
+  /* --- FULLSCREEN MENU --- */
+  .fs-menu__panel { padding: 1.1rem !important; overflow-y: auto !important; -webkit-overflow-scrolling: touch !important; }
+  .fs-menu__split { margin: 0 !important; padding: 0.6rem 0 1rem !important; gap: 1.2rem !important; }
+  .fs-menu__link { font-size: 1.4rem !important; padding: 0.4rem 0 !important; min-height: 44px !important; }
   .fs-menu__link .menu-arrow { opacity: 0.6 !important; transform: none !important; }
-  .home-segregation { padding: 2rem 1.1rem !important; border-radius: 18px !important; margin-top: 0 !important; margin-bottom: 0.75rem !important; }
-  .home-segregation__grid { grid-template-columns: 1fr !important; gap: 1rem !important; }
-  .client-strip { padding: 0.8rem 1rem !important; flex-direction: column !important; align-items: flex-start !important; gap: 0.6rem !important; margin-top: 0 !important; margin-bottom: 0.75rem !important; }
+
+  /* --- HOME DIVISIONS --- */
+  .home-segregation { padding: 2rem 1rem !important; border-radius: 18px !important; margin-top: 0 !important; margin-bottom: 0.75rem !important; }
+  .home-segregation__title { font-size: clamp(1.65rem, 6.2vw, 2.1rem) !important; }
+  .home-segregation__grid { grid-template-columns: 1fr !important; gap: 0.85rem !important; }
+  .seg-card { padding: 1.25rem 1.1rem !important; }
+  .seg-card__heading { font-size: 1.2rem !important; }
+  .auto-chips-row { gap: 0.35rem !important; margin: 0.7rem 0 1rem !important; }
+  .auto-chip-btn { padding: 0.3rem 0.55rem !important; font-size: 0.68rem !important; }
+
+  /* --- CLIENT STRIP --- */
+  .client-strip { padding: 0.8rem 1rem !important; flex-direction: column !important; align-items: flex-start !important; gap: 0.5rem !important; margin-top: 0 !important; margin-bottom: 0.75rem !important; }
   .client-strip__track { width: 100% !important; overflow-x: auto !important; -webkit-overflow-scrolling: touch !important; }
-  .trust { padding: 2.2rem 1.1rem 1.8rem !important; border-radius: 18px !important; margin-top: 0 !important; margin-bottom: 0.75rem !important; }
-  .trust__top { grid-template-columns: 1fr !important; gap: 1.4rem !important; margin-bottom: 1.5rem !important; }
-  .trust__ghost { margin: 1.5rem auto 0.5rem !important; }
-  .trust__ghost-row { gap: 0.5rem !important; }
-  .trust__pct { flex-direction: column !important; gap: 0.3rem !important; }
-  .trust__pct-num { font-size: 3.2rem !important; }
-  .review-card { width: 18.5rem !important; min-width: 18.5rem !important; padding: 1.15rem !important; }
-  .crm-panel { border-radius: 18px !important; max-height: 94svh !important; }
-  .crm-header { padding: 1rem 1.2rem !important; }
-  .crm-body { padding: 1.2rem !important; gap: 1rem !important; }
-  .crm-footer { padding: 1rem 1.2rem !important; flex-direction: column !important; align-items: stretch !important; }
+  .client-strip__items { gap: 0.8rem !important; }
+
+  /* --- TRUST & CLIENT REVIEWS --- */
+  .trust { padding: 2rem 1rem 1.6rem !important; border-radius: 18px !important; margin-top: 0 !important; margin-bottom: 0.75rem !important; }
+  .trust__top { grid-template-columns: 1fr !important; gap: 1.2rem !important; margin-bottom: 1.2rem !important; }
+  .trust__pct { flex-direction: column !important; gap: 0.25rem !important; }
+  .trust__pct-num { font-size: 3rem !important; line-height: 1 !important; }
+  .trust__pct-text { font-size: 0.82rem !important; }
+  
+  /* Trust Ghost Big Typography: Perfectly fitted on small screens */
+  .trust__ghost { 
+    margin: 1.2rem auto 0.4rem !important; 
+    max-width: 100% !important; 
+    overflow: hidden !important; 
+  }
+  .trust__ghost-row { 
+    display: flex !important; 
+    justify-content: center !important; 
+    flex-wrap: wrap !important; 
+    gap: 0.3rem 0.7rem !important; 
+  }
+  .trust__ghost-word { 
+    font-size: clamp(1.35rem, 6.2vw, 2.2rem) !important; 
+    line-height: 1.1 !important; 
+    letter-spacing: -0.01em !important; 
+  }
+  .review-card { width: 16.5rem !important; min-width: 16.5rem !important; padding: 1rem !important; }
+
+  /* --- HARDWARE CATALOG --- */
+  .catalog-section { padding: 2rem 1rem !important; border-radius: 18px !important; margin-top: 0 !important; margin-bottom: 0.75rem !important; }
+  .catalog-title { font-size: clamp(1.65rem, 6.2vw, 2.1rem) !important; }
+  .catalog-tabs { 
+    display: flex !important; 
+    justify-content: flex-start !important; 
+    overflow-x: auto !important; 
+    -webkit-overflow-scrolling: touch !important; 
+    gap: 0.4rem !important; 
+    padding: 0.25rem 0.1rem 0.65rem !important; 
+    margin-bottom: 1.4rem !important; 
+    scrollbar-width: none !important; 
+    width: 100% !important; 
+  }
+  .catalog-tabs::-webkit-scrollbar { display: none !important; }
+  .cat-tab { 
+    white-space: nowrap !important; 
+    padding: 0.45rem 0.85rem !important; 
+    font-size: 0.72rem !important; 
+    flex-shrink: 0 !important; 
+    border-radius: 999px !important; 
+  }
+  .catalog-grid { grid-template-columns: 1fr !important; gap: 1rem !important; }
+  .prod-card { padding: 1.2rem !important; }
+  .prod-card__title { font-size: 1.08rem !important; }
+  .prod-spec-row {
+    display: flex !important;
+    justify-content: space-between !important;
+    align-items: baseline !important;
+    gap: 0.5rem !important;
+  }
+  .prod-spec-row strong {
+    text-align: right !important;
+    word-break: break-word !important;
+    max-width: 65% !important;
+  }
+
+  /* --- CONSOLE / SCADA VIEWPORT --- */
+  .console-section { padding: 2rem 1rem !important; border-radius: 18px !important; margin-top: 0 !important; margin-bottom: 0.75rem !important; }
+  .console-title { font-size: clamp(1.65rem, 6.2vw, 2.1rem) !important; }
+  .console-container { gap: 1.2rem !important; }
+  .dock-btn { padding: 0.85rem 1rem !important; }
+  .dock-meta strong { font-size: 0.82rem !important; }
+  .dock-meta span { font-size: 0.68rem !important; }
+  .viewport-hud { padding: 1.25rem 1rem !important; }
+  .hud-title { font-size: 1.22rem !important; line-height: 1.25 !important; }
+  .hud-desc { font-size: 0.8rem !important; }
+  .hud-specs { gap: 0.4rem !important; margin-bottom: 1.2rem !important; }
+  .hud-spec-pill { font-size: 0.68rem !important; padding: 0.3rem 0.6rem !important; }
+
+  /* --- WATER ENGINEERING --- */
+  .water-section { padding: 2rem 1rem !important; border-radius: 18px !important; margin-top: 0 !important; margin-bottom: 0.75rem !important; }
+  .water-title { font-size: clamp(1.65rem, 6.2vw, 2.1rem) !important; }
+  .water-grid { grid-template-columns: 1fr !important; gap: 1rem !important; }
+  .water-card { padding: 1.2rem !important; }
+  .water-card__title { font-size: 1.08rem !important; }
+  .water-card__spec-item {
+    display: flex !important;
+    justify-content: space-between !important;
+    align-items: baseline !important;
+    gap: 0.5rem !important;
+  }
+  .water-card__spec-item strong {
+    text-align: right !important;
+    word-break: break-word !important;
+    max-width: 65% !important;
+  }
+
+  /* --- SERVICES & CONSULTATION --- */
+  .services { padding: 2rem 1rem !important; border-radius: 18px !important; margin-top: 0 !important; margin-bottom: 0.75rem !important; }
+  .services__grid { grid-template-columns: 1fr !important; gap: 1rem !important; }
+  .service-card { padding: 1.25rem 1.1rem !important; }
+
+  /* --- STATS & INDUSTRIES & FOOTER --- */
+  .stats-section { padding: 2rem 1rem !important; border-radius: 18px !important; margin-top: 0 !important; margin-bottom: 0.75rem !important; }
+  .stats-grid { grid-template-columns: 1fr 1fr !important; gap: 1rem !important; }
+  .stat-num { font-size: 2.2rem !important; }
+  .stat-label { font-size: 0.72rem !important; }
+
+  .industries { padding: 2rem 1rem !important; border-radius: 18px !important; margin-top: 0 !important; margin-bottom: 0.75rem !important; }
+  .industries-grid { grid-template-columns: 1fr !important; gap: 1rem !important; }
+  
+  .footer { padding: 2rem 1rem 1.5rem !important; border-radius: 18px !important; margin-top: 0 !important; margin-bottom: 0.5rem !important; }
+  .footer__grid { grid-template-columns: 1fr !important; gap: 1.4rem !important; }
+
+  /* --- CRM MODAL ON MOBILE --- */
+  .crm-panel { border-radius: 18px !important; max-height: 94svh !important; width: 95% !important; margin: 0 auto !important; }
+  .crm-header { padding: 1rem 1.1rem !important; }
+  .crm-body { padding: 1.1rem !important; gap: 0.9rem !important; }
+  .crm-footer { padding: 0.9rem 1.1rem !important; flex-direction: column !important; align-items: stretch !important; gap: 0.6rem !important; }
   .crm-quote-btn, .crm-wa-btn { width: 100% !important; justify-content: center !important; }
-  .catalog-section, .console-section, .water-section, .services, .industries, .footer { padding: 2.2rem 1.1rem !important; border-radius: 18px !important; margin-top: 0 !important; margin-bottom: 0.75rem !important; }
-  .catalog-filters { display: flex !important; overflow-x: auto !important; -webkit-overflow-scrolling: touch !important; gap: 0.5rem !important; scrollbar-width: none !important; }
-  .catalog-grid { grid-template-columns: 1fr !important; }
-  .stats-section { padding: 2.2rem 1.1rem !important; border-radius: 18px !important; margin-top: 0 !important; margin-bottom: 0.75rem !important; }
-  .stats-grid { grid-template-columns: 1fr 1fr !important; gap: 1.2rem !important; }
-  .industries-grid, .footer__grid { grid-template-columns: 1fr !important; }
-  .footer { margin-top: 0 !important; margin-bottom: 0.5rem !important; }
+
+  /* Floating WhatsApp button */
   .whatsapp-float { bottom: 1rem !important; right: 1rem !important; width: 3.2rem !important; height: 3.2rem !important; border-radius: 50% !important; justify-content: center !important; padding: 0 !important; }
   .whatsapp-float span { display: none !important; }
   .whatsapp-float svg { width: 1.6rem !important; height: 1.6rem !important; }
+}
+
+@media (max-width: 480px) {
+  body { padding: 4px !important; }
+  .header { padding: 0.65rem 0.65rem 0 !important; }
+  .hero__title { font-size: 1.65rem !important; }
+  .hero__tagline { font-size: 1.05rem !important; }
+  .hero__lead { font-size: 0.78rem !important; }
+  .review-card { width: 15rem !important; min-width: 15rem !important; }
+  .stats-grid { grid-template-columns: 1fr !important; gap: 0.75rem !important; }
+  .hud-spec-pill { font-size: 0.64rem !important; padding: 0.25rem 0.5rem !important; }
 }
 </style>
 </head>
