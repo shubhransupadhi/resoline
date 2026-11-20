@@ -977,7 +977,15 @@ main{padding:0;width:100%;overflow-x:clip}
   .brand-pill { padding: 6px 12px !important; border-radius: 12px !important; }
   .brand-logo-img { height: 28px !important; width: auto !important; }
   .burger { width: 2.4rem !important; height: 2.4rem !important; }
-  .hero { border-radius: 18px !important; padding-bottom: 2rem !important; }
+
+  /* Eliminate scroll animation blank ghosting on mobile devices */
+  .reveal-up {
+    opacity: 1 !important;
+    transform: none !important;
+    transition: none !important;
+  }
+
+  .hero { border-radius: 18px !important; padding-bottom: 1.5rem !important; margin-bottom: 0.75rem !important; }
   .hero__grid { padding: 1.2rem 1rem 1.8rem !important; gap: 1.6rem !important; }
   .hero__eyebrow-chip { font-size: 0.65rem !important; padding: 0.3rem 0.65rem !important; margin-bottom: 0.8rem !important; white-space: normal !important; line-height: 1.4 !important; }
   .hero__title { font-size: clamp(1.85rem, 7.8vw, 2.4rem) !important; line-height: 1.12 !important; margin-bottom: 0.75rem !important; letter-spacing: -0.01em !important; }
@@ -991,12 +999,14 @@ main{padding:0;width:100%;overflow-x:clip}
   .fs-menu__split { margin: 0 !important; padding: 0.8rem 0 1.2rem !important; gap: 1.5rem !important; }
   .fs-menu__link { font-size: 1.55rem !important; padding: 0.45rem 0 !important; min-height: 44px !important; }
   .fs-menu__link .menu-arrow { opacity: 0.6 !important; transform: none !important; }
-  .home-segregation { padding: 2rem 1.1rem !important; border-radius: 18px !important; }
+  .home-segregation { padding: 2rem 1.1rem !important; border-radius: 18px !important; margin-top: 0 !important; margin-bottom: 0.75rem !important; }
   .home-segregation__grid { grid-template-columns: 1fr !important; gap: 1rem !important; }
-  .client-strip { padding: 0.8rem 1rem !important; flex-direction: column !important; align-items: flex-start !important; gap: 0.6rem !important; }
+  .client-strip { padding: 0.8rem 1rem !important; flex-direction: column !important; align-items: flex-start !important; gap: 0.6rem !important; margin-top: 0 !important; margin-bottom: 0.75rem !important; }
   .client-strip__track { width: 100% !important; overflow-x: auto !important; -webkit-overflow-scrolling: touch !important; }
-  .trust { padding: 2.5rem 1.2rem 2rem !important; border-radius: 18px !important; }
-  .trust__top { grid-template-columns: 1fr !important; gap: 1.4rem !important; margin-bottom: 2rem !important; }
+  .trust { padding: 2.2rem 1.1rem 1.8rem !important; border-radius: 18px !important; margin-top: 0 !important; margin-bottom: 0.75rem !important; }
+  .trust__top { grid-template-columns: 1fr !important; gap: 1.4rem !important; margin-bottom: 1.5rem !important; }
+  .trust__ghost { margin: 1.5rem auto 0.5rem !important; }
+  .trust__ghost-row { gap: 0.5rem !important; }
   .trust__pct { flex-direction: column !important; gap: 0.3rem !important; }
   .trust__pct-num { font-size: 3.2rem !important; }
   .review-card { width: 18.5rem !important; min-width: 18.5rem !important; padding: 1.15rem !important; }
@@ -1005,11 +1015,13 @@ main{padding:0;width:100%;overflow-x:clip}
   .crm-body { padding: 1.2rem !important; gap: 1rem !important; }
   .crm-footer { padding: 1rem 1.2rem !important; flex-direction: column !important; align-items: stretch !important; }
   .crm-quote-btn, .crm-wa-btn { width: 100% !important; justify-content: center !important; }
-  .catalog-section, .console-section, .water-section, .services, .industries, .footer { padding: 2.5rem 1.1rem !important; border-radius: 18px !important; }
+  .catalog-section, .console-section, .water-section, .services, .industries, .footer { padding: 2.2rem 1.1rem !important; border-radius: 18px !important; margin-top: 0 !important; margin-bottom: 0.75rem !important; }
   .catalog-filters { display: flex !important; overflow-x: auto !important; -webkit-overflow-scrolling: touch !important; gap: 0.5rem !important; scrollbar-width: none !important; }
   .catalog-grid { grid-template-columns: 1fr !important; }
+  .stats-section { padding: 2.2rem 1.1rem !important; border-radius: 18px !important; margin-top: 0 !important; margin-bottom: 0.75rem !important; }
   .stats-grid { grid-template-columns: 1fr 1fr !important; gap: 1.2rem !important; }
   .industries-grid, .footer__grid { grid-template-columns: 1fr !important; }
+  .footer { margin-top: 0 !important; margin-bottom: 0.5rem !important; }
   .whatsapp-float { bottom: 1rem !important; right: 1rem !important; width: 3.2rem !important; height: 3.2rem !important; border-radius: 50% !important; justify-content: center !important; padding: 0 !important; }
   .whatsapp-float span { display: none !important; }
   .whatsapp-float svg { width: 1.6rem !important; height: 1.6rem !important; }
@@ -1322,7 +1334,6 @@ setTimeout(function() {
           <a href="#consultation-part" class="wwd-consult-link">Part 02: Consultation &amp; AMC ↓</a>
         </div>
       </div>
-    </div>
     </div>
   </div>
 
